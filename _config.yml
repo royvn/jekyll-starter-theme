@@ -1,0 +1,69 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely edit after that. If you find
+# yourself editing this file very often, consider using Jekyll's data files
+# feature for the data you need to update frequently.
+#
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
+
+# BASIC
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "http://example.nl" # the base hostname & protocol for your site, e.g. http://example.com
+lang: nl_NL
+
+authors:
+  example:
+    name:
+    image: /assets/images/example.jpg
+    email: example@example.nl
+    web: http://example.nl
+    twitter: example
+    github: example
+    instagram: example
+    linkedin: https://www.linkedin.com/
+
+# SEO
+logo: 
+title: Jekyll starter theme
+description: Jekyll starter theme.
+permalink: pretty
+
+# How many articles do you wish to appear on the front page:
+# paginate: 3
+
+# COLLECTIONS
+collections:
+  posts:
+    output: true
+    permalink: /blog/:categories/:year/:month/:day/:title/
+
+# BUILD
+markdown: kramdown
+highlighter: rouge
+
+gems: 
+  - jekyll-seo-tag
+  - jekyll-paginate
+  - jekyll-feed
+  - jekyll-sitemap
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - webpack.config.js
+  - .babelrc
+  - .gitignore
+  - sass
+  - js
+  - package.json
+  - package.lock
+  - yarn.lock
+  - node_modules
+  - README.md
