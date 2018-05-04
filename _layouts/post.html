@@ -1,0 +1,81 @@
+---
+layout: page
+---
+
+<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+    <header class="post-header">
+        {% if page.tags %}
+            <p class="post-meta">
+                <span>
+                    in 
+                </span>
+                <span>
+                    {{ page.tags | array_to_sentence_string }}
+                </span>
+            </p>
+        {% endif %}            
+        <h1 class="post-title" itemprop="name headline">{{ page.title | escape }}</h1>                        
+        <p class="post-author">
+            {% if page.author %}
+            <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <span itemprop="name">{{ page.author }}</span>
+            </span>
+            {% endif %}
+            <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+                {% assign date_format = site.minima.date_format | default: "%-d %m %Y" %}
+                op {{ page.date | date: date_format }}
+            </time>
+        </p>
+    </header>
+
+    {% if page.image %}
+    <div class="post-image">
+        <img src="{{ page.image }}" alt="{{ page.title }}">
+    </div>
+    {% endif %}
+
+    <div class="post-content" itemprop="articleBody">
+        {{ content }}                    
+    </div>
+
+    {% if page.comments %}
+    <div class="post-comments">
+    </div>
+    {% endif %}
+    
+    <nav class="post-navigation">
+        {% if page.next.url %}
+        <a href="{{ page.next.url }}" class="related-navigation related-navigation--next">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 ml-lg-auto mr-lg-auto text-center">
+                        {% if page.next.title %}
+                            <span class="related-navigation__title">
+                                {{ page.next.title }}
+                            </span>
+                        {% endif %}
+                        <div class="related-navigation__subtitle">Volgend artikel</div>
+                    </div>
+                </div>
+            </div>
+        </a>      
+        {% endif %}   
+        {% if page.previous.url %}
+            <a href="{{ page.previous.url }}" class="related-navigation related-navigation--previous">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6 ml-lg-auto mr-lg-auto text-center">
+                            {% if page.previous.title %}
+                            <span class="related-navigation__title">
+                                {{ page.previous.title }}
+                            </span>
+                            {% endif %}
+                            <div class="related-navigation__subtitle">Vorig artikel</div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        {% endif %}
+    </nav>
+</article>
