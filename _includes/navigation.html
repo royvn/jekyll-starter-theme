@@ -1,0 +1,13 @@
+<nav class="navigation">
+	<ul class="nav">
+		{% for item in site.data.navigation %}
+			<li class="nav-item">
+				<a href="{{ item.permalink }}" class="nav-link{% if page.url contains item.permalink and item.permalink != '/' or page.url == '/' %} active{% endif %}">
+					<span>
+						{{ item.title }}
+					</span>
+				</a>
+			</li>
+		{% endfor %}
+	</ul>
+</nav>	
