@@ -1,3 +1,6 @@
 # Jekyll Starter Theme
 
-Basic website structure with [Jekyll](https://jekyllrb.com/).
+Basic website theme with [Jekyll](https://jekyllrb.com/).
+
+* `bundle exec jekyll serve`
+* `bundle exec jekyll build --watch`
