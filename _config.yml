@@ -49,7 +49,7 @@ collections:
 markdown: kramdown
 highlighter: rouge
 
-gems: 
+plugins: 
   - jekyll-seo-tag
   - jekyll-paginate
   - jekyll-feed
