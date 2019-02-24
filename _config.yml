@@ -20,20 +20,20 @@ url: "http://example.nl" # the base hostname & protocol for your site, e.g. http
 lang: nl_NL
 
 authors:
-  example:
-    name:
-    image: /assets/images/example.jpg
-    email: example@example.nl
-    web: http://example.nl
-    twitter: example
-    github: example
-    instagram: example
+  royvn:
+    name: Roy van Neden
+    image: /assets/img/royvn.jpg
+    email: roy@vanneden.nl
+    web: http://roy.vanneden.nl
+    twitter: royvn_
+    github: royvn
+    instagram: royvn
     linkedin: https://www.linkedin.com/
 
 # SEO
 logo: 
 title: Jekyll starter theme
-description: Jekyll starter theme.
+description: Simple & basic Jekyll blogging theme.
 permalink: pretty
 
 # How many articles do you wish to appear on the front page:
@@ -43,7 +43,7 @@ permalink: pretty
 collections:
   posts:
     output: true
-    permalink: /blog/:categories/:year/:month/:day/:title/
+    permalink: /:title/
 
 # BUILD
 markdown: kramdown
@@ -57,13 +57,12 @@ plugins:
 exclude:
   - Gemfile
   - Gemfile.lock
-  - webpack.config.js
-  - .babelrc
   - .gitignore
-  - sass
-  - js
+  - src
+  - gulpfile.babel.js
+  - package-lock.json
   - package.json
-  - package.lock
+  - postcss.config.js
   - yarn.lock
   - node_modules
   - README.md

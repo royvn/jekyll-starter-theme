@@ -1,21 +1,33 @@
-{% for teaser in site.posts %}
-    <article>
-        <a href="{{ teaser.url }}" class="teaser">
-            <div class="teaser-tags">
-                {% for tag in teaser.tags %}
-                    {{ tag }}
-                {% endfor %}            
-            </div>
-            <div class="holder w4xh2">
-                <img src="{{ teaser.thumbnail }}" alt="{{ teaser.title }}" class="img-fluid">
-            </div>
-            <div class="teaser-body">
-                <span class="teaser-date">
-                    {{ teaser.date | date: '%m %d %Y' }}
-                </span>
-                <h3 class="tease-title">{{ teaser.title }}</h3>
-                <p class="teaser-excerpt">{{ teaser.excerpt }}</p>
-            </div>
-        </a>
+ {% for post in site.posts %}
+    <article class="post">
+        <div class="post-author">
+            {% if post.date %}
+            <!-- https://learn.cloudcannon.com/jekyll/date-formatting/ -->            
+            <p class="post-date">
+                {{ post.date | date: '%B %Y' }}
+            </p>
+            {% endif %}
+            {% assign author = site.authors[post.author] %}
+            {% if author.image %}
+                <img src="{{ author.image }}" alt="{{ author.name }}">
+            {% endif %}
+            <p class="post-author">
+                {% if post.author %}
+                    <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+                        <span itemprop="name">{{ author.name }}</span>
+                    </span>
+                {% endif %}
+            </p>
+        </div>
+        <div class="post-content">
+            <a href="{{ post.url }}">
+                {% if post.title %}
+                    <h2 class="post-title">
+                        {{ post.title }}
+                    </h2>
+                {% endif %}
+            </a>
+            {{  post.content }}
+        </div>
     </article>
 {% endfor %}

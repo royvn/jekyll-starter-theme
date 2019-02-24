@@ -1,8 +1,11 @@
 - title: Home
   permalink: /
 
-- title: Blog
-  permalink: /blog/
+- title: Example post
+  permalink: /example/
 
-- title: Contact
-  permalink: /contact/
+- title: Example page
+  permalink: /example-page/
+
+- title: 404
+  permalink: /404/
