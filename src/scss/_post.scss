@@ -1,0 +1,48 @@
+.post {
+    // article {
+        width: 100%;
+        max-width: 1024px;
+        margin: 0 auto;
+        // display: grid;
+        // grid-template-columns: 144px 1fr;
+        // grid-column-gap: 1.5rem;
+    // }
+    // .post-date {
+    //     font-size: 0.75rem;
+    //     line-height: 1rem;
+    //     color: $primary;
+    //     text-transform: uppercase;
+    //     letter-spacing: 1px;
+    //     margin-bottom: 0.5rem;
+    //     background-color: red;
+    // }
+    .post-title {
+        font-size: 3rem;
+        line-height: 1.5;
+    }
+    .post-excerpt {
+        margin-bottom: 0;
+    }
+    .post-content {
+        h1, h2, h3, h4, h5, h6, p {
+            @include media-breakpoint-up(lg) {
+                max-width: 80%;
+                margin: 0 auto;
+            }
+        }
+        > p {
+            line-height: 2;
+            margin-bottom: 1.5rem;
+            color: $gray-6;
+        }
+        > .highlight pre, table, .video, .image, blockquote {
+            margin: 3rem 0;
+        }
+        img, video {
+            display: block;
+        }
+        hr {
+            margin: 0;
+        }
+    }
+}
