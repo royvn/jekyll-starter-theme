@@ -16,3 +16,10 @@
 @import 'teaser';
 
 @import '../../node_modules/aos/src/sass/aos';
+
+.container {
+    width: 88%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}

@@ -14,10 +14,42 @@ layout: page
     </header>
 
     {% if page.image %}
-        <div class="image">
+        <div class="post-image">
             <img src="{{ page.image }}" alt="{{ page.title | escape }}">
         </div>
     {% endif %}
+
+    <div class="post-author">
+        {% assign author = site.authors[page.author] %}
+        {% if author.image %}
+            <img src="{{ author.image }}" alt="{{ author.name }}" class="post-author-image">
+        {% endif %}
+        <p class="">
+            Geschreven door 
+            {% if page.author %}
+                <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+                    <span itemprop="name">{{ page.author }}</span>
+                </span>
+            {% endif %}
+        </p>
+        <ul>
+            <li>
+                <a href="{{ author.web }}" target="_blank">
+                    Web
+                </a>
+            </li>
+            <li>
+                <a href="{{ author.twitter }}">
+                    Twitter
+                </a>
+            </li>
+            <li>
+                <a href="{{ author.facebook }}">
+                    Facebook
+                </a>
+            </li>
+        </ul>
+    </div>
     
     <div class="post-content" itemprop="articleBody">
         {{ content }}                    
@@ -29,30 +61,16 @@ layout: page
     {% endif %}
 
     <footer class="post-footer">
-            {% assign author = site.authors[page.author] %}
-            {{ author.web }}
-            {{ author.twitter }}
-            {{ author.facebook }}
-            {% if author.image %}
-                <img src="{{ author.image }}" alt="{{ author.name }}">
-            {% endif %}
-            <p class="post-author">
-                {% if page.author %}
-                    <span itemprop="author" itemscope itemtype="http://schema.org/Person">
-                        <span itemprop="name">{{ page.author }}</span>
-                    </span>
-                {% endif %}
+        {% if page.tags %}
+            <p class="post-meta">
+                <span>
+                    in 
+                </span>
+                <span>
+                    {{ page.tags | array_to_sentence_string }}
+                </span>
             </p>
-            {% if page.tags %}
-                <p class="post-meta">
-                    <span>
-                        in 
-                    </span>
-                    <span>
-                        {{ page.tags | array_to_sentence_string }}
-                    </span>
-                </p>
-            {% endif %}
+        {% endif %}
     </footer>
     
     <nav class="post-navigation">

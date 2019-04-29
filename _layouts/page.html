@@ -1,12 +1,10 @@
 ---
 layout: default
 ---
-<div id="root">
-    {% include header.html %}
-    <div class="overlay"></div>
-    <div class="content">
-        {{ content }}
-    </div>
-    {% include footer.html %}
+{% include header.html %}
+<div class="overlay"></div>
+<div class="content">
+    {{ content }}
 </div>
+{% include footer.html %}
 {% include scripts.html %}

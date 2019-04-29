@@ -22,10 +22,11 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    line-height: 1.5;
+    font-family: $headings-font-family;
+    line-height: $headings-line-height;
     margin-top: 0;
     margin-bottom: 0.5rem;
-    font-weight: bold;
+    font-weight: $headings-font-weight;
 }
 
 h1, .h1 {
