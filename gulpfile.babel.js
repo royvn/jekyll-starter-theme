@@ -24,3 +24,7 @@ exports.default = function() {
     // .pipe(uglify())
     .pipe(dest('assets/js/'));
 }
+
+gulp.task('watch', function() {
+  gulp.watch('src/**/*.scss', gulp.series('sass'));
+});
