@@ -1,10 +1,14 @@
 ---
 layout: default
 ---
-{% include header.html %}
-<div class="overlay"></div>
-<div class="content">
-    {{ content }}
+
+<div class="site-wrapper">
+	<div class="loader"></div>
+	<a class="skip-link screen-reader-text" href="#content">Skip naar content</a>
+	{% include site/header.html %}
+	<div class="site-content" id="content">
+		{{ content }}
+	</div>
+	{% include site/footer.html %}
 </div>
-{% include footer.html %}
-{% include scripts.html %}
+{% include site/scripts.html %}

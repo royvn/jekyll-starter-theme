@@ -6,12 +6,78 @@ image:
 permalink: /
 ---
 
+<div class="hero hero--dark-mode" style="background-image: url('assets/img/hero-2.jpg')">
+  <div class="grid">
+      <div class="row">
+          <div class="col-lg-8 ml-auto mr-auto text-md-center">
+              <h1 class="hero__title">
+                  Roy van Neden <span class="t-48">&mdash;</span>
+                  <div>
+                      <span class="type"></span> designer
+                  </div>
+              </h1>
+              <p class="hero__paragraph">Met plezier besteed ik het meeste van mijn tijd aan het ontwerpen, realiseren en verbeteren van digitale producten.</p>
+              <a href="/over" class="btn btn--blue">Meer over mij</a>
+          </div>
+      </div>
+  </div>
+  <button type="button" class="mouse">
+      <span>
+          Please scroll
+      </span>
+  </button>
+</div>
+
+<div>
+    hero section
+</div>
+
+P
 <ul> 
     {% for post in site.posts %}
         <li>
             <a href="{{ post.url }}">
-                {{ post.title }}
+                <h2>
+                    {{ post.title }}
+                </h2>
+                <img src="{{ post.image }}" alt="{{ post.title }}">
             </a>
         </li>   
     {% endfor %}
 </ul>
+
+Projects
+<ul> 
+    {% for post in site.projects %}
+        <li>
+            <a href="{{ post.url }}">
+                <h2>
+                    {{ post.title }}
+                </h2>
+                <img src="{{ post.image }}" alt="{{ post.title }}">
+            </a>
+        </li>   
+    {% endfor %}
+</ul>
+
+Categories
+{% for category in site.categories %}
+
+  <h3>{{ category[0] }}</h3>
+  <ul>
+    {% for post in category[1] %}
+      <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+    {% endfor %}
+  </ul>
+{% endfor %}
+
+Tags
+{% for tag in site.tags %}
+
+  <h3>{{ tag[0] }}</h3>
+  <ul>
+    {% for post in tag[1] %}
+      <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+    {% endfor %}
+  </ul>
+{% endfor %}

@@ -1,11 +1,14 @@
 - title: Home
   permalink: /
 
-- title: Example post
-  permalink: /example/
+- title: Over
+  permalink: /over/
 
-- title: Example page
-  permalink: /example-page/
+- title: Werk
+  permalink: /werk/
 
-- title: 404
-  permalink: /404/
+- title: Blog
+  permalink: /blog/
+
+- title: Contact
+  permalink: /contact/

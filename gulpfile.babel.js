@@ -11,12 +11,12 @@ const rename = require('gulp-rename');
 gulp.task('sass', function () {
   return gulp.src('src/scss/style.scss')
     .pipe(sass().on('error', sass.logError))
-    .pipe(rename('style.min.css'))
-    .pipe(gulp.dest('assets/css'));
+    .pipe(rename('inline-style.html'))
+    .pipe(gulp.dest('_includes'));
 });
 
 exports.default = function() {
-  return src('src/*.js')
+  return src('src/js/*.js')
     .pipe(babel({
       presets: ['@babel/env']
     }))

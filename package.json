@@ -1,25 +1,29 @@
 {
-  "name": "jekyll-starter-theme",
+  "name": "royvn.github.io",
   "version": "1.0.0",
-  "description": "Basic website theme with [Jekyll](https://jekyllrb.com/).",
+  "description": "Personal website build with Jekyll.",
   "main": "index.js",
   "dependencies": {
-    "@babel/core": "^7.2.2",
-    "@babel/preset-env": "^7.2.3",
-    "aos": "^2.3.4",
-    "autoprefixer": "^9.4.2",
+    "@babel/core": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "autoprefixer": "^9.6.1",
     "babel-register": "^6.26.0",
-    "bootstrap": "^4.2.1",
-    "gulp": "^4.0.0",
-    "gulp-autoprefixer": "^6.0.0",
+    "bootstrap": "^4.3.1",
+    "jquery": "^3.4.1",
+    "normalize.css": "^8.0.1",
+    "popper.js": "^1.15.0",
+    "slick-carousel": "^1.8.1",
+    "typed.js": "^2.0.10"
+  },
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^6.1.0",
     "gulp-babel": "^8.0.0",
-    "gulp-watch": "^5.0.1",
     "gulp-rename": "^1.4.0",
     "gulp-sass": "^4.0.2",
-    "gulp-uglify": "^3.0.1",
-    "normalize.css": "^8.0.1"
+    "gulp-uglify": "^3.0.2",
+    "gulp-watch": "^5.0.1"
   },
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "watch": ""
