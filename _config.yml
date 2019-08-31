@@ -16,24 +16,24 @@
 
 # BASIC
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://example.nl" # the base hostname & protocol for your site, e.g. http://example.com
+url: "http://royvn.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 lang: nl_NL
 
 authors:
   royvn:
     name: Roy van Neden
-    image: /assets/img/royvn.jpg
-    email: roy@vanneden.nl
+    image: /uploads/royvn.jpg
+    email: roy.van.neden@gmail.com
     web: http://roy.vanneden.nl
     twitter: royvn_
     github: royvn
     instagram: royvn
-    linkedin: https://www.linkedin.com/
+    linkedin: https://www.linkedin.com/in/roy-van-neden-10549761/
 
 # SEO
 logo: 
-title: Jekyll starter theme
-description: Simple & basic Jekyll blogging theme.
+title: Roy van Neden
+description: Designer & developer uit Leidschendam woonachtig in Den Haag.
 permalink: pretty
 
 # How many articles do you wish to appear on the front page:
@@ -43,7 +43,10 @@ permalink: pretty
 collections:
   posts:
     output: true
-    permalink: /:title/
+    permalink: /blog/:title/
+  projects:
+    output: true
+    permalink: /projecten/:title/
 
 # BUILD
 markdown: kramdown
@@ -55,14 +58,13 @@ plugins:
   - jekyll-feed
   - jekyll-sitemap
 exclude:
+  - src
+  - .gitignore
   - Gemfile
   - Gemfile.lock
-  - .gitignore
-  - src
   - gulpfile.babel.js
   - package-lock.json
   - package.json
   - postcss.config.js
-  - yarn.lock
   - node_modules
   - README.md
