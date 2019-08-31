@@ -1,7 +1,9 @@
 .site-navigation {
 	background-color: red;
-	.site-branding {
-		width: 25%;
+	@include media-breakpoint-up(lg) {
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
 	}
 }
 

@@ -1,14 +1,14 @@
 - title: Home
   permalink: /
 
-- title: Over
-  permalink: /over/
-
-- title: Werk
-  permalink: /werk/
+- title: Projecten
+  permalink: /projecten/
 
 - title: Blog
   permalink: /blog/
+
+- title: Over
+  permalink: /over/
 
 - title: Contact
   permalink: /contact/
