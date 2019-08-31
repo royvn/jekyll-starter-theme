@@ -1,25 +1,326 @@
-@import '../../node_modules/normalize.css/normalize';
+/*!
+Theme Name: RVN
+Theme URI: http://roy.vanneden.nl/
+Author: Roy van Neden
+Author URI: http://roy.vanneden.nl
+Description: Personal custom build wordpress theme.
+Version: 1.0.0
+License: ?
+License URI: ?
+Text Domain: rvn
+Tags: 
+*/
 
-@import '../../node_modules/bootstrap/scss/mixins';
-@import '../../node_modules/bootstrap/scss/functions';
-@import '../../node_modules/bootstrap/scss/variables';
+//
+// Variables
+//
+$black: #111111;
+$white: #FDFDFD;
+$green: #348F50;
+$red:   #D0021B;
+$blue:	#56B4D3;
 
-@import 'variables';
+$font-family-sans-serif: 'Lato', sans-serif;
+$headings-font-family: 'Poppins', sans-serif;
+$headings-font-weight: 600;
+$body-bg: $white;
+$body-color: $black;
+$grid-gutter-width: 3rem;
 
-@import 'elements';
-@import 'header';
-@import 'sidebar';
-@import 'overlay';
-@import 'footer';
+html {
+	-moz-osx-font-smoothing: grayscale;
+	text-rendering: optimizeLegibility;
+}
 
-@import 'post';
-@import 'teaser';
+//
+// Bootstrap overwrites
+//
+// @import "custom";
 
-@import '../../node_modules/aos/src/sass/aos';
+//
+// Bootstrap
+//
+@import "../../node_modules/bootstrap/scss/functions";
+@import "../../node_modules/bootstrap/scss/variables";
+@import "../../node_modules/bootstrap/scss/mixins";
+// @import "../../node_modules/bootstrap/scss/root";
+@import "../../node_modules/bootstrap/scss/reboot";
+@import "../../node_modules/bootstrap/scss/type";
+@import "../../node_modules/bootstrap/scss/images";
+@import "../../node_modules/bootstrap/scss/code";
+@import "../../node_modules/bootstrap/scss/grid";
+// @import "../../node_modules/bootstrap/scss/tables";
+// @import "../../node_modules/bootstrap/scss/forms";
+// @import "../../node_modules/bootstrap/scss/buttons";
+// @import "../../node_modules/bootstrap/scss/transitions";
+// @import "../../node_modules/bootstrap/scss/dropdown";
+// @import "../../node_modules/bootstrap/scss/button-group";
+// @import "../../node_modules/bootstrap/scss/input-group";
+// @import "../../node_modules/bootstrap/scss/custom-forms";
+// @import "../../node_modules/bootstrap/scss/nav";
+// @import "../../node_modules/bootstrap/scss/navbar";
+// @import "../../node_modules/bootstrap/scss/card";
+// @import "../../node_modules/bootstrap/scss/breadcrumb";
+// @import "../../node_modules/bootstrap/scss/pagination";
+// @import "../../node_modules/bootstrap/scss/badge";
+// @import "../../node_modules/bootstrap/scss/jumbotron";
+// @import "../../node_modules/bootstrap/scss/alert";
+// @import "../../node_modules/bootstrap/scss/progress";
+// @import "../../node_modules/bootstrap/scss/media";
+// @import "../../node_modules/bootstrap/scss/list-group";
+// @import "../../node_modules/bootstrap/scss/close";
+// @import "../../node_modules/bootstrap/scss/modal";
+// @import "../../node_modules/bootstrap/scss/tooltip";
+// @import "../../node_modules/bootstrap/scss/popover";
+// @import "../../node_modules/bootstrap/scss/carousel";
+@import "../../node_modules/bootstrap/scss/utilities";
+// @import "../../node_modules/bootstrap/scss/print";
 
-.container {
-    width: 88%;
-    max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
+body.logged-in {
+    .header.header--fixed {
+        top: 2rem;
+    }
+}
+
+@import "mixins/mixins";
+
+@import "accessibility";
+
+@import "layout/layout";
+@import "site-wrapper";
+@import "site-header";
+@import "site-navigation";
+@import "site-search";
+@import "site-footer";
+@import "site-overlay";
+
+@import "buttons";
+@import "grid";
+@import "post";
+
+
+@import 'hero';
+@import 'latest-posts';
+@import 'case';
+
+@import 'teasers';
+@import 'alignments';
+@import 'archives';
+@import 'comments';
+@import 'widgets';
+
+// HEADLINE
+.headline-label	{
+	font-size: 0.875rem;
+	line-height: 1.5rem;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	font-family: $headings-font-family;
+	opacity: 0.48;
+}
+
+.headline-subtitle {
+    font-size: 0.75rem;
+    line-height: 1.25rem;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 600;
+    opacity: 0.64;
+}
+
+.headline-title {
+    font-size: 2.5rem;
+    line-height: 1.25;
+    @include media-breakpoint-up(lg) {
+        font-size: 2.75rem;
+    }
+    @include media-breakpoint-up(xl) {
+        font-size: 3rem;
+	}
+	margin-bottom: 1.5rem;
+}
+
+.headline-paragraph {
+	font-size: 1.125rem;
+	line-height: 2rem;
+	margin-bottom: 1.5rem;
+	// color: lighten($black, 32%);
+}
+
+// HOME
+.intro {
+	background: #348F50;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #56B4D3, #348F50);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #56B4D3, #348F50); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+// .section-type {
+//     display: block;
+//     padding: 1rem 1.5rem;
+//     color: $green;
+//     border: 1px dashed $green;
+//     background-color: lighten($green, 48%);
+//     text-align: center;
+//     text-transform: uppercase;
+//     letter-spacing: 2px;
+//     font-size: 0.75rem;
+//     line-height: 1.5rem;
+// }
+
+.dark-mode {
+    background-color: $black;
+    color: $white;
+}
+
+.light-mode {
+    background-color: $white;
+    color: $black;
+}
+
+.t-48 {
+    opacity: 0.48;    
+}
+
+.t-64 {
+    opacity: 0.64;
+}
+
+.presentation-tab {
+    list-style: none;
+    padding: 0;
+    // max-width: 25rem; //400px
+    margin: 0 auto;
+    li {
+        &:first-child {
+            svg {
+                fill: #ffc107;
+            }
+        }
+        &:nth-child(2) {
+            svg {
+                fill: #56b4d3;
+            }
+        }
+        &:last-child {
+            svg {
+                fill: #348f50;
+            }
+        }
+    }
+    a {
+		display: flex;
+    	// grid-template-columns: 1.5rem 1fr;
+    	// grid-column-gap: 1rem;
+        // display: flex;
+        // flex-wrap: nowrap;
+        cursor: pointer;
+        padding: 1.5rem;
+        width: 100%;
+        color: inherit;
+        border-radius: 0.5rem;
+        &:hover, &:active, &:focus {
+            text-decoration: none;
+        }
+        &:active {
+            background-color: lighten($black, 84%);
+        }
+        h4 {
+            font-size: 1.125rem;
+            line-height: 1.5rem;
+        }
+        svg {
+            flex: 0 0 1.5rem;
+            margin-right: 1rem;
+			text-align: center;
+			width: 1.5rem;
+            height: 1.5rem;
+            display: flex;
+            align-items: center;
+			justify-content: center;
+			font-size: 1.5rem;
+        }
+        p {
+            margin: 0;
+        }
+        &.active {
+            background-color: lighten($black, 88%);
+        }
+    }
+}
+
+.presentation-tab-dark-mode {
+    a.active {
+        background-color: $gray-800;
+    }
+}
+
+.clip-path-bottom {
+	position: relative;
+	&:after {
+		content: '';
+		width: 100%;
+		height: 3.0625rem;
+		background-color: $white;
+		position: absolute;
+		bottom: -1px;
+		left: 0;
+		right: 0;
+		clip-path: polygon(100% 0, 0 100%, 100% 100%);
+	}
+	&--dark:after {
+		background-color: $black;
+	}
+}
+
+.tab-content > .tab-pane.active {
+    display: block;
+}
+
+.tab-content > .tab-pane {
+    display: none;
+}
+
+.tags {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    // justify-content: center;
+    margin-bottom: -0.5rem;
+    a {
+        margin-right: 0.5rem;
+        margin-bottom: 0.5rem;
+        &:last-child {
+            margin-right: 0;
+        }
+        display: block;
+        padding: 0.5rem 1rem;
+        border-radius: 3rem;
+        font-size: 0.625rem;
+        line-height: 1rem;
+        background-color: lighten($primary, 32%);
+        color: $primary;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-weight: 600;
+        &:hover, &:active, &:focus {
+            text-decoration: none;
+        }
+        &:hover, &:focus {
+            background-color: $primary;
+            color: $white;
+        }
+    }
+}
+
+@import 'nav-links';
+@import 'blocks/gutenberg';
+
+@import 'post-categories';
+
+.error-404.not-found {
+    @include grid;
+    margin-bottom: 3rem;   
 }

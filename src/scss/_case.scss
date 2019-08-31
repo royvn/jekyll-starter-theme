@@ -1,0 +1,51 @@
+.case {
+    .case__subtitle {
+        font-size: 1rem;
+        line-height: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+    .case__title {
+        font-size: 2rem;
+        line-height: 2.5rem;
+        @include media-breakpoint-up(lg) {
+            font-size: 3rem;
+            line-height: 3.5rem;
+        }
+        margin-bottom: 1.5rem;
+    }
+    .case__introduction {
+        font-family: $headings-font-family;
+        @include media-breakpoint-up(lg) {
+            font-size: 1.25rem;
+            line-height: 2rem;
+        }
+        margin-bottom: 0;
+    }
+    .case__image {
+        margin-top: -4rem;
+        @include media-breakpoint-up(lg) {
+            margin-top: -8rem;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+    .entry-header {
+        background-color: slategray;
+        display: block;   
+        padding-top: 7.5rem;
+        padding-bottom: 7rem;
+        @include media-breakpoint-up(lg) {
+            padding-top: 12rem;
+            padding-bottom: 14rem;
+        }
+    }
+    .entry-content {
+        padding-top: 6rem;
+        padding-bottom: 6rem;
+    }
+}

@@ -1,0 +1,28 @@
+.holder {
+  position: relative;
+  display: block;
+  width: 100%;
+  &--w4xh1 {
+    padding-bottom: 25%;
+  }
+  
+  &--w4xh2 {
+    padding-bottom: 50%;
+  }
+  
+  &--w4xh3 {
+    padding-bottom: 75%;
+  }
+  
+  &--w4xh4 {
+    padding-bottom: 100%;
+  }
+  
+  &--w4xh5 {
+    padding-bottom: 125%;
+  }
+  
+  &--w4xh6 {
+    padding-bottom: 150%;
+  }
+}

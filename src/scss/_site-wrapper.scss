@@ -1,0 +1,13 @@
+.site-wrapper {
+    position: relative;
+    padding-top: 6rem;
+    @include media-breakpoint-up(lg){
+        padding-top: 9rem;
+    }
+}
+
+.page--home, .single-case {
+    .site-wrapper {
+        padding-top: 0;
+    }
+}

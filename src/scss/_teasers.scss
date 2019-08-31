@@ -1,0 +1,27 @@
+.teaser {
+	.teaser__permalink {
+		display: block;
+		color: inherit;
+		&:hover, &:focus {
+			text-decoration: none;
+			color: $primary;
+		}
+	}	
+	.teaser__content {
+		> *:last-child {
+			margin-bottom: 0;
+		}
+	}
+	.teaser__title {
+		font-size: 1.5rem; 
+		line-height: 2rem;
+	}
+	.teaser__excerpt {
+		color: lighten($black, 24%);
+	}
+	.teaser__thumbnail {
+		width: 100%;
+		height: auto;
+		margin-bottom: 1.5rem;
+	}
+}
