@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Responsive aspect ratio in CSS
-excerpt: 
+description: Niet nieuw of moeilijk maar wel handig, een responsive aspect ratio in CSS. Toepasbaar op bijvoorbeeld video’s, placeholders en iframes. 
 date: 2017-04-18
 image: /uploads/responsive-aspect-ratio-in-css.png
 categories: [Design, Development]

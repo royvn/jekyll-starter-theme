@@ -1,9 +1,9 @@
 ---
 layout: post
 title: CSS variabelen en preprocessor variabelen
-excerpt: 
+description: In CSS zijn variabelen er voornamelijk om consistent hergebruikt te worden. Nu zijn variabelen al lang...
 date: 2019-01-20
-image: /uploads/wwdc18.png
+image:
 categories: [Design, Development]
 tags: [CSS]
 ---
@@ -64,7 +64,7 @@ Het grootste voordeel ten opzichte van CSS variabelen is dat een preprocessor ge
 
 Op het moment van schrijven laat een check op [caniuse.com](https://caniuse.com/#feat=css-variables) zien dat de ondersteuning voor CSS variabelen redelijk goed is. Een aantal browsers valt zoals verwacht wel buiten de boot. Gebruikt jou doelgroep voornamelijk browsers zoals IE 11 of meer oude meuk 😂 dan kan je niet anders dan alleen preprocessor variabelen gebruiken.
 
-![Browser support voor CSS variabelen](../uploads/css-custom-properties-support.png)
+![Browser support voor CSS variabelen](/uploads/css-custom-properties-support.png)
 
 Browser support voor CSS variabelen (CSS Custom Properties) is redelijk goed, namelijk 87,54% wereldwijd (rechtsboven zichtbaar)
 

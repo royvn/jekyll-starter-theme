@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Het verschil tussen require en import
-excerpt: 
+description: Stukken code zijn beter beheersbaar in kleinere stukken, dit geldt ook voor javascript. Om stukken javascript...
 date: 2018-11-24
 image: /uploads/het-verschil-tussen-require-en-import.jpg
 categories: [Development]

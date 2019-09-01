@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Rewrite slug verversen na registratie van een custom post type
-excerpt: 
+description: In WordPress werkt een later aangepaste rewrite slug van een custom post type niet automatisch in...
 date: 2017-05-03
 image:
 categories: [Notities]
