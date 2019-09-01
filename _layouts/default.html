@@ -2,6 +2,14 @@
 <html class="no-js" lang="nl">
 	{% include site/head.html %}
 	<body class="layout layout--{{ page.layout }} page page--{{ page.title | downcase | replace:' ','-' | replace:'_','' | replace:'/','-' }}">
-		{{ content }}
+		<div class="site-wrapper">
+			<a class="skip-link screen-reader-text" href="#content">Skip naar content</a>
+			{% include site/header.html %}
+			<div class="site-content" id="content">
+				{{ content }}
+			</div>
+			{% include site/footer.html %}
+		</div>
+		{% include site/scripts.html %}
 	</body>
 </html>

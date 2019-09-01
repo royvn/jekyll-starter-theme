@@ -57,9 +57,11 @@ p {
 abbr[title],
 abbr[data-original-title] {
   text-decoration: underline;
+  -webkit-text-decoration: underline dotted;
   text-decoration: underline dotted;
   cursor: help;
   border-bottom: 0;
+  -webkit-text-decoration-skip-ink: none;
   text-decoration-skip-ink: none; }
 
 address {
@@ -1797,6 +1799,7 @@ button.bg-dark:focus {
   position: fixed !important; }
 
 .position-sticky {
+  position: -webkit-sticky !important;
   position: sticky !important; }
 
 .fixed-top {
@@ -1813,8 +1816,9 @@ button.bg-dark:focus {
   left: 0;
   z-index: 1030; }
 
-@supports (position: sticky) {
+@supports ((position: -webkit-sticky) or (position: sticky)) {
   .sticky-top {
+    position: -webkit-sticky;
     position: sticky;
     top: 0;
     z-index: 1020; } }
@@ -3444,6 +3448,7 @@ body.logged-in .header.header--fixed {
 .screen-reader-text {
   border: 0;
   clip: rect(1px, 1px, 1px, 1px);
+  -webkit-clip-path: inset(50%);
   clip-path: inset(50%);
   height: 1px;
   margin: -1px;
@@ -3458,6 +3463,7 @@ body.logged-in .header.header--fixed {
     border-radius: 3px;
     box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
     clip: auto !important;
+    -webkit-clip-path: none;
     clip-path: none;
     color: inherit;
     display: block;
@@ -3521,6 +3527,7 @@ body.logged-in .header.header--fixed {
     .site-header--light #hamburger span span {
       background-color: #FDFDFD; }
   .site-header--toggled {
+    -webkit-backdrop-filter: blur(8px);
     backdrop-filter: blur(8px);
     background-color: rgba(255, 255, 255, 0.88);
     color: #111111;
@@ -3563,8 +3570,11 @@ body.logged-in .header.header--fixed {
 
 .site-navigation {
   background-color: red; }
-  .site-navigation .site-branding {
-    width: 25%; }
+  @media (min-width: 992px) {
+    .site-navigation {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%); } }
 
 .nav {
   list-style: none;
@@ -3581,6 +3591,8 @@ body.logged-in .header.header--fixed {
 .nav-permalink {
   display: block;
   padding: 0.75rem 0; }
+  .nav-permalink--active {
+    background-color: blue; }
 
 #hamburger {
   cursor: pointer;
@@ -4104,12 +4116,25 @@ body.page-template-default .entry-content, .single .entry-content {
     .mouse:hover span {
       letter-spacing: 4px; }
     .mouse:hover:after {
+      -webkit-animation-name: mouse;
       animation-name: mouse;
+      -webkit-animation-duration: 0.96s;
       animation-duration: 0.96s;
+      -webkit-animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
       animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      -webkit-animation-iteration-count: infinite;
       animation-iteration-count: infinite; }
   .mouse span {
     display: block; }
+
+@-webkit-keyframes mouse {
+  0% {
+    top: 0.5rem; }
+  50% {
+    top: 0.625rem;
+    height: 0.5rem; }
+  100% {
+    top: 0.5rem; } }
 
 @keyframes mouse {
   0% {
@@ -4166,9 +4191,13 @@ body.page-template-default .entry-content, .single .entry-content {
     line-height: 1.75rem; }
   .latest-post .latest-post__tags {
     margin-top: auto;
-    opacity: 0.64; }
+    opacity: 0.64;
+    line-height: 1.5rem;
+    display: flex;
+    flex-wrap: wrap; }
     .latest-post .latest-post__tags span {
-      margin-right: 0.5rem; }
+      display: block;
+      margin-right: 1rem; }
       .latest-post .latest-post__tags span:last-child {
         margin-right: 0; }
 
@@ -4379,7 +4408,6 @@ body.page-template-default .entry-content, .single .entry-content {
 .intro {
   background: #348F50;
   /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #56B4D3, #348F50);
   /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to right, #56B4D3, #348F50);
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */ }
@@ -4451,6 +4479,7 @@ body.page-template-default .entry-content, .single .entry-content {
     bottom: -1px;
     left: 0;
     right: 0;
+    -webkit-clip-path: polygon(100% 0, 0 100%, 100% 100%);
     clip-path: polygon(100% 0, 0 100%, 100% 100%); }
   .clip-path-bottom--dark:after {
     background-color: #111111; }
