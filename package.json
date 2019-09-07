@@ -4,10 +4,6 @@
   "description": "Personal website build with Jekyll.",
   "main": "index.js",
   "dependencies": {
-    "@babel/core": "^7.5.5",
-    "@babel/preset-env": "^7.5.5",
-    "autoprefixer": "^9.6.1",
-    "babel-register": "^6.26.0",
     "bootstrap": "^4.3.1",
     "jquery": "^3.4.1",
     "normalize.css": "^8.0.1",
@@ -16,13 +12,15 @@
     "typed.js": "^2.0.10"
   },
   "devDependencies": {
-    "gulp": "^4.0.2",
-    "gulp-autoprefixer": "^6.1.0",
-    "gulp-babel": "^8.0.0",
-    "gulp-rename": "^1.4.0",
-    "gulp-sass": "^4.0.2",
-    "gulp-uglify": "^3.0.2",
-    "gulp-watch": "^5.0.1"
+    "autoprefixer": "^9.6.1",
+    "css-loader": "^3.2.0",
+    "mini-css-extract-plugin": "^0.8.0",
+    "node-sass": "^4.12.0",
+    "postcss-loader": "^3.0.0",
+    "sass-loader": "^8.0.0",
+    "style-loader": "^1.0.0",
+    "webpack": "^4.39.3",
+    "webpack-cli": "^3.3.8"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -30,12 +28,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/royvn/jekyll-starter-theme.git"
+    "url": "git+https://github.com/royvn/royvn.github.io.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/royvn/jekyll-starter-theme/issues"
+    "url": "https://github.com/royvn/royvn.github.io/issues"
   },
-  "homepage": "https://github.com/royvn/jekyll-starter-theme#readme"
+  "homepage": "https://github.com/royvn/royvn.github.io#readme",
+  "browserslist": [
+    "defaults"
+  ]
 }
