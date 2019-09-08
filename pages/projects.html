@@ -1,0 +1,22 @@
+---
+layout: default 
+title: Projecten
+description:
+image:
+permalink: /projecten/
+---
+
+<h1>Projecten</h1>
+
+{% for project in site.projects %}
+  <article class="teaser">
+      <a href="{{ project.url }}" class="teaser__permalink">
+        <img src="{{ project.image }}" alt="{{ project.title }}">
+        <div class="teaser__content">
+          <h3 class="teaser__title">
+            {{ project.title }}
+          </h3>
+        </div>
+      </a>
+  </article>
+{% endfor %}

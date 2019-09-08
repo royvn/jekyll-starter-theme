@@ -6,6 +6,7 @@ date: "2019-04-29"
 image: /uploads/adobe-xd-en-line-height.jpg
 categories: [Design]
 tags: [Adobe]
+author: royvn
 ---
 
 Als designer werk je met verschillende tools. Hierbij loop je soms tegen dingen aan die je werkproces verstoren. Zo ik ook laatst bij het maken van een ontwerp in [Adobe XD](https://www.adobe.com/nl/products/xd.html). In de eerste instantie lijkt het een werkbare tool. Tijdens het aflezen van design specificaties viel het echter op dat XD apart met de [line-height](https://developer.mozilla.org/en-US/docs/Web/CSS/line-height) en de daarmee verbonden hoogte van een tekst object omgaat.
@@ -42,8 +43,7 @@ Niet te begrijpen voor een UX/UI design tool
 
 Omdat de line-height en de daaraan verbonden hoogte niet klopt is het toepassen van verticale ruimte en het positioneren van elementen niet eenvoudig meer. De hoogte klopt niet, dus de Y as positie van een aangrenzend component voor de juiste margin of padding ook niet.
 
-<video controls src="../../images/adobe-xd-line-height-issues.mp4"></video>
-
+<video controls src="/uploads/adobe-xd-line-height-issue.mp4"></video>
 De hoogte klopt niet op basis van de ingevoerde line-height en regels
 
 ### Overdracht

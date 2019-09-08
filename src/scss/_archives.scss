@@ -2,6 +2,7 @@
 .archive .site-main, 
 .blog .site-main {
     @include grid;
+    display: grid;
     grid-template-columns: 1fr;
     grid-auto-columns: 1fr;
     grid-gap: 1.5rem;

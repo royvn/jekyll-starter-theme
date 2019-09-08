@@ -1,5 +1,5 @@
 @mixin grid {
-    display: grid;
+    // display: grid;
     padding-right: 1.5rem;
     padding-left: 1.5rem;
     margin-left: auto;
@@ -12,5 +12,5 @@
     @include media-breakpoint-up(lg) {
         width: 80%;
     }
-    max-width: 70rem;
+    // max-width: 70rem;
 }

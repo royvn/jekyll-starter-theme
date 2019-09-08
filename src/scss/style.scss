@@ -1,16 +1,3 @@
-/*!
-Theme Name: RVN
-Theme URI: http://roy.vanneden.nl/
-Author: Roy van Neden
-Author URI: http://roy.vanneden.nl
-Description: Personal custom build wordpress theme.
-Version: 1.0.0
-License: ?
-License URI: ?
-Text Domain: rvn
-Tags: 
-*/
-
 //
 // Variables
 //
@@ -20,7 +7,7 @@ $green: #348F50;
 $red:   #D0021B;
 $blue:	#56B4D3;
 
-$font-family-sans-serif: 'Lato', sans-serif;
+$font-family-sans-serif: 'Lato', sans-serif; // deze nog aanpassen
 $headings-font-family: 'Poppins', sans-serif;
 $headings-font-weight: 600;
 $body-bg: $white;
@@ -47,7 +34,7 @@ html {
 @import "../../node_modules/bootstrap/scss/reboot";
 @import "../../node_modules/bootstrap/scss/type";
 @import "../../node_modules/bootstrap/scss/images";
-@import "../../node_modules/bootstrap/scss/code";
+// @import "../../node_modules/bootstrap/scss/code";
 @import "../../node_modules/bootstrap/scss/grid";
 // @import "../../node_modules/bootstrap/scss/tables";
 // @import "../../node_modules/bootstrap/scss/forms";
@@ -75,12 +62,6 @@ html {
 // @import "../../node_modules/bootstrap/scss/carousel";
 @import "../../node_modules/bootstrap/scss/utilities";
 // @import "../../node_modules/bootstrap/scss/print";
-
-body.logged-in {
-    .header.header--fixed {
-        top: 2rem;
-    }
-}
 
 @import "mixins/mixins";
 
@@ -120,23 +101,23 @@ body.logged-in {
 }
 
 .headline-subtitle {
-    font-size: 0.75rem;
-    line-height: 1.25rem;
-    margin-bottom: 0.5rem;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    font-weight: 600;
-    opacity: 0.64;
+	font-size: 0.75rem;
+	line-height: 1.25rem;
+	margin-bottom: 0.5rem;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	font-weight: 600;
+	opacity: 0.64;
 }
 
 .headline-title {
-    font-size: 2.5rem;
-    line-height: 1.25;
-    @include media-breakpoint-up(lg) {
-        font-size: 2.75rem;
-    }
-    @include media-breakpoint-up(xl) {
-        font-size: 3rem;
+	font-size: 2.5rem;
+	line-height: 1.25;
+	@include media-breakpoint-up(lg) {
+		font-size: 2.75rem;
+	}
+	@include media-breakpoint-up(xl) {
+		font-size: 3rem;
 	}
 	margin-bottom: 1.5rem;
 }
@@ -156,171 +137,167 @@ body.logged-in {
 }
 
 // .section-type {
-//     display: block;
-//     padding: 1rem 1.5rem;
-//     color: $green;
-//     border: 1px dashed $green;
-//     background-color: lighten($green, 48%);
-//     text-align: center;
-//     text-transform: uppercase;
-//     letter-spacing: 2px;
-//     font-size: 0.75rem;
-//     line-height: 1.5rem;
-// }
-
-.dark-mode {
-    background-color: $black;
-    color: $white;
-}
-
-.light-mode {
-    background-color: $white;
-    color: $black;
-}
-
-.t-48 {
-    opacity: 0.48;    
-}
-
-.t-64 {
-    opacity: 0.64;
-}
-
-.presentation-tab {
-    list-style: none;
-    padding: 0;
-    // max-width: 25rem; //400px
-    margin: 0 auto;
-    li {
-        &:first-child {
-            svg {
-                fill: #ffc107;
-            }
-        }
-        &:nth-child(2) {
-            svg {
-                fill: #56b4d3;
-            }
-        }
-        &:last-child {
-            svg {
-                fill: #348f50;
-            }
-        }
-    }
-    a {
-		display: flex;
-    	// grid-template-columns: 1.5rem 1fr;
-    	// grid-column-gap: 1rem;
-        // display: flex;
-        // flex-wrap: nowrap;
-        cursor: pointer;
-        padding: 1.5rem;
-        width: 100%;
-        color: inherit;
-        border-radius: 0.5rem;
-        &:hover, &:active, &:focus {
-            text-decoration: none;
-        }
-        &:active {
-            background-color: lighten($black, 84%);
-        }
-        h4 {
-            font-size: 1.125rem;
-            line-height: 1.5rem;
-        }
-        svg {
-            flex: 0 0 1.5rem;
-            margin-right: 1rem;
-			text-align: center;
-			width: 1.5rem;
-            height: 1.5rem;
-            display: flex;
-            align-items: center;
-			justify-content: center;
-			font-size: 1.5rem;
-        }
-        p {
-            margin: 0;
-        }
-        &.active {
-            background-color: lighten($black, 88%);
-        }
-    }
-}
-
-.presentation-tab-dark-mode {
-    a.active {
-        background-color: $gray-800;
-    }
-}
-
-.clip-path-bottom {
-	position: relative;
-	&:after {
-		content: '';
-		width: 100%;
-		height: 3.0625rem;
-		background-color: $white;
-		position: absolute;
-		bottom: -1px;
-		left: 0;
-		right: 0;
-		clip-path: polygon(100% 0, 0 100%, 100% 100%);
-	}
-	&--dark:after {
+	//     display: block;
+	//     padding: 1rem 1.5rem;
+	//     color: $green;
+	//     border: 1px dashed $green;
+	//     background-color: lighten($green, 48%);
+	//     text-align: center;
+	//     text-transform: uppercase;
+	//     letter-spacing: 2px;
+	//     font-size: 0.75rem;
+	//     line-height: 1.5rem;
+	// }
+	
+	.dark-mode {
 		background-color: $black;
+		color: $white;
 	}
-}
-
-.tab-content > .tab-pane.active {
-    display: block;
-}
-
-.tab-content > .tab-pane {
-    display: none;
-}
-
-.tags {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-wrap: wrap;
-    // justify-content: center;
-    margin-bottom: -0.5rem;
-    a {
-        margin-right: 0.5rem;
-        margin-bottom: 0.5rem;
-        &:last-child {
-            margin-right: 0;
-        }
-        display: block;
-        padding: 0.5rem 1rem;
-        border-radius: 3rem;
-        font-size: 0.625rem;
-        line-height: 1rem;
-        background-color: lighten($primary, 32%);
-        color: $primary;
-        text-transform: uppercase;
-        letter-spacing: 2px;
-        font-weight: 600;
-        &:hover, &:active, &:focus {
-            text-decoration: none;
-        }
-        &:hover, &:focus {
-            background-color: $primary;
-            color: $white;
-        }
-    }
-}
-
-@import 'nav-links';
-@import 'blocks/gutenberg';
-
-@import 'post-categories';
-
-.error-404.not-found {
-    @include grid;
-    margin-bottom: 3rem;   
-}
+	
+	.light-mode {
+		background-color: $white;
+		color: $black;
+	}
+	
+	.t-48 {
+		opacity: 0.48;    
+	}
+	
+	.t-64 {
+		opacity: 0.64;
+	}
+	
+	.presentation-tab {
+		list-style: none;
+		padding: 0;
+		// max-width: 25rem; //400px
+		margin: 0 auto;
+		li {
+			display: block;
+			width: 100%;
+			&:first-child {
+				svg {
+					fill: #ffc107;
+				}
+			}
+			&:nth-child(2) {
+				svg {
+					fill: #56b4d3;
+				}
+			}
+			&:last-child {
+				svg {
+					fill: #348f50;
+				}
+			}
+		}
+		a {
+			display: flex;
+			// grid-template-columns: 1.5rem 1fr;
+			// grid-column-gap: 1rem;
+			// display: flex;
+			// flex-wrap: nowrap;
+			cursor: pointer;
+			padding: 1.5rem;
+			width: 100%;
+			color: inherit;
+			border-radius: 0.5rem;
+			&:hover, &:active, &:focus {
+				text-decoration: none;
+			}
+			&:active {
+				background-color: lighten($black, 84%);
+			}
+			h4 {
+				font-size: 1.125rem;
+				line-height: 1.5rem;
+			}
+			svg {
+				flex: 0 0 1.5rem;
+				margin-right: 1rem;
+				text-align: center;
+				width: 1.5rem;
+				height: 1.5rem;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				font-size: 1.5rem;
+			}
+			p {
+				margin: 0;
+			}
+			&.active {
+				background-color: lighten($black, 88%);
+			}
+		}
+	}
+	
+	.presentation-tab-dark-mode {
+		a.active {
+			background-color: $gray-800;
+		}
+	}
+	
+	.clip-path-bottom {
+		position: relative;
+		&:after {
+			content: '';
+			width: 100%;
+			height: 3.0625rem;
+			background-color: $white;
+			position: absolute;
+			bottom: -1px;
+			left: 0;
+			right: 0;
+			clip-path: polygon(100% 0, 0 100%, 100% 100%);
+		}
+		&--dark:after {
+			background-color: $black;
+		}
+	}
+	
+	.tab-content > .tab-pane.active {
+		display: block;
+	}
+	
+	.tab-content > .tab-pane {
+		display: none;
+	}
+	
+	.tags {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		display: flex;
+		flex-wrap: wrap;
+		// justify-content: center;
+		margin-bottom: -0.5rem;
+		a.tag {
+			margin-right: 0.5rem;
+			margin-bottom: 0.5rem;
+			&:last-child {
+				margin-right: 0;
+			}
+			display: block;
+			padding: 0.5rem 1rem;
+			border-radius: 3rem;
+			font-size: 0.625rem;
+			line-height: 1rem;
+			background-color: lighten($primary, 32%);
+			color: $primary;
+			text-transform: uppercase;
+			letter-spacing: 2px;
+			font-weight: 600;
+			&:hover, &:active, &:focus {
+				text-decoration: none;
+			}
+			&:hover, &:focus {
+				background-color: $primary;
+				color: $white;
+			}
+		}
+	}
+	
+	@import 'nav-links';
+	
+	@import 'post-categories';

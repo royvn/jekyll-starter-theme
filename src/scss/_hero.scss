@@ -31,6 +31,14 @@
 	> * {
 		z-index: 2;
 	}
+	.hero__content {
+		@include make-col-ready();
+		margin: 0 auto;
+		@include media-breakpoint-up(lg) {
+			@include make-col(8);
+			text-align: center;
+		}
+	}
 	.hero__subtitle {
 		font-size: 0.875rem;
 		line-height: 1.5rem;

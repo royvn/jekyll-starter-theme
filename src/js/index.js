@@ -1,11 +1,15 @@
 "use strict";
 
+import '../scss/style.scss';
+
 import $ from 'jquery';
 import 'popper.js';
 import 'bootstrap';
 import Typed from 'typed.js';
 
-if($('body').hasClass('home')) {
+$('html').removeClass('no-js').addClass('js');
+
+if($('body').hasClass('page--home')) {
 	var options = {
 		strings: ["interaction", "digital", "front-end"],
 		typeSpeed: 88,
@@ -36,9 +40,11 @@ search.addEventListener('click', function() {
 // HEADER
 var header = $('.site-header');
 headerState();
+
 window.addEventListener('scroll', function (){
 	headerState();
 });
+
 function headerState() {
 	let y = window.pageYOffset || document.documentElement.scrollTop;
 	if(y > 0) {
