@@ -3,6 +3,7 @@
 import '../scss/style.scss';
 
 import $ from 'jquery';
+import 'lazysizes';
 import 'popper.js';
 import 'bootstrap';
 import Typed from 'typed.js';

@@ -31,9 +31,9 @@ Ja, heb je iets bedacht?
 
 De titel zou zoals je verwacht in CSS 32 pixels hoog moeten zijn. Zo werkt het in je browser. Als de titel over twee regels gaat zou dat 32+32=64 pixels hoog moeten worden. Logisch toch? Adobe XD denkt er anders over, namelijk 40 pixels voor een enkele regel en 72 pixels voor een dubbele (afhankelijk van lettertype). Dat is een verschil van 8 pixels 😬 (lettertype [Poppins](https://fonts.google.com/specimen/Poppins)).
 
-<iframe src="https://giphy.com/embed/pPhyAv5t9V8djyRFJH" width="480" height="350" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
-
-<p><a href="https://giphy.com/gifs/wtf-obama-wth-pPhyAv5t9V8djyRFJH">via GIPHY</a></p>
+<div class="embed-responsive embed-responsive-4by3">
+  <iframe class="embed-responsive-item" src="https://giphy.com/embed/pPhyAv5t9V8djyRFJH"></iframe>
+</div>
 
 Niet te begrijpen voor een UX/UI design tool
 
