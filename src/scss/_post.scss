@@ -192,6 +192,10 @@ margin-bottom: 6rem;
 // single post layout
 .layout.layout--post {
 	.post {		
+		.post-header .grid .row {
+			display: flex;
+			align-items: center;
+		}
 		.post-title {
 			font-size: 2.5rem;
 			line-height: 3.5rem;
