@@ -18,8 +18,8 @@ Een onderdeel van een goed ontwerp is bijvoorbeeld het doordacht toepassen van i
 Op het Adobe forum staat het volgende over hoe XD afmetingen behandelt.
 
 > XD currently uses a virtual pixel for most of its measurements (including font size), which should be the same unit of measure as a CSS pixel, or most measurements in iOS. It’s roughly equal to 1 physical pixel on a 72 dpi monitor (and, incidentally, a point).
-
-[Adobe forum](https://forums.adobe.com/thread/2140211)
+>
+> [Adobe forum](https://forums.adobe.com/thread/2140211)
 
 Op basis hiervan verwacht je dat afmetingen overeen moeten komen met een CSS pixel.
 
@@ -31,7 +31,7 @@ Ja, heb je iets bedacht?
 
 De titel zou zoals je verwacht in CSS 32 pixels hoog moeten zijn. Zo werkt het in je browser. Als de titel over twee regels gaat zou dat 32+32=64 pixels hoog moeten worden. Logisch toch? Adobe XD denkt er anders over, namelijk 40 pixels voor een enkele regel en 72 pixels voor een dubbele (afhankelijk van lettertype). Dat is een verschil van 8 pixels 😬 (lettertype [Poppins](https://fonts.google.com/specimen/Poppins)).
 
-<div class="embed-responsive embed-responsive-4by3">
+<div class="embed-responsive embed-responsive-16by9">
   <iframe class="embed-responsive-item" src="https://giphy.com/embed/pPhyAv5t9V8djyRFJH"></iframe>
 </div>
 

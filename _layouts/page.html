@@ -2,8 +2,10 @@
 layout: default
 ---
 
-<article class="">
-	<img src="{{page.image}}" alt="">
+<article class="page">
+	{% if page.image %}
+		<img src="{{ page.image }}" alt="{{ page.title }}" class="img-fluid">
+	{% endif %}
 	<header class="">
 		<h1 class="">
 			{{ page.title }}

@@ -6,6 +6,7 @@ date: 2017-05-03
 image:
 categories: [Notities]
 tags: [WordPress]
+author: royvn
 ---
 
 In [WordPress](https://nl.wordpress.com/) werkt een later aangepaste rewrite slug van een custom post type niet automatisch in de front-end.

@@ -1,5 +1,4 @@
 .site-footer {
-	// min-height: 100vh;
 	position: relative;
 	background-color: $black;
 	padding-top: 6rem;
@@ -17,44 +16,4 @@
 		}
 		margin-bottom: 3rem;
 	}
-}
-
-.widget {
-	ul {
-		list-style: none;
-		padding: 0;
-		margin: 0;
-		li {
-			margin-bottom: 0.5rem;
-			&:last-child {
-				margin-bottom: 0;
-			}
-			a {
-				color: inherit;
-				opacity: 0.64;
-				&:hover, &:focus, &:active {
-					text-decoration: none;
-				}
-				&:hover, &:focus {
-					opacity: 1;
-				}
-				&:active {
-					opacity: 0.48;
-				}
-			}
-		}
-	}
-}
-
-.widget-title {
-	font-size: 1rem;
-	line-height: 1.5rem;
-	margin-bottom: .5rem;
-}
-
-.widget_recent_entries {
-}
-
-.textwidget > *:last-child {
-	margin-bottom: 0;
 }

@@ -21,6 +21,7 @@
 	svg {
 		fill: $black;
 	}
+	display: none; // todo
 }
 
 .site-search {
@@ -43,6 +44,7 @@
 	overflow-y: scroll; 
 	font-family: $headings-font-family;
 	text-align: center;
+	display: none;
 }
 
 .site-search__form {
@@ -68,8 +70,6 @@
 		outline: none;
 	}
 }
-
-.search-label {}
 
 body.site-search-open {
 	overflow: hidden;
