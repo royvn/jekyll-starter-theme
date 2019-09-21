@@ -2,8 +2,8 @@
 layout: post
 title: Adobe XD en line-height
 description: Als designer werk je met verschillende tools. Hierbij loop je soms tegen dingen aan die je...
-date: "2019-04-29"
 image: /uploads/adobe-xd-en-line-height.jpg
+date: "2019-04-29"
 categories: [Design]
 tags: [Adobe]
 author: royvn

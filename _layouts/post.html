@@ -76,9 +76,14 @@ layout: default
 	{% endif %}
 	<footer class="post-footer">
 	</footer>
+	<div class="grid">
+		<h2>
+			Bekijk ook
+		</h2>
+	</div>
 	<nav class="post-navigation">
 		{% if page.previous.url %}
-			<a href="{{ page.previous.url }}" class="post-navigation__url">
+			<a href="{{ page.previous.url }}" class="post-navigation__url{% if page.previous.image %} post-navigation__url--has-image{% endif %}">
 				<div>
 					<span class="post-navigation__subtitle">Vorig artikel</span>
 					{% if page.previous.title %}
@@ -93,7 +98,7 @@ layout: default
 			</a>
 		{% endif %}
 		{% if page.next.url %}
-			<a href="{{ page.next.url }}" class="post-navigation__url">
+			<a href="{{ page.next.url }}" class="post-navigation__url{% if page.next.image %} post-navigation__url--has-image{% endif %}">
 				<div>
 					<span class="post-navigation__subtitle">Volgend artikel</span>
 					{% if page.next.title %}
