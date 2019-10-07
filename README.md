@@ -10,5 +10,3 @@
 * `bundle exec jekyll serve --drafts`
 * `bundle exec jekyll build --watch`
 * `npx webpack`
-
-If you enjoy this theme [donate](https://www.paypal.me/royvn).
