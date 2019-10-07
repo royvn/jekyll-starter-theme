@@ -25,6 +25,9 @@ ul.widget-list {
 			&:active {
 				opacity: 0.48;
 			}
+			&.active {
+				opacity: 1;
+			}
 		}
 	}
 }

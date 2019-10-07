@@ -1,6 +1,6 @@
 {% assign currentPage = page.title | downcase %}
 
-<header class="site-header site-header--fixed{% if currentPage == 'home' %} site-header--light site-header--blend{% endif %}">
+<header class="site-header{% if currentPage == 'home' or page.layout == 'project' %} site-header--light site-header--blend{% endif %}">
 	<div class="grid">
 		<div class="site-branding">
 			{% if site.title %}

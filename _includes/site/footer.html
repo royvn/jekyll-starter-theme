@@ -13,7 +13,7 @@
 				<ul class="widget-list">
 					{% for item in site.data.navigation %}
 						<li>
-							<a href="{{ item.permalink }}">
+							<a href="{{ item.permalink }}"{% if page.url contains item.permalink and item.permalink != '/' or page.url == '/' %} class="active"{% endif %}>
 								<span>
 									{{ item.title }}
 								</span>

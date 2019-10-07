@@ -81,7 +81,7 @@ html {
 @import 'hero';
 
 @import 'latest-posts';
-@import 'case';
+@import 'project';
 
 @import 'teasers';
 @import 'archives';
@@ -263,7 +263,6 @@ html {
 		padding: 0;
 		display: flex;
 		flex-wrap: wrap;
-		// justify-content: center;
 		margin-bottom: -0.5rem;
 		a.tag {
 			margin-right: 0.5rem;

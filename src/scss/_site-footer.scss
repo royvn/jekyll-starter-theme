@@ -1,11 +1,11 @@
 .site-footer {
 	position: relative;
 	background-color: $black;
+	color: $white;
 	padding-top: 6rem;
 	padding-bottom: 3rem;
 	font-size: 0.875rem;
 	line-height: 1.25rem;
-	color: $white;
 	.widget {
 		@include make-col-ready();
 		@include media-breakpoint-up(sm){

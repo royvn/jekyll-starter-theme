@@ -72,11 +72,9 @@ Je bent aan het einde van deze pagina gekomen. Maar er is meer. Bekijk mijn rece
 {% for post in site.posts limit:4 %}
   <li>
     <a href="{{ post.url }}">
-      {{ post.title }}
-    </a> 
-    <div>
+      {{ post.title }} <br>
       {{ post.date | date: '%d %m %Y' }}
-    </div>
+    </a> 
   </li>
 {% endfor %}
 </ul>

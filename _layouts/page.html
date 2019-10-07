@@ -2,16 +2,75 @@
 layout: default
 ---
 
-<article class="page">
-	{% if page.image %}
-		<img src="{{ page.image }}" alt="{{ page.title }}" class="img-fluid">
-	{% endif %}
-	<header class="">
-		<h1 class="">
-			{{ page.title }}
-		</h1>
+<article class="post page">	
+
+	<header class="post-header">            
+		<div class="grid">
+			<div class="row">
+				<div class="post-header__content">
+						<a href="/" class="back">Terug naar home</a>
+						<h1 class="post-title" itemprop="name headline">
+							{{ page.title | escape }}
+						</h1>
+						<p class="post-meta">
+							Geplaatst op 
+							<time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished"> 
+								{{ page.date | date: "%-d %B %Y" }}
+							</time>
+							{% if page.categories %} 
+							in {% for category in page.categories %}{{ category | downcase }}{% if forloop.last %}.{% else %}, {% endif %}{% endfor %}
+							{% endif %}
+						</p>
+				</div>
+				<div class="post-header__image">
+					{% if page.image %}
+						<div class="post-image">
+							<img src="{{ page.image }}" alt="{{ page.title | escape }}" class="img-fluid">
+						</div>
+					{% endif %}
+				</div>
+			</div>
+		</div>
 	</header>
-	<div class="">
-		{{ content }}
-	</div>	
+	<div class="grid">
+		<div class="post-split">
+			<aside class="post-aside">
+				{% assign author = site.authors[page.author] %}
+				{% if author %}
+					<div class="post-author">
+						{% if author.image %}
+							<img src="{{ author.image }}" alt="{{ author.name }}" class="post-author-image img-fluid">
+						{% endif %}
+						<p class="post-author__label">
+							Geschreven door 
+						</p>
+						{% if author.name %}
+							<p class="post-author__name" itemprop="author" itemscope itemtype="http://schema.org/Person">
+								<span itemprop="name">{{ author.name }}</span>
+							</p>
+						{% endif %}
+					</div>
+				{% endif %}
+				{% if page.tags %}
+					<p class="">
+						Getagd in 
+					</p>
+					<div class="tags">
+						{% for tag in page.tags %}
+							<a href="/tags#{{ tag }}" class="tag">
+								{{ tag }}
+							</a>
+						{% endfor %}
+					</div>
+				{% endif %}
+				{% include ads.html %}					
+			</aside>
+			<div class="post-content content" itemprop="articleBody">
+				{{ content }}                    
+			</div>
+		</div>
+	</div>
+
+
+
 </article>

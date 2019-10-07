@@ -6,7 +6,7 @@ image:
 permalink: /
 ---
 
-<div class="hero hero--dark-mode">
+<section class="hero hero--dark-mode">
 	<img src="/assets/images/hero-2-16x9.jpg" data-src="/assets/images/hero-2.jpg" alt="{{ site.title }}" class="hero__image lazyload">
 	<div class="grid">
 		<div class="row">
@@ -27,11 +27,11 @@ permalink: /
 			Please scroll
 		</span>
 	</button>
-</div>
+</section>
 
 <section class="section" id="wat-ik-doe">
-	<div class="grid">
-		<div class="row">
+	<div class="grid pb-5">
+		<div class="row pt-5 pb-5">
 			<div class="col-lg-6 pt-5 pb-5 ml-auto mr-auto text-center">
 				<p class="headline-subtitle">Wat ik doe</p>
 				<h2 class="headline-title mb-0">Van concept tot realisatie</h2>
@@ -102,11 +102,11 @@ permalink: /
 	<div class="grid pt-5">
 			<div class="row pt-5 align-items-center">
 					<div class="col-lg-6">
-							<h2 class="headline-title">Blog</h2>
-							<p class="headline-paragraph">Ik ben altijd bezig met het op de hoogte blijven van ontwikkelingen. Zo nu en dan schrijf ik hier ook een stukje over.</p>
+						<h2 class="headline-title">Blog</h2>
+						<p class="headline-paragraph">Ik ben altijd bezig met het op de hoogte blijven van ontwikkelingen. Zo nu en dan schrijf ik hier ook een stukje over.</p>
 					</div>
 					<div class="col-lg-6 text-lg-right">
-							<a href="/blog" class="btn btn--light">Alle artikelen</a>
+						<a href="/blog" class="btn btn--light">Alle artikelen</a>
 					</div>
 			</div>
 	</div>    
@@ -146,13 +146,13 @@ permalink: /
 		<div class="row pb-5">
 			{% for project in site.projects %}
 				<div class="col-lg-6 pb-5">
-					<article class="teaser">
-							<a href="{{ project.url }}" class="teaser__permalink">
+					<article class="project-preview">
+							<a href="{{ project.url }}" class="project-preview__permalink">
 								{% if project.image %}
-									<img src="{{ project.image }}" alt="{{ project.title }}" class="teaser__thumbnail img-fluid">
+									<img src="{{ project.image }}" alt="{{ project.title }}" class="project-preview__thumbnail">
 								{% endif %}
-								<div class="teaser__content">
-									<h3 class="teaser__title">
+								<div class="project-preview__content">
+									<h3 class="project-preview__title">
 										{{ project.title }}
 									</h3>
 								</div>
