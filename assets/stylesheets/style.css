@@ -4109,6 +4109,9 @@ body.navigation-open .site-overlay, body.search-open .site-overlay {
 
 .content {
   display: block;
+  -webkit-hyphens: auto;
+      -ms-hyphens: auto;
+          hyphens: auto;
   word-wrap: break-word;
   font-size: 1.125rem;
   line-height: 1.75rem; }

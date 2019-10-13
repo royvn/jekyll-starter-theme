@@ -3,7 +3,7 @@ layout: post
 title: CSS variabelen en preprocessor variabelen
 description: In CSS zijn variabelen er voornamelijk om consistent hergebruikt te worden. Nu zijn variabelen al lang...
 date: 2019-01-20
-image:
+image: /uploads/css-variabelen-en-preprocessor-variabelen.jpg
 categories: [Design, Development]
 tags: [CSS]
 author: royvn
