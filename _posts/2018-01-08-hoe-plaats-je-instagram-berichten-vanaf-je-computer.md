@@ -6,6 +6,7 @@ date: 2018-01-08
 image: /uploads/instagram-0.jpg
 categories: [Notities]
 tags: [Social]
+author: royvn
 ---
 
 Voor het uploaden van je foto’s naar Instagram heb je helaas altijd de native of web app vanaf je mobiel nodig.

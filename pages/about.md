@@ -3,9 +3,7 @@ layout: page
 permalink: /over/
 title: Over
 date: 2018-05-01
-image:
-categories:
-tags:
+image: /uploads/royvn.jpg
 ---
 
 Hoi, ik ben **Roy van Neden**. Hardloper, petrolhead, interaction designer en front-end developer uit Leidschendam woonachtig in Den Haag.
@@ -74,11 +72,9 @@ Je bent aan het einde van deze pagina gekomen. Maar er is meer. Bekijk mijn rece
 {% for post in site.posts limit:4 %}
   <li>
     <a href="{{ post.url }}">
-      {{ post.title }}
-    </a> 
-    <div>
+      {{ post.title }} <br>
       {{ post.date | date: '%d %m %Y' }}
-    </div>
+    </a> 
   </li>
 {% endfor %}
 </ul>

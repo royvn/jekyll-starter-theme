@@ -67,7 +67,6 @@ html {
 
 @import "accessibility";
 
-@import "layout/layout";
 @import "site-wrapper";
 @import "site-header";
 @import "site-navigation";
@@ -79,15 +78,13 @@ html {
 @import "grid";
 @import "post";
 
-
 @import 'hero';
+
 @import 'latest-posts';
-@import 'case';
+@import 'project';
 
 @import 'teasers';
-@import 'alignments';
 @import 'archives';
-@import 'comments';
 @import 'widgets';
 
 // HEADLINE
@@ -116,9 +113,6 @@ html {
 	@include media-breakpoint-up(lg) {
 		font-size: 2.75rem;
 	}
-	@include media-breakpoint-up(xl) {
-		font-size: 3rem;
-	}
 	margin-bottom: 1.5rem;
 }
 
@@ -126,15 +120,14 @@ html {
 	font-size: 1.125rem;
 	line-height: 2rem;
 	margin-bottom: 1.5rem;
-	// color: lighten($black, 32%);
 }
 
 // HOME
-.intro {
-	background: #348F50;  /* fallback for old browsers */
-	background: -webkit-linear-gradient(to right, #56B4D3, #348F50);  /* Chrome 10-25, Safari 5.1-6 */
-	background: linear-gradient(to right, #56B4D3, #348F50); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-}
+// .intro {
+// 	background: #348F50;  /* fallback for old browsers */
+// 	background: -webkit-linear-gradient(to right, #56B4D3, #348F50);  /* Chrome 10-25, Safari 5.1-6 */
+// 	background: linear-gradient(to right, #56B4D3, #348F50); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+// }
 
 // .section-type {
 	//     display: block;
@@ -170,7 +163,6 @@ html {
 	.presentation-tab {
 		list-style: none;
 		padding: 0;
-		// max-width: 25rem; //400px
 		margin: 0 auto;
 		li {
 			display: block;
@@ -240,6 +232,7 @@ html {
 	
 	.clip-path-bottom {
 		position: relative;
+		z-index: 1;
 		&:after {
 			content: '';
 			width: 100%;
@@ -270,7 +263,6 @@ html {
 		padding: 0;
 		display: flex;
 		flex-wrap: wrap;
-		// justify-content: center;
 		margin-bottom: -0.5rem;
 		a.tag {
 			margin-right: 0.5rem;

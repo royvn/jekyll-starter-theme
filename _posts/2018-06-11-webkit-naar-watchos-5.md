@@ -6,11 +6,10 @@ date: 2018-06-11
 image: /uploads/wwdc18.png
 categories: [Development]
 tags: [WatchOS, Webkit]
+author: royvn
 ---
 
-Tijdens de WWDC 2018 van Apple was er een leuk nieuwtje. Webkit komt naar watchOS. Dit betekent dat je, zodra watchOS 5 uit is, web content zoals websites en html emails kan gaan consumeren op je Apple Watch!
-
-De schermruimte op je Apple Watch is voor nu nogal beperkt. Dus wat zijn de mogelijkheden en hoe zal het werken?
+Tijdens de WWDC 2018 van Apple was er een leuk nieuwtje. Webkit komt naar watchOS. Dit betekent dat je, zodra watchOS 5 uit is, web content zoals websites en html emails kan gaan consumeren op je Apple Watch! De schermruimte op je Apple Watch is voor nu nogal beperkt. Dus wat zijn de mogelijkheden en hoe zal het werken?
 
 ## Hoe het werkt
 Als basis zal Webkit op watchOS een website met 320 CSS pixels proberen te weergeven. 320 is qua afmetingen precies de schermbreedte van een iPhone 5s en iPhone SE.

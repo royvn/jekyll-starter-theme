@@ -1,5 +1,5 @@
-.teaser {
-	.teaser__permalink {
+.project-preview {
+	.project-preview__permalink {
 		display: block;
 		color: inherit;
 		&:hover, &:focus {
@@ -7,19 +7,19 @@
 			color: $primary;
 		}
 	}	
-	.teaser__content {
+	.project-preview__content {
 		> *:last-child {
 			margin-bottom: 0;
 		}
 	}
-	.teaser__title {
+	.project-preview__title {
 		font-size: 1.5rem; 
 		line-height: 2rem;
 	}
-	.teaser__excerpt {
+	.project-preview__excerpt {
 		color: lighten($black, 24%);
 	}
-	.teaser__thumbnail {
+	.project-preview__thumbnail {
 		width: 100%;
 		height: auto;
 		margin-bottom: 1.5rem;
