@@ -58,13 +58,16 @@ plugins:
   - jekyll-feed
   - jekyll-sitemap
 exclude:
-  - src
-  - .gitignore
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
   - Gemfile
   - Gemfile.lock
-  - gulpfile.babel.js
+  - src
+  - .gitignore
+  - postcss.config.js
+  - webpack.config.js
   - package-lock.json
   - package.json
-  - postcss.config.js
   - node_modules
   - README.md
