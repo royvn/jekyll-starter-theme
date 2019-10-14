@@ -10,7 +10,7 @@ layout: default
 				<div class="post-header__content">
 						<a href="/blog" class="back">Terug naar overzicht</a>
 						<h1 class="post-title" itemprop="name headline">
-							{{ page.title | escape }}
+							{{ page.title }}
 						</h1>
 						<p class="post-meta">
 							Geplaatst op 
@@ -25,7 +25,7 @@ layout: default
 				<div class="post-header__image">
 					{% if page.image %}
 						<div class="post-image">
-							<img src="{{ page.image }}" alt="{{ page.title | escape }}" class="img-fluid">
+							<img src="{{ page.image }}" alt="{{ page.title }}" class="img-fluid">
 						</div>
 					{% endif %}
 				</div>
