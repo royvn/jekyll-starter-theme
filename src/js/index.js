@@ -30,6 +30,10 @@ toggleNavigation.addEventListener('click', function() {
 	body.classList.toggle('site-navigation-open');
 });
 
+document.querySelector('.site-mask').addEventListener('click', function(){
+	body.classList.toggle('site-navigation-open');
+});
+
 // SEARCH TOGGLE
 var search = document.getElementById('magnifying-glass');
 search.addEventListener('click', function() {
