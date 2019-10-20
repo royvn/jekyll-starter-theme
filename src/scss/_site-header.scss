@@ -1,14 +1,10 @@
 .site-header {
 	position: relative;
-	z-index: ($zindex-fixed)+1;
 	transition: all .24s cubic-bezier(0.55, 0.085, 0.68, 0.53);
 	background-color: transparent;
 	color: inherit;
 	width: 100%;
 	padding: 1.5rem 0;
-	// @include media-breakpoint-up(lg) {
-	// 	padding: 3rem 0;
-	// }
 	&--absolute {
 		position: absolute;
 		top: 0;
@@ -20,6 +16,7 @@
 		top: 0;
 		left: 0;
 		right: 0;
+		z-index: ($zindex-fixed)+2;
 	}
 	#hamburger span span {
 		background-color: $black;
