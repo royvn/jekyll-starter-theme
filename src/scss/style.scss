@@ -77,8 +77,13 @@ html {
 @import "buttons";
 @import "grid";
 @import "post";
+@import "page";
+@import "content";
 
-@import 'hero';
+// includes
+@import 'includes/banner';
+@import 'includes/hero';
+@import 'includes/what-i-do';
 
 @import 'latest-posts';
 @import 'project';

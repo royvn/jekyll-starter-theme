@@ -2,9 +2,6 @@
 	position: relative;
 	width: 100%;
 	padding-top: 6rem;
-	@include media-breakpoint-up(lg){
-		padding-top: 9rem;
-	}
 }
 
 .page--home, .layout--project {

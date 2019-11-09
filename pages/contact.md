@@ -2,6 +2,7 @@
 layout: page
 permalink: /contact/
 title: Contact
+subtitle: Laat iets van je horen
 description: Wil je iets vragen of met mij in contact komen? Stuur gerust een berichtje op Linkedin...
 image: 
 date: 2018-05-01
