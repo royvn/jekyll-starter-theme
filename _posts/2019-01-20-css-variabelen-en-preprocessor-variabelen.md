@@ -12,7 +12,7 @@ author: royvn
 In CSS zijn variabelen er voornamelijk om consistent hergebruikt te worden. Nu zijn variabelen al lang onderdeel van [verschillende preprocessors](https://developer.mozilla.org/en-US/docs/Glossary/CSS_preprocessor). Native heeft CSS ook [CSS custom properties](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_variables) (hierna CSS variabelen genoemd). Beide hebben zo hun voor- en nadelen afhankelijk van de situatie waarin je ze toepast. Welke dat zijn lees je hier.
 
 > CSS variables are entities defined by CSS authors that contain specific values to be reused throughout a document.
-- [MDN web docs](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_variables)
+[MDN web docs](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_variables)
 
 ## Preprocessor variabelen
 

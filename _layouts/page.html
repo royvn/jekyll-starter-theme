@@ -2,43 +2,23 @@
 layout: default
 ---
 
-<article class="post page">	
-	<!-- <header class="post-header">            
-		<div class="grid">
-			<div class="row">
-				<div class="post-header__content">
-						<a href="/" class="back">Terug naar home</a>
-						<h1 class="post-title" itemprop="name headline">
-							{{ page.title  }}
-						</h1>
-						<p class="post-meta">
-							Geplaatst op 
-							<time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished"> 
-								{{ page.date | date: "%-d %B %Y" }}
-							</time>
-							{% if page.categories %} 
-							in {% for category in page.categories %}{{ category | downcase }}{% if forloop.last %}.{% else %}, {% endif %}{% endfor %}
-							{% endif %}
-						</p>
-				</div>
-				<div class="post-header__image">
-					{% if page.image %}
-						<div class="post-image">
-							<img src="{{ page.image }}" alt="{{ page.title }}" class="img-fluid">
-						</div>
-					{% endif %}
-				</div>
-			</div>
-		</div>
-	</header> -->
-	<div class="grid">
-		<div class="post-split">
-			<div class="post-content content" itemprop="articleBody">
-					<h1 class="post-title" itemprop="name headline">
+<article>	
+		<header class="page-header">
+			<div class="grid">
+				{% if page.title %}
+					<h1 class="page-header__title" itemprop="name headline">
 						{{ page.title }}
 					</h1>
-				{{ content }}                    
+				{% endif %}
+				{% if page.subtitle %}
+					<h2 class="page-header__subtitle">
+						{{ page.subtitle }}
+					</h2>
+				{% endif %}
 			</div>
+		</header>
+		<div class="page-content content" itemprop="articleBody">
+			{{ content }}                    
 		</div>
 		<aside class="post-aside">
 			{% assign author = site.authors[page.author] %}
@@ -71,5 +51,4 @@ layout: default
 			{% endif %}
 			{% include ads.html %}					
 		</aside>
-	</div>
 </article>
