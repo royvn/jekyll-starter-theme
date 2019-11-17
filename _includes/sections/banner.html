@@ -1,4 +1,4 @@
-<section class="section">
+<div class="section">
   <div class="banner">
     {% if include.src and include.data_src %}
       <img src="{{ include.src }}" data-src="{{ include.data_src }}" alt="{{ include.alt }}" class="img-fluid lazyload">
@@ -14,9 +14,9 @@
                 </h2>
               {% endif %}
               {% if include.subtitle %}
-                <h3 class="subtitle">
+                <p class="subtitle">
                   {{ include.subtitle }}
-                </h3>
+                </p>
               {% endif %}
               {% if include.button_url and include.button_label %}
                 <a href="{{ include.button_url }}" class="btn btn--light">
@@ -29,4 +29,4 @@
       </div>
     {% endif %}
   </div>
-</section>
+</div>

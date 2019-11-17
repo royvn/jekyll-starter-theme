@@ -150,6 +150,9 @@ body.site-navigation-open {
 	overflow: hidden;
 	.site-header {
 		color: $black;
+		#hamburger span span {
+			background-color: $black;
+		}
 	}
 	.site-navigation {
 		transform: translateY(0%);

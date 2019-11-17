@@ -24,34 +24,42 @@
 				Social
 			</span>
 			<ul class="nav social">
-				<li class="nav-item">
-					<a href="{{ site.authors.royvn.github }}" target="_blank" rel="noopener" class="nav-permalink">
-						<span>
-							Github
-						</span>
-					</a>
-				</li>
-				<li class="nav-item">
-					<a href="{{ site.authors.royvn.twitter }}" target="_blank" rel="noopener" class="nav-permalink">
-						<span>
-							Instagram
-						</span>
-					</a>
-				</li>
-				<li class="nav-item">
-					<a href="{{ site.authors.royvn.linkedin }}" target="_blank" rel="noopener" class="nav-permalink">
-						<span>
-							Linkedin
-						</span>
-					</a>
-				</li>
-				<li class="nav-item">
-					<a href="{{ site.authors.royvn.twitter }}" target="_blank" rel="noopener" class="nav-permalink">
-						<span>
-							Twitter
-						</span>
-					</a>
-				</li>
+				{% if site.authors.royvn.github %}
+					<li class="nav-item">
+						<a href="{{ site.authors.royvn.github }}" target="_blank" rel="noopener" class="nav-permalink">
+							<span>
+								Github
+							</span>
+						</a>
+					</li>
+				{% endif %}
+				{% if site.authors.royvn.instagram %}
+					<li class="nav-item">
+						<a href="{{ site.authors.royvn.instagram }}" target="_blank" rel="noopener" class="nav-permalink">
+							<span>
+								Instagram
+							</span>
+						</a>
+					</li>
+				{% endif %}
+				{% if site.authors.royvn.linkedin %}
+					<li class="nav-item">
+						<a href="{{ site.authors.royvn.linkedin }}" target="_blank" rel="noopener" class="nav-permalink">
+							<span>
+								Linkedin
+							</span>
+						</a>
+					</li>
+				{% endif %}
+				{% if site.authors.royvn.twitter %}
+					<li class="nav-item">
+						<a href="{{ site.authors.royvn.twitter }}" target="_blank" rel="noopener" class="nav-permalink">
+							<span>
+								Twitter
+							</span>
+						</a>
+					</li>
+				{% endif %}
 			</ul>
 		</div>
 

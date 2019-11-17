@@ -33,7 +33,7 @@
     line-height: 3rem;
 	}
 	margin-bottom: 0;
-  max-width: 30rem;
+  max-width: 40rem;
   font-size: 1.75rem;
   line-height: 2.25rem;
 }
@@ -44,8 +44,9 @@
 		margin: 6rem 0;
 	}
 	&.content {
-		> *:not(section) {
-			@include grid;
+		> *:not(.section) {
+      @include grid;
+      max-width: 40rem;
 		}		
 	}
 }
