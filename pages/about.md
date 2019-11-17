@@ -2,14 +2,14 @@
 layout: page
 permalink: /over/
 title: Over
-subtitle: Designer en developer uit Leidschendam woonachtig in Den Haag
+subtitle: Howdy! Ik ontwerp en ontwikkel graag gebruiksvriendelijke interfaces
 date: 2018-05-01
 image: /uploads/royvn.jpg
 ---
 
 {% include sections/banner.html src="/uploads/vissershaven-16x8.jpg" data_src="/uploads/vissershaven.jpg" alt="Vissershaven" %}
 
-Hoi, ik ben **Roy van Neden**. Hardloper, petrolhead, interaction designer en front-end developer uit Leidschendam woonachtig in Den Haag.
+Hoi, ik ben **Roy van Neden**. Petrolhead, interaction designer en front-end developer uit Leidschendam woonachtig in Den Haag.
 
 ![Roy](/uploads/royvn-500x500.jpg)
 
@@ -63,14 +63,17 @@ De Haagse Hogeschool
 2010 – 2015  
 Den Haag
 
-Voor meer info verwijs ik je graag door naar mijn Linkedin.
+Voor meer info verwijs ik je graag door naar mijn <a href="{{ site.authors.royvn.linkedin }}" target="blank" rel="noopener">Linkedin</a>.
 
-## Vrije tijd
-![Uitkijkpunt Meijendel](/uploads/skyline-scheveningen.jpg)
+## Overig
 
-Niet gek dit stukje achtertuin
+In mijn vrije tijd loop ik graag met mijn parttime hond door de natuur. 
 
-In mijn vrije tijd loop ik graag met mijn parttime hond door de natuur. Klussen, sportief en competitief bezig zijn vind ik ook leuk. Zo ben ik altijd in voor een ⛷ en 🏎 sessie. Op koude regenachtige dagen slinger ik ook graag een goede game 🎮 aan.
+![Hond](/uploads/hond.jpg)
+
+Klussen, sportief en competitief bezig zijn vind ik ook leuk. Zo ben ik altijd in voor een ⛷ en 🏎 sessie. Op koude regenachtige dagen slinger ik ook graag een goede game 🎮 aan.
+
+{% include sections/banner.html src="/uploads/skyline-scheveningen-16x8.jpg" data_src="/uploads/skyline-scheveningen.jpg" alt="Niet gek dit stukje achtertuin bij mij om de hoek 😄" %}
 
 ## Meer lezen?
 Je bent aan het einde van deze pagina gekomen. Maar er is meer. Bekijk mijn recent geplaatste artikelen.
