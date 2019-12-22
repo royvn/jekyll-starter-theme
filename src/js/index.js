@@ -24,9 +24,7 @@ if($('body').hasClass('page--home')) {
 var body = document.querySelector('body');
 
 // MENU TOGGLE
-var toggleNavigation = document.getElementById('hamburger');
-
-toggleNavigation.addEventListener('click', function() {
+document.getElementById('hamburger').addEventListener('click', function() {
 	body.classList.toggle('site-navigation-open');
 });
 
@@ -35,11 +33,37 @@ document.querySelector('.site-mask').addEventListener('click', function(){
 });
 
 // SEARCH TOGGLE
-var search = document.getElementById('magnifying-glass');
-search.addEventListener('click', function() {
+
+var searchInput = document.getElementById('site-search-input');
+var searchData;
+
+document.getElementById('magnifying-glass').addEventListener('click', function() {
 	body.classList.toggle('site-search-open');
-	let searchInput = document.getElementById('site-search-input');
 	searchInput.focus();
+	$.getJSON('/jekyll.json')
+	.done(function(data){
+		console.log('done');
+		searchData = data;
+		console.log(data);
+		console.log('---------');
+		console.log(searchData);
+	});
+});
+
+searchInput.addEventListener('keyup', function(e){
+	var keyword = this.value;
+	console.log(keyword);
+	for(var i = 0; i < searchData.length; i++ ) {
+		console.log(i);
+		searchData[i];
+	}
+
+	var result = searchData.filter(function(item){
+		return item.title == keyword;
+	});
+
+	console.log(result);
+
 });
 
 // HEADER

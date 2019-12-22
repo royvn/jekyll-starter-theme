@@ -1,79 +1,85 @@
 .btn {
-    position: relative;
-    background-color: transparent;
-    border: 1px solid transparent;
-    display: inline-flex;
-    font-size: 0.875rem;
-    line-height: 1.5rem;
-    padding: 0.6875rem 1.5rem;
-    margin: 0;
-    font-family: $headings-font-family;
-    font-weight: 600;
-    border-radius: 0.25rem;
-    transition: all .16s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    overflow: hidden;
-    &:hover, &:focus, &:active {
-        text-decoration: none;
-    }
-    &:hover, &:focus {
-        transform: scale(1.125);
-        color: $black;
-    }
-    &:active {
-        transform: scale(1.0625);
-    }
-    &:before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0,0,0,0.16);
-        transform: translateX(-100%);
-        transition: all .16s ease-in-out;
-    }
-    &--block {
-        display: block;
-        text-align: center;
-    }
-}
-
-.btn--light {
-    background-color: $white;
-    border-color: $white;
-    color: $blue;
-    &:hover {
-        color: darken($blue, 32%);
-    }
-}
-
-.btn--blue {
-    background-color: $blue;
-    border-color: $blue;
-    color: $white;
-    &:hover {
-        background-color: darken($blue, 16%);
-        border-color: darken($blue, 16%);
-        color: $white;
-    }
-}
-
-.btn--effect {
-    &:hover {
-        &:before {
-            transform: translateX(0%);
-        }
-    }
-}
-
-.btn--outline-blue {
-    border-color: $blue;
-    color: $blue;
-    &:hover, &:focus {
-        background-color: $blue;
-        color: $white;
-    }
+	position: relative;
+	background-color: transparent;
+	border: 1px solid transparent;
+	display: inline-flex;
+	font-size: 0.875rem;
+	line-height: 1.5rem;
+	padding: 0.6875rem 1.5rem;
+	margin: 0;
+	font-family: $headings-font-family;
+	font-weight: 600;
+	border-radius: 0.25rem;
+	transition: all .16s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+	overflow: hidden;
+	&:hover, 
+	&:focus, 
+	&:active {
+		text-decoration: none;
+	}
+	&:hover, 
+	&:focus {
+		transform: scale(1.125);
+		color: $black;
+	}
+	&:active {
+		transform: scale(1.0625);
+	}
+	&:before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0,0,0,0.16);
+		transform: translateX(-100%);
+		transition: all .16s ease-in-out;
+	}
+	&--block {
+		display: block;
+		text-align: center;
+	}
+	&.btn--light {
+		background-color: $white;
+		border-color: $white;
+		color: $blue;
+		&:hover {
+			color: darken($blue, 32%);
+		}
+	}
+	&.btn--blue {
+		background-color: $blue;
+		border-color: $blue;
+		color: $white;
+		&:hover {
+			background-color: darken($blue, 16%);
+			border-color: darken($blue, 16%);
+			color: $white;
+		}
+	}
+	&.btn--effect {
+		&:hover {
+			&:before {
+				transform: translateX(0%);
+			}
+		}
+	}
+	&.btn--outline-blue {
+		border-color: $blue;
+		color: $blue;
+		&:hover, 
+		&:focus {
+			background-color: $blue;
+			color: $white;
+		}
+	}
+	&.btn--disabled {
+		cursor: not-allowed;
+		opacity: 0.48;
+		&:hover, &:focus {
+		}
+	}
 }

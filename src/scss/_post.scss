@@ -102,7 +102,9 @@ margin-bottom: 6rem;
 
 
 // cards style grid
-.blog, .archive, .search {
+.blog, 
+.archive, 
+.search {
 	.hentry { 
 		position: relative;
 		border-radius: 0.5rem;
@@ -189,9 +191,6 @@ margin-bottom: 6rem;
 	}
 }
 
-// single post layout
-// .layout.layout--post {
-// }
 .post {		
 	.post-header .grid .row {
 		display: flex;
