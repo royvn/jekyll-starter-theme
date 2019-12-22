@@ -100,7 +100,9 @@
 	margin: 0;
 	a {
 		color: inherit;
-		&:hover, &:focus, &:active {
+		&:hover, 
+		&:focus, 
+		&:active {
 			text-decoration: none;
 		}
 	}

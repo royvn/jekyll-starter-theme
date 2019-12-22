@@ -8,9 +8,10 @@
 	border: none;
 	padding: 0;
 	margin: 0;
-	display: block;
+	display: flex;
 	align-items: center;
 	justify-content: center;
+	display: none;
 	> * {
 		position: absolute;
 		top: 50%;
@@ -43,7 +44,6 @@
 	overflow-y: scroll; 
 	font-family: $headings-font-family;
 	text-align: center;
-	display: none;
 }
 
 .site-search__form {
