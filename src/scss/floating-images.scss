@@ -14,7 +14,7 @@
 	display: grid;
 	grid-template-columns: repeat(12, 1fr);
 	column-gap: 1.5rem;
-	transform: perspective(64px) skewX(-1deg) skewY(0) rotate(0.08deg) rotateX(1deg);
+	transform: perspective(64px) skewX(-0.08deg) skewY(0) rotate(0.08deg) rotateX(0.08deg);
 	div {
 		margin-top: auto;
 		width: 100%;
