@@ -17,3 +17,25 @@
 		margin-bottom: 3rem;
 	}
 }
+
+.closure {
+	color: darken($white, 48%);
+	text-align: center;
+	max-width: 32rem;
+	margin: 0 auto;
+	@include media-breakpoint-up(md){
+		margin: 3rem auto 0 auto;
+
+	}
+	p {
+		margin-bottom: 0;
+	}
+	a {
+		color: $white;
+		&:hover, 
+		&:focus,
+		&:active {
+			text-decoration: none;	
+		}
+	}
+}
