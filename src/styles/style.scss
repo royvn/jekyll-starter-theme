@@ -1,0 +1,42 @@
+@import 'normalize.css/normalize';
+
+// global style 
+body {
+  margin: 0;
+  background-color: #131217;
+  color: #d9d7e0;
+}
+
+.notice {
+  background-color: orange;
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+  text-align: center;
+  a {
+    display: block;
+    color: inherit;
+    padding: 0.25rem 0;
+  }
+}
+
+.header {
+  background-color: lightblue;
+}
+
+.navigation {
+  background-color: red;
+  &--open {
+    background-color: olivedrab;
+  }
+}
+
+.footer {
+  background-color: lemonchiffon;
+}
+
+.menu-link {
+  &.menu-link--active {
+    font-weight: bold;
+  }
+
+}
