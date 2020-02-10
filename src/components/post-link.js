@@ -1,15 +1,16 @@
 import React from "react";
 import { Link } from "gatsby";
+import Img from "gatsby-image";
 
-function Card(props) {
+function PostLink(props) {
 	return (
-		<article className="entry">
-			<div className="entry-image">
+		<article className="post-link">
+			<div className="post-link__image">
 					{props.node.frontmatter.image}
-					{/* <img src={props.node.frontmatter.image.childImageSharp.original.src} srcSet={props.node.frontmatter.image.childImageSharp.fluid.srcSet} alt={props.node.frontmatter.title} /> */}
+					{/* <Img src={props.node.frontmatter.image.childImageSharpsrc} alt={props.node.frontmatter.title} /> */}
 			</div>
-			<div className="entry-content">
-        <h2 className="entry-title">
+			<div className="post-link__content">
+        <h2 className="post-link__title">
           {props.node.frontmatter.title}
         </h2>
         <p className="entry-meta">
@@ -26,4 +27,4 @@ function Card(props) {
 	);
 }
 
-export default Card;
+export default PostLink;

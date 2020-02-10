@@ -3,7 +3,11 @@ module.exports = {
 		siteUrl: `https://royvn.github.io`,
 		title: `Roy van Neden`,
 		description: `Designer & developer.`,
-		author: `Roy van Neden`,
+    author: `Roy van Neden`,
+    authorGithub: `https://github.com/royvn`,
+    authorInstagram: `https://www.instagram.com/royvn/`,
+    authorLinkedin: `https://www.linkedin.com/in/roy-van-neden-10549761/`,
+    authorTwitter: `https://www.twitter.com/@royvn_`
 	},
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -23,6 +27,7 @@ module.exports = {
     },
     `gatsby-transformer-remark`,
     `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-transformer-remark`,
       options: {
@@ -33,14 +38,13 @@ module.exports = {
               // It's important to specify the maxWidth (in pixels) of
               // the content container as this plugin uses this as the
               // base for generating different widths of each image.
-              maxWidth: 590,
+              maxWidth: 640,
             },
           },
         ],
       },
     },
     `gatsby-plugin-sass`,
-    `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {

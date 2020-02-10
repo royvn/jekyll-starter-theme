@@ -10,7 +10,9 @@ class NotFound extends React.Component {
 			<Layout>
 				<SEO title="404: Not found" />
 				<h1>Pagina niet gevonden</h1>
-				<p>De URL bestaat niet... Niet sip zijn, wil je terug naar <Link to="/">Home</Link>?</p>
+				<p>
+					Probeer het nog een keer. Of keer terug naar <Link to="/">home</Link>.
+				</p>
 			</Layout>
 		);
 	}

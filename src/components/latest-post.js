@@ -12,9 +12,11 @@ function LatestPost(props) {
 					{props.node.frontmatter.title}
 				</h3>
 				<div className="latest-post__tags">
-					<span>
-						{props.node.frontmatter.categories}
-					</span>
+					{props.node.frontmatter.tags.map((tag)=>(
+						<span className="tag">
+							{tag}
+						</span>
+					))}
 				</div>
 			</Link>	
 		</article>

@@ -3,16 +3,16 @@ import { graphql } from "gatsby";
 
 import Layout from "../components/layout";
 import SEO from "../components/seo";
-import Card from "../components/card";
+import PostLink from "../components/post-link";
 
 const BlogPage = ({data}) => (
   <Layout>
-    <SEO title="Blog" />
+    <SEO title="Blog" description="Zo nu en dan deel ik op mijn blog dingen die ik interessant vind of geleerd hebt. Kijk gerust rond 🙈."/>
     { console.log(data)}
     <h1>Blog</h1>
-    <div className="posts">
+    <div className="post-links">
       {data.allMarkdownRemark.edges.map(({node}) => (
-        <Card key={node.id} node={node} />
+        <PostLink key={node.id} node={node} />
       ))}
     </div>
   </Layout>

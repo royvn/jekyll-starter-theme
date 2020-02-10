@@ -10,7 +10,7 @@ class Notice extends React.Component {
 	render() {
 		return (
 			<div className="notice">
-        <Link to={ this.props.link } className="notice__item" activeClassName="active">
+        <Link to={ this.props.link } className="notice__item" activeClassName="notice__item--active">
           { this.props.title }
         </Link>
 			</div>

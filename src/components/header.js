@@ -23,27 +23,24 @@ class Header extends React.Component {
 
 	render() {
 		return (
-			<header className="header">
+			<header className="header header--light">
 				<div className="grid">
-					<div className="d-flex align-items-center justify-content-between">
-						<div className="branding">
-							<p className="branding-title">
-								<Link to="/">
-									{this.props.siteTitle}
-								</Link>
-							</p>
-						</div>
-						<div className="d-flex flex-wrap">
-							<button className="hamburger" onClick={this.handleHamburgerClick}>
-								hamburger
-								<span>
-									<span></span>
-									<span></span>			
-									<span></span>
-								</span>
-							</button>
-						</div>
+					<div className="branding">
+						<p className="branding-title">
+							<Link to="/">
+								{this.props.siteTitle}
+							</Link>
+						</p>
 					</div>
+
+					<button onClick={this.handleHamburgerClick} className={`hamburger${this.state.isNavigationToggled ? ' hamburger--open' : ''}`}>
+						<span>
+							<span></span>
+							<span></span>			
+							<span></span>
+						</span>
+					</button>
+
 				</div>
 				<Navigation isNavigationToggled={this.state.isNavigationToggled}/>
 			</header>

@@ -38,7 +38,7 @@ class Hero extends React.Component {
               <h1 className="hero__title">
                   {this.props.title} <span className="t-48">&mdash;</span>
                   <div>
-                      <span className="type"></span> designer
+                    <span className="type"></span> designer
                   </div>
               </h1>
               <p className="hero__paragrap">

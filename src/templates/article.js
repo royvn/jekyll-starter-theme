@@ -1,18 +1,22 @@
 import React from "react";
 import { graphql } from "gatsby";
 import Layout from "../components/layout";
+import SEO from "../components/seo";
+
 // import Img from "gatsby-image";
 
 export default ({ data }) => {
   const post = data.markdownRemark;
   return (
     <Layout>
-      <div>
+      <SEO title={post.frontmatter.title} description={post.excerpt} />
+      <article>
         <h1>
           {post.frontmatter.title}
         </h1>
+        {post.frontmatter.image}
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
-      </div>
+      </article>
     </Layout>
   )
 };
@@ -29,6 +33,7 @@ export const query = graphql`
         tags
         author
       }
+      excerpt(pruneLength: 160)
     }
   }
 `;
