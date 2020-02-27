@@ -3,7 +3,7 @@ slug: /adobe-xd-en-line-height/
 title: Adobe XD en line-height
 date: "2019-04-29"
 description: Als designer werk je met verschillende tools. Hierbij loop je soms tegen dingen aan die je...
-image: /uploads/adobe-xd-en-line-height.jpg
+image: ../uploads/adobe-xd-en-line-height.jpg
 categories: [Design]
 tags: [Adobe]
 author: royvn
@@ -43,11 +43,12 @@ Niet te begrijpen voor een UX/UI design tool
 
 Omdat de line-height en de daaraan verbonden hoogte niet klopt is het toepassen van verticale ruimte en het positioneren van elementen niet eenvoudig meer. De hoogte klopt niet, dus de Y as positie van een aangrenzend component voor de juiste margin of padding ook niet.
 
-<div class="embed-responsive embed-responsive-16by9">
-  <iframe class="embed-responsive-item" src="/public/adobe-xd-line-height-issue.mp4"></iframe>
+<div class="holder holder--16-9">
+  <iframe class="holder__embed" src="../uploads/adobe-xd-line-height-issue.mp4"></iframe>
 </div>
 
-<video controls playsinline src="./public/adobe-xd-line-height-issue.mp4"></video>
+<video controls playsinline src="./public/static/adobe-xd-line-height-issue.mp4"></video>
+
 De hoogte klopt niet op basis van de ingevoerde line-height en regels
 
 ### Overdracht
