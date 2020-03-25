@@ -5,6 +5,8 @@ import Layout from "../components/layout";
 import Hero from "../components/hero";
 import SEO from "../components/seo";
 import LatestPost from "../components/latest-post";
+import Notice from '../components/notice';
+
 
 import image from "../images/hero.jpg";
 
@@ -15,21 +17,32 @@ class IndexPage extends React.Component {
     return (
       <Layout>
         <SEO title="Home"/>
-        <Hero image={image} title="Roy van Neden" type={["front-end", "interaction", "UX", "UI"]} paragraph="Met plezier besteed ik het meeste van mijn tijd aan het ontwerpen, realiseren en verbeteren van digitale producten." />
-        <section className="section dark-mode pb-5">
-          <div className="grid pt-5">
-            <div className="row pt-5 align-items-center">
-              <div className="col-lg-6">
-                <h2 className="headline-title">
-                  Blog
-                </h2>
-                <p className="headline-paragraph">
-                  Zo nu en dan deel ik op mijn blog dingen die ik interessant vind of geleerd hebt. Kijk gerust rond 🙈.
-                </p>
-              </div>
-              <div className="col-lg-6 text-lg-right">
-                <Link to="/over" className="btn btn--light">Alle artikelen</Link>
-              </div>
+        <Notice title="Lees mijn meest laatste post!" link="/blog/" />
+        <Hero image={image} title="Roy van Neden" type={["front-end developer", "Shopify developer", "interaction designer", "UX/UI designer"]} paragraph="Met plezier besteed ik het meeste van mijn tijd aan het ontwerpen, realiseren en verbeteren van digitale producten." />
+        <section className="section">
+          <div className="grid page-width page-spacer align-items-center">
+            <div className="grid__item gcs-xs-1 gce-xs-13 gcs-lg-4 gce-lg-10 text-center">
+              <p className="headline-subtitle">
+                Wat ik doe
+              </p>
+              <h2 className="headline-title">
+                Van concept tot realisatie
+              </h2>
+            </div>
+          </div>    
+          
+        </section>
+
+        <section className="section section--dark-mode">
+          <div className="grid page-width page-spacer align-items-center">
+            <div className="grid__item gcs-xs-1 gce-xs-13 gcs-lg-3 gce-lg-11 text-center">
+              <h2 className="headline-title">
+                Blog
+              </h2>
+              <p className="headline-paragraph">
+                Zo nu en dan deel ik op mijn blog dingen die ik interessant vind of geleerd hebt. Kijk gerust rond 🙈.
+              </p>
+              <Link to="/blog/" className="btn btn--light">Alle artikelen</Link>
             </div>
           </div>    
           <div className="latest-posts">
@@ -38,7 +51,21 @@ class IndexPage extends React.Component {
             ))}
           </div>
         </section>
-        <Link to="/blog/">Go to blog</Link>
+        
+        <section className="section">
+          <div className="grid page-width page-spacer align-items-center">
+            <div className="grid__item gcs-xs-1 gce-xs-13 text-center">
+              <h2 className="headline-title">
+                Een selectie van projecten
+              </h2>
+              <span className="btn btn--blue btn--disabled">Binnenkort online</span>
+            </div>
+          </div>    
+          {/* <div className="floating-projects">
+            <div className="row custom-row">
+            </div>
+          </div> */}
+        </section>
       </Layout>
     );    
   }

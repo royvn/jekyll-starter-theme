@@ -2,9 +2,9 @@ import React from "react";
 
 function PageHeader(props) {
 	return (
-    <header className="page-header">
-			<div className="grid">
-        <div className="grid__item gc-3-8">
+    <div className="section page-header">
+			<div className="page-width page-spacer grid">
+        <div className="grid__item gcs-xs-1 gce-xs-13">
           <h1 className="page-header__title">
             {props.title}
           </h1>
@@ -13,7 +13,7 @@ function PageHeader(props) {
           </h2>
         </div>
 			</div>
-		</header>
+		</div>
 	);
 }
 

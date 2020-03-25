@@ -9,9 +9,9 @@ import React from "react";
 import PropTypes from "prop-types";
 import { useStaticQuery, graphql } from "gatsby";
 
-import Notice from './notice';
 import Header from "./header";
 import Footer from "./footer";
+import Notice from "./notice";
 
 const Layout = ({ children }) => {
 
@@ -27,7 +27,6 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <Notice title="Nieuwe blog: Adobe XD en line-height" link="/contact/" />
       <Header siteTitle={data.site.siteMetadata.title} />
       <main className="main" id="content">
         {children}

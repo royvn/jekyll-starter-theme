@@ -10,9 +10,9 @@ class WidgetList extends React.Component {
   render() {
     return (
       <div className="widget">
-        <h4 className="widget-title">
+        <p className="widget-title">
           {this.props.title}
-        </h4>
+        </p>
         <ul className="widget-list">
           {(this.props.list).map(({node}) => (
             <li key={node.id}>

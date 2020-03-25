@@ -55,7 +55,7 @@ exports.createPages = async ({ graphql, actions }) => {
     }
   `);
   result.data.allMarkdownRemark.edges.forEach(({ node }) => {
-    console.log(node.fields.slug);
+    // console.log(node.fields.slug);
     const slug = node.fields.slug;
     createPage({
       path: slug,
@@ -67,5 +67,5 @@ exports.createPages = async ({ graphql, actions }) => {
       },
     })
   });
-  console.log(JSON.stringify(result, null, 4));
+  // console.log(JSON.stringify(result, null, 4));
 }

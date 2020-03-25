@@ -12,8 +12,8 @@ import CallToAction from "../components/call-to-action";
 const AboutPage = () => (
   <Layout>
     <SEO title="Over" description="Designer &amp; developer in regio Den Haag" />
-    <article>
-
+    <article className="page-content content">
+      
       <PageHeader title="Over" subtitle="Howdy! Ik ontwerp en ontwikkel graag gebruiksvriendelijke interfaces" />
       
       <Banner />
@@ -167,7 +167,7 @@ const AboutPage = () => (
       </Link>
 
     </article>
-    <CallToAction />
+
   </Layout>
 )
 

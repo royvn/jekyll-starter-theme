@@ -11,9 +11,9 @@ class Footer extends React.Component {
 	render() {
 		return (
 			<footer className="footer">
-				<div className="grid">
+				<div className="grid page-width page-spacer">
 					
-					<div className="grid__item">
+					<div className="grid__item gcs-xs-1 gce-xs-13 gcs-md-1 gce-md-4">
 						<div className="widget">
 							<h4 className="widget-title">
 								{this.props.siteTitle}
@@ -21,7 +21,7 @@ class Footer extends React.Component {
 						</div>
 					</div>
 
-					<div className="grid__item">
+					<div className="grid__item gcs-xs-1 gce-xs-13 gcs-md-4 gce-md-7">
 						<WidgetList title="Hoofdmenu" list={
 							[
 								{
@@ -68,54 +68,37 @@ class Footer extends React.Component {
 						} />
 					</div>
 
-					<div className="grid__item">
-						<WidgetList title="Social" list={
-							[
-								{
-									node: {
-										fields: {
-											slug: "/contact/"
-										},
-										frontmatter:{
-											title: "Github"
-										}
-									}
-								},
-								{
-									node: {
-										fields: {
-											slug: "/contact/"
-										},
-										frontmatter:{
-											title: "Instagram"
-										}
-									}
-								},
-								{
-									node: {
-										fields: {
-											slug: "/contact/"
-										},
-										frontmatter:{
-											title: "Linkedin"
-										}
-									}
-								},
-								{
-									node: {
-										fields: {
-											slug: "/contact/"
-										},
-										frontmatter:{
-											title: "Twitter"
-										}
-									}
-								}
-							]
-						} />
+					<div className="grid__item gcs-xs-1 gce-xs-13 gcs-md-7 gce-md-10">
+						<div className="widget">
+							<p className="widget-title">
+								Social
+							</p>
+							<ul className="widget-list">
+								<li className="nav-item">
+									<a href="https://github.com/royvn" target="_blank" rel="noopener noreferrer" className="nav-link">
+										Github
+									</a>
+								</li>
+								<li className="nav-item">
+									<a href="https://www.instagram.com/royvn/" target="_blank" rel="noopener noreferrer" className="nav-link">
+										Instagram
+									</a>
+								</li>
+								<li className="nav-item">
+									<a href="https://www.linkedin.com/in/roy-van-neden-10549761/" target="_blank" rel="noopener noreferrer" className="nav-link">
+										Linkedin
+									</a>
+								</li>
+								<li className="nav-item">
+									<a href="https://twitter.com/royvn_" target="_blank" rel="noopener noreferrer" className="nav-link">
+										Twitter
+									</a>
+								</li>
+							</ul>
+						</div>
 					</div>
 					
-					<div className="grid__item">
+					<div className="grid__item gcs-xs-1 gce-xs-13 gcs-md-10 gce-md-13">
 						<StaticQuery query={graphql`
 							query {
 								allMarkdownRemark(filter: {}, limit: 5) {
@@ -138,9 +121,9 @@ class Footer extends React.Component {
 					</div>
 
 				</div>
-				<div className="grid">
-					<div className="row justify-content-center">
-						<div className="col-lg-12 text-center pb-5">
+				<div className="grid page-width page-spacer">
+					<div className="grid__item gcs-xs-1 gce-xs-13">
+						<p className="license">
 							© 1992 - {new Date().getFullYear()}, Built with
 							{` `}
 							<a href="https://www.gatsbyjs.org" target="_blank" rel="noopener noreferrer">
@@ -156,8 +139,8 @@ class Footer extends React.Component {
 								Github
 							</a>. 
 							{` `}
-							Created in the Hague, the Netherlands.
-						</div>    
+							Created in The Hague, the Netherlands.
+						</p>
 					</div>
 				</div>
 			</footer>

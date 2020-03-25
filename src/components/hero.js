@@ -32,29 +32,27 @@ class Hero extends React.Component {
     };
     return (
       <div className="hero hero--dark-mode" style={heroStyle}>
-        <div className="grid">
-          <div className="row">
-            <div className="col-lg-8 ml-auto mr-auto text-md-center">
-              <h1 className="hero__title">
-                  {this.props.title} <span className="t-48">&mdash;</span>
-                  <div>
-                    <span className="type"></span> designer
-                  </div>
-              </h1>
-              <p className="hero__paragrap">
-                {this.props.paragraph}
-              </p>
-              <Link to="/over" className="btn btn--blue">
-                  Meer over mij
-              </Link>
-            </div>
+        <div className="grid page-width page-spacer">
+          <div className="grid__item gcs-xs-1 gce-xs-13 gcs-lg-3 gce-lg-11 text-center">
+            <h1 className="hero__title">
+              {this.props.title} <span className="t-48">&mdash;</span>
+              <div>
+                <span className="type"></span>
+              </div>
+            </h1>
+            <p className="hero__paragraph">
+              {this.props.paragraph}
+            </p>
+            <Link to="/over" className="btn btn--blue">
+                Meer over mij
+            </Link>
+            {/* <button type="button" className="mouse" onClick={this.handleMouseClick}>
+              <span>
+                Please scroll
+              </span>
+            </button> */}
           </div>
         </div>
-        <button type="button" className="mouse" onClick={this.handleMouseClick}>
-          <span>
-            Please scroll
-          </span>
-        </button>
       </div>
     );
   }

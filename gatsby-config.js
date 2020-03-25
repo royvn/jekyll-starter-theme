@@ -3,11 +3,7 @@ module.exports = {
 		siteUrl: `https://royvn.github.io`,
 		title: `Roy van Neden`,
 		description: `Designer & developer.`,
-    author: `Roy van Neden`,
-    authorGithub: `https://github.com/royvn`,
-    authorInstagram: `https://www.instagram.com/royvn/`,
-    authorLinkedin: `https://www.linkedin.com/in/roy-van-neden-10549761/`,
-    authorTwitter: `https://www.twitter.com/@royvn_`
+    author: `Roy van Neden`
 	},
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -25,9 +21,15 @@ module.exports = {
         path: `${__dirname}/src/images/`,
       },
     },
-    `gatsby-transformer-remark`,
-    `gatsby-transformer-sharp`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `uploads`,
+        path: `${__dirname}/src/uploads/`,
+      },
+    },
     `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
     {
       resolve: `gatsby-transformer-remark`,
       options: {
