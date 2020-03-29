@@ -15,10 +15,11 @@ class Header extends React.Component {
 		}
 		this.handleHamburgerClick = this.handleHamburgerClick.bind(this);
 		this.handleHeaderHighlight = this.handleHeaderHighlight.bind(this);
+		this.handleCloseAnimation = this.handleCloseAnimation.bind(this);
 	}
 
 		
-	handleHeaderHighlight(latestYScrollPosition) {
+	handleHeaderHighlight() {
 		
 		let currentScrollYPosition = window.scrollY;
 
@@ -35,14 +36,18 @@ class Header extends React.Component {
 	}
 
 	componentDidMount() {
-		let latestYScrollPosition = window.scrollY;
 		window.addEventListener('scroll', this.handleHeaderHighlight);
-
 	}
 	
 	handleHamburgerClick() {
 		this.setState({
 			isNavigationToggled: !this.state.isNavigationToggled
+		});
+	}
+	
+	handleCloseAnimation(){
+		this.setState({
+			isNavigationToggled: false
 		});
 	}
 
@@ -51,13 +56,11 @@ class Header extends React.Component {
 			<header className={`header header--fixed ${this.state.isNavigationToggled ? 'navigation--open' : ''} ${this.state.isHighlighted ? 'header--highlighted' : ''}`}>
 				<div className="header__bar">
 					<div className="page-width page-spacer">
-
 						<div className="brand">
 							<Link to="/" className="brand-title">
 								{this.props.siteTitle}
 							</Link>
 						</div>
-
 						<button onClick={this.handleHamburgerClick} className={`hamburger${this.state.isNavigationToggled ? ' hamburger--open' : ''}`}>
 								<span>
 									<span></span>
@@ -65,11 +68,10 @@ class Header extends React.Component {
 									<span></span>
 								</span>
 							</button>
-
 					</div>
 				</div>
 				<Navigation isNavigationToggled={this.state.isNavigationToggled} />
-				<div className="header__mask"></div>
+				<div className="header__mask" onClick={this.handleCloseAnimation}></div>
 			</header>
 		);
 	}  

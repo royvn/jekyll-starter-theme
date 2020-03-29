@@ -48,22 +48,22 @@ class Navigation extends React.Component {
 							</span>
 							<ul className="nav social">
 								<li className="nav-item">
-									<a href="https://github.com/royvn" target="_blank" rel="noopener" className="nav-link">
+									<a href="https://github.com/royvn" target="_blank" rel="noopener noreferrer" className="nav-link">
 										Github
 									</a>
 								</li>
 								<li className="nav-item">
-									<a href="https://www.instagram.com/royvn/" target="_blank" rel="noopener" className="nav-link">
+									<a href="https://www.instagram.com/royvn/" target="_blank" rel="noopener noreferrer" className="nav-link">
 										Instagram
 									</a>
 								</li>
 								<li className="nav-item">
-									<a href="https://www.linkedin.com/in/roy-van-neden-10549761/" target="_blank" rel="noopener" className="nav-link">
+									<a href="https://www.linkedin.com/in/roy-van-neden-10549761/" target="_blank" rel="noopener noreferrer" className="nav-link">
 										Linkedin
 									</a>
 								</li>
 								<li className="nav-item">
-									<a href="https://twitter.com/royvn_" target="_blank" rel="noopener" className="nav-link">
+									<a href="https://twitter.com/royvn_" target="_blank" rel="noopener noreferrer" className="nav-link">
 										Twitter
 									</a>
 								</li>

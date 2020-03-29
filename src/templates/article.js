@@ -13,7 +13,7 @@ export default ({ data }) => {
       <article className="post">
         <header className="post-header">
           <div className="page-width page-spacer grid align-items-center">
-            <div className="post-header__content gcs-xs-1 gce-xs-13 gcs-lg-1 gce-lg-6">
+            <div className="post-header__content gcs-xs-1 gce-xs-13 gcs-lg-1 gce-lg-5">
               <Link to="/blog" className="back">
                 Terug naar overzicht
               </Link>

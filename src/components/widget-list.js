@@ -15,8 +15,8 @@ class WidgetList extends React.Component {
         </p>
         <ul className="widget-list">
           {(this.props.list).map(({node}) => (
-            <li key={node.id}>
-              <Link to={node.fields.slug}>
+            <li key={node.id} className="widget-list-item">
+              <Link to={node.fields.slug} className="widget-list-link" activeClassName="widget-list-link--active">
                 {node.frontmatter.title}
               </Link>
             </li>

@@ -6,7 +6,7 @@ import Hero from "../components/hero";
 import SEO from "../components/seo";
 import LatestPost from "../components/latest-post";
 import Notice from '../components/notice';
-
+import TabsWithImage from '../components/tabs-with-image';
 
 import image from "../images/hero.jpg";
 
@@ -16,10 +16,14 @@ class IndexPage extends React.Component {
     const { data } = this.props;
     return (
       <Layout>
+        
         <SEO title="Home"/>
-        <Notice title="Lees mijn meest laatste post!" link="/blog/" />
+        
+        {/* <Notice title="Lees mijn meest laatste post!" link="/blog/" /> */}
+
         <Hero image={image} title="Roy van Neden" type={["front-end developer", "Shopify developer", "interaction designer", "UX/UI designer"]} paragraph="Met plezier besteed ik het meeste van mijn tijd aan het ontwerpen, realiseren en verbeteren van digitale producten." />
-        <section className="section">
+
+        <section className="toolkit">
           <div className="grid page-width page-spacer align-items-center">
             <div className="grid__item gcs-xs-1 gce-xs-13 gcs-lg-4 gce-lg-10 text-center">
               <p className="headline-subtitle">
@@ -30,17 +34,17 @@ class IndexPage extends React.Component {
               </h2>
             </div>
           </div>    
-          
+          <TabsWithImage />
         </section>
 
-        <section className="section section--dark-mode">
+        <section className="toolkit toolkit--dark-mode">
           <div className="grid page-width page-spacer align-items-center">
-            <div className="grid__item gcs-xs-1 gce-xs-13 gcs-lg-3 gce-lg-11 text-center">
+            <div className="grid__item gcs-xs-1 gce-xs-13 gcs-lg-4 gce-lg-10 text-center">
               <h2 className="headline-title">
                 Blog
               </h2>
               <p className="headline-paragraph">
-                Zo nu en dan deel ik op mijn blog dingen die ik interessant vind of geleerd hebt. Kijk gerust rond 🙈.
+                Zo nu en dan deel ik op mijn blog dingen die ik interessant vind of geleerd hebt. Kijk gerust rond <span role="img">🙈</span>.
               </p>
               <Link to="/blog/" className="btn btn--light">Alle artikelen</Link>
             </div>
@@ -52,7 +56,7 @@ class IndexPage extends React.Component {
           </div>
         </section>
         
-        <section className="section">
+        <section className="toolkit">
           <div className="grid page-width page-spacer align-items-center">
             <div className="grid__item gcs-xs-1 gce-xs-13 text-center">
               <h2 className="headline-title">
@@ -61,11 +65,27 @@ class IndexPage extends React.Component {
               <span className="btn btn--blue btn--disabled">Binnenkort online</span>
             </div>
           </div>    
-          {/* <div className="floating-projects">
-            <div className="row custom-row">
+          <div className="floating-projects">
+          <div className="row custom-row">
+            <div>
+              <img src="/uploads/project-1.jpg" data-src="/uploads/project-1.jpg" alt="Project screenshot 1" className="img-fluid w-100" />
             </div>
-          </div> */}
+            <div>
+              <img src="/uploads/project-2.jpg" data-src="/uploads/project-2.jpg" alt="Project screenshot 2" className="img-fluid w-100" />
+            </div>
+            <div>
+              <img src="/uploads/project-3.jpg" data-src="/uploads/project-3.jpg" alt="Project screenshot 3" className="img-fluid w-100" />
+            </div>
+            <div>
+              <img src="/uploads/project-4.jpg" data-src="/uploads/project-4.jpg" alt="Project screenshot 4" className="img-fluid w-100" />
+            </div>
+            <div>
+              <img src="/uploads/project-1.jpg" data-src="/uploads/project-1.jpg" alt="Project screenshot 5" className="img-fluid w-100" />
+            </div>
+          </div>
+          </div>
         </section>
+
       </Layout>
     );    
   }
@@ -75,7 +95,7 @@ class IndexPage extends React.Component {
 export default IndexPage;
 
 export const query = graphql`
-	query MyLatestPosts {
+	{
 		allMarkdownRemark(filter: {fileAbsolutePath: {regex: "content/posts/"}}, limit: 10, sort: {order: DESC, fields: frontmatter___date}) {
 			edges {
 				node {

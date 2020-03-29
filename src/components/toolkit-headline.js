@@ -1,10 +1,10 @@
 import React from "react";
 
-function PageHeader(props) {
+function ToolkitHeadline(props) {
 	return (
-    <div className="section page-header">
+    <div className="toolkit page-header">
 			<div className="page-width page-spacer grid">
-        <div className="grid__item gcs-xs-1 gce-xs-13">
+        <div className="grid__item gcs-xs-1 gce-xs-13 gcs-md-1 gce-md-8">
           <h1 className="page-header__title">
             {props.title}
           </h1>
@@ -17,4 +17,4 @@ function PageHeader(props) {
 	);
 }
 
-export default PageHeader;
+export default ToolkitHeadline;

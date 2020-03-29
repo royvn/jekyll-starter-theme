@@ -46,11 +46,6 @@ class Hero extends React.Component {
             <Link to="/over" className="btn btn--blue">
                 Meer over mij
             </Link>
-            {/* <button type="button" className="mouse" onClick={this.handleMouseClick}>
-              <span>
-                Please scroll
-              </span>
-            </button> */}
           </div>
         </div>
       </div>
