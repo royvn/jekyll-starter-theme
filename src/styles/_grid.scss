@@ -1,0 +1,39 @@
+.page-width {	
+	max-width: rem(1120);
+	margin: 0 auto;
+	@include media-breakpoint-up(md) {
+		width: 96%;
+	}
+}
+
+.page-spacer {
+	padding: 0 ($grid-spacer / 2);
+	@include media-breakpoint-up(lg) {
+		padding: 0 $grid-spacer;
+	}
+}
+
+.grid {
+	display: grid;
+	grid-template-columns: repeat(12, 1fr);
+	.grid__item {
+		width: 100%;
+	}
+}
+
+@each $name, $width in $grid-breakpoints {
+	@include media-breakpoint-up(#{$name}) {
+		@for $i from 1 through 13 {
+			.gcs-#{$name}-#{$i} {
+				grid-column-start: #{$i};
+			}
+			.gce-#{$name}-#{$i} {
+				grid-column-end: #{$i};
+			}
+		}
+	}
+}
+
+.align-items-center {
+	align-items: center;
+}

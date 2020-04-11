@@ -1,0 +1,33 @@
+$black: #131217;
+$green: #348F50;
+$red:   #D0021B;
+$white: #FDFDFD;
+$silver: #d9d7e0;
+$blue:	#56B4D3;
+
+$default-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+$default-font-size: 1rem;
+
+$h1-font-size: $default-font-size * 2.5;
+$h2-font-size: $default-font-size * 2;
+$h3-font-size: $default-font-size * 1.5;
+$h4-font-size: $default-font-size * 1.25;
+$h5-font-size: $default-font-size * 1;
+$h6-font-size: $default-font-size * 0.75;
+
+$headings-font-family: "Poppins", sans-serif;
+$headings-line-height: 1.25;
+$headings-font-weight: 600;
+
+$body-background: $white;
+$body-color: $black;
+
+$grid-spacer: 3rem;
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+);

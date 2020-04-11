@@ -1,0 +1,40 @@
+.widget-title {
+	display: block;
+	font-size: 1rem;
+	line-height: 1.5rem;
+	font-family: $headings-font-family;
+  line-height: $headings-line-height;
+  font-weight: $headings-font-weight;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+ul.widget-list {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	.widget-list-item {
+		margin-bottom: 0.5rem;
+		&:last-child {
+			margin-bottom: 0;
+		}
+		.widget-list-link {
+			.footer & {
+				color: inherit;
+				opacity: 0.64;
+			}
+			&:hover, &:focus, &:active {
+				text-decoration: none;
+			}
+			&:hover, &:focus {
+				opacity: 1;
+			}
+			&:active {
+				opacity: 0.48;
+			}
+			&--active {
+				opacity: 1;
+			}
+		}
+	}
+}

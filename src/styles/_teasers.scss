@@ -1,0 +1,27 @@
+.project-preview {
+	.project-preview__permalink {
+		display: block;
+		color: inherit;
+		&:hover, &:focus {
+			text-decoration: none;
+			color: $blue;
+		}
+	}	
+	.project-preview__content {
+		> *:last-child {
+			margin-bottom: 0;
+		}
+	}
+	.project-preview__title {
+		font-size: 1.5rem; 
+		line-height: 2rem;
+	}
+	.project-preview__excerpt {
+		color: lighten($black, 24%);
+	}
+	.project-preview__thumbnail {
+		width: 100%;
+		height: auto;
+		margin-bottom: 1.5rem;
+	}
+}
