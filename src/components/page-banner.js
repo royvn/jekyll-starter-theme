@@ -3,7 +3,7 @@ import Img from "gatsby-image";
 
 function Banner(props) {
 	return (
-		<div className="section">
+		<div className="toolkit">
 			<div className="banner">
 				
 			</div>

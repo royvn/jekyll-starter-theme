@@ -9,6 +9,10 @@ import Notice from '../components/notice';
 import TabsWithImage from '../components/tabs-with-image';
 
 import image from "../images/hero.jpg";
+import imageFloat1 from "../images/project-1.jpg";
+import imageFloat2 from "../images/project-2.jpg";
+import imageFloat3 from "../images/project-3.jpg";
+import imageFloat4 from "../images/project-4.jpg";
 
 class IndexPage extends React.Component {
 
@@ -23,7 +27,7 @@ class IndexPage extends React.Component {
 
         <Hero image={image} title="Roy van Neden" type={["front-end developer", "Shopify developer", "interaction designer", "UX/UI designer"]} paragraph="Met plezier besteed ik het meeste van mijn tijd aan het ontwerpen, realiseren en verbeteren van digitale producten." />
 
-        <section className="toolkit">
+        {/* <section className="toolkit">
           <div className="grid page-width page-spacer align-items-center">
             <div className="grid__item gcs-xs-1 gce-xs-13 gcs-lg-4 gce-lg-10 text-center">
               <p className="headline-subtitle">
@@ -35,7 +39,7 @@ class IndexPage extends React.Component {
             </div>
           </div>    
           <TabsWithImage />
-        </section>
+        </section> */}
 
         <section className="toolkit toolkit--dark-mode">
           <div className="grid page-width page-spacer align-items-center">
@@ -68,19 +72,19 @@ class IndexPage extends React.Component {
           <div className="floating-projects">
           <div className="row custom-row">
             <div>
-              <img src="/uploads/project-1.jpg" data-src="/uploads/project-1.jpg" alt="Project screenshot 1" className="img-fluid w-100" />
+              <img src={imageFloat1} alt="Project screenshot 1" className="img-fluid w-100" />
             </div>
             <div>
-              <img src="/uploads/project-2.jpg" data-src="/uploads/project-2.jpg" alt="Project screenshot 2" className="img-fluid w-100" />
+              <img src={imageFloat2} alt="Project screenshot 2" className="img-fluid w-100" />
             </div>
             <div>
-              <img src="/uploads/project-3.jpg" data-src="/uploads/project-3.jpg" alt="Project screenshot 3" className="img-fluid w-100" />
+              <img src={imageFloat3} alt="Project screenshot 3" className="img-fluid w-100" />
             </div>
             <div>
-              <img src="/uploads/project-4.jpg" data-src="/uploads/project-4.jpg" alt="Project screenshot 4" className="img-fluid w-100" />
+              <img src={imageFloat4} alt="Project screenshot 4" className="img-fluid w-100" />
             </div>
             <div>
-              <img src="/uploads/project-1.jpg" data-src="/uploads/project-1.jpg" alt="Project screenshot 5" className="img-fluid w-100" />
+              <img src={imageFloat1} alt="Project screenshot 5" className="img-fluid w-100" />
             </div>
           </div>
           </div>
