@@ -24,8 +24,8 @@ class Navigation extends React.Component {
 									</Link>
 								</li>
 								<li className="nav-item">
-									<Link to="/about/" className="nav-link" activeClassName="nav-link--active">
-										Over
+									<Link to="/info/" className="nav-link" activeClassName="nav-link--active">
+										Info
 									</Link>
 								</li>
 								<li className="nav-item">

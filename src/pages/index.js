@@ -1,12 +1,12 @@
 import React from "react";
 import { Link, graphql } from "gatsby";
 
-import Layout from "../components/layout";
-import Hero from "../components/hero";
-import SEO from "../components/seo";
-import LatestPost from "../components/latest-post";
-import Notice from '../components/notice';
-import TabsWithImage from '../components/tabs-with-image';
+import Layout from "../components/Layout";
+import Hero from "../components/Hero";
+import SEO from "../components/Seo";
+import LatestPost from "../components/LatestPost";
+import Notice from '../components/Notice';
+import TabsWithImage from '../components/Tabs';
 
 import image from "../images/hero.jpg";
 import imageFloat1 from "../images/project-1.jpg";
@@ -23,7 +23,7 @@ class IndexPage extends React.Component {
         
         <SEO title="Home"/>
         
-        {/* <Notice title="Lees mijn meest laatste post!" link="/blog/" /> */}
+        <Notice title="Website is momenteel in ontwikkeling!" link="/blog/" />
 
         <Hero image={image} title="Roy van Neden" type={["front-end developer", "Shopify developer", "interaction designer", "UX/UI designer"]} paragraph="Met plezier besteed ik het meeste van mijn tijd aan het ontwerpen, realiseren en verbeteren van digitale producten." />
 

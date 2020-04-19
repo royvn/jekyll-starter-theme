@@ -1,6 +1,7 @@
 import React from "react";
 import { Link, StaticQuery, graphql } from "gatsby";
-import WidgetList from "./widget-list";
+
+import WidgetList from "./WidgetList";
 
 class Footer extends React.Component {
 
@@ -49,8 +50,8 @@ class Footer extends React.Component {
 											</Link>
 										</li>
 										<li className="widget-list-item">
-											<Link to="/about/" className="widget-list-link" activeClassName="widget-list-link--active">
-												Over
+											<Link to="/info/" className="widget-list-link" activeClassName="widget-list-link--active">
+												Info
 											</Link>
 										</li>
 										<li className="widget-list-item">
@@ -102,23 +103,23 @@ class Footer extends React.Component {
 						<div className="grid page-width page-spacer">
 							<div className="grid__item gcs-xs-1 gce-xs-13">
 								<p className="license">
-								© 1992 - {new Date().getFullYear()}, Built with
-								{` `}
-								<a href="https://www.gatsbyjs.org" target="_blank" rel="noopener noreferrer">
-								Gatsby
-								</a> and {` `} 
-								<a href="https://reactjs.org/" target="_blank" rel="noopener noreferrer">
-								React
-								</a>
-								.
-								Hosted on 
-								{` `}
-								<a href="https://github.com/royvn/royvn.github.io" target="_blank" rel="noopener noreferrer">
-								Github
-								</a>. 
-								{` `}
-								Created in The Hague, the Netherlands.
-							</p>
+									© 1992 - {new Date().getFullYear()}, Built with
+									{` `}
+									<a href="https://www.gatsbyjs.org" target="_blank" rel="noopener noreferrer">
+									Gatsby
+									</a> and {` `} 
+									<a href="https://reactjs.org/" target="_blank" rel="noopener noreferrer">
+									React
+									</a>
+									.
+									Hosted on 
+									{` `}
+									<a href="https://github.com/royvn/royvn.github.io" target="_blank" rel="noopener noreferrer">
+									Github
+									</a>. 
+									{` `}
+									Created in The Hague, the Netherlands.
+								</p>
 							</div>
 						</div>
 					</footer>

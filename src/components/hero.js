@@ -28,7 +28,7 @@ class Hero extends React.Component {
 
   render() {
     const heroStyle ={
-        backgroundImage: 'url(' + this.props.image +')'
+      backgroundImage: 'url(' + this.props.image +')'
     };
     return (
       <div className="hero hero--dark-mode" style={heroStyle}>
@@ -43,7 +43,7 @@ class Hero extends React.Component {
             <p className="hero__paragraph">
               {this.props.paragraph}
             </p>
-            <Link to="/over" className="btn btn--blue">
+            <Link to="/info/" className="btn btn--blue">
                 Meer over mij
             </Link>
           </div>

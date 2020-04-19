@@ -2,16 +2,16 @@ import React from "react";
 import { Link, graphql, StaticQuery } from "gatsby";
 import Img from "gatsby-image";
 
-import Layout from "../components/layout";
-import SEO from "../components/seo";
-import ToolkitHeadline from "../components/toolkit-headline";
-import Banner from "../components/page-banner";
-import WidgetList from "../components/widget-list";
-import CallToAction from "../components/call-to-action";
+import Layout from "../components/Layout";
+import SEO from "../components/Seo";
+import ToolkitHeadline from "../components/ToolkitHeadline";
+import Banner from "../components/ToolkitBanner";
+import WidgetList from "../components/WidgetList";
+import CallToAction from "../components/CallToAction";
 
 const AboutPage = () => (
   <Layout>
-    <SEO title="Over" description="Designer &amp; developer in regio Den Haag" />
+    <SEO title="Info" description="Designer &amp; developer in regio Den Haag" />
     <StaticQuery query={graphql`
       query {
         allMarkdownRemark(filter: {}, limit: 5) {
@@ -27,7 +27,15 @@ const AboutPage = () => (
             }
           }
         }
-        file(relativePath: {eq: "royvn.jpg"}) {
+        image1: file(relativePath: {eq: "vissershaven.jpg"}) {
+          id
+          childImageSharp {
+            fluid(maxWidth: 1200, quality: 100) {
+              ...GatsbyImageSharpFluid_withWebp
+            }
+          }
+        }
+        image2: file(relativePath: {eq: "royvn.jpg"}) {
           id
           childImageSharp {
             fluid(maxWidth: 300, quality: 100) {
@@ -39,11 +47,11 @@ const AboutPage = () => (
       `} render={data => (
         <article className="page-content content">
           <ToolkitHeadline title="Over" subtitle="Hi! Ik ontwerp en ontwikkel graag gebruiksvriendelijke interfaces" />
-          <Banner />
+          <Banner image={data.image1.childImageSharp.fluid}/>
           <p>
             Hoi, ik ben <b>Roy van Neden</b>. Petrolhead, interaction designer en front-end developer uit Leidschendam woonachtig in Den Haag.
           </p>
-          <Img fluid={data.file.childImageSharp.fluid} alt="Dit ben ik" style={{maxWidth: 300}} />
+          <Img fluid={data.image2.childImageSharp.fluid} alt="Dit ben ik" style={{maxWidth: 300}} />
           <p>
             Dit ben ik.
           </p>

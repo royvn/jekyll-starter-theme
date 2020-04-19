@@ -23,7 +23,6 @@ class TabsWithImage extends React.Component {
 		return (
 			<div className="grid page-width page-spacer align-items-center">
         <div className="grid__item gcs-xs-1 gce-xs-13 gcs-lg-1 gce-lg-6">
-          {this.state.activeTab}
           <ul className="nav presentation-tab" id="tab">
             <li>
               <a href="#tab-1-target" id="tab-1" onClick={this.handleTab}>

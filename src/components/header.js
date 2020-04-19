@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "gatsby";
 // import PropTypes from "prop-types";
 
-import Navigation from "./navigation";
+import Navigation from "./Navigation";
 
 class Header extends React.Component {
 	
@@ -17,7 +17,6 @@ class Header extends React.Component {
 		this.handleHeaderHighlight = this.handleHeaderHighlight.bind(this);
 		this.handleCloseAnimation = this.handleCloseAnimation.bind(this);
 	}
-
 		
 	handleHeaderHighlight() {
 		
