@@ -16,6 +16,9 @@
 .banner {
   display: block;
   background-color: gray;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
   color: $white;
   position: relative;
   display: flex;

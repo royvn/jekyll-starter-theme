@@ -1,9 +1,9 @@
 .notice {
   position: fixed;
+  z-index: 9;
   bottom: 0;
   left: 0;
   right: 0;
-  z-index: 1;
   font-size: rem(14);
   line-height: rem(24);
   text-align: center;
