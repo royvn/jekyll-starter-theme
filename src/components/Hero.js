@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "gatsby";
 import Typed from "typed.js";
 
-// import css from "./Hero.module.scss";
+// import css from "./hero.module.scss";
 
 class Hero extends React.Component {
 

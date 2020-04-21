@@ -9,10 +9,7 @@ class NotFound extends React.Component {
 		return (
 			<Layout>
 				<SEO title="404, pagina niet gevonden" />
-				<h1>Pagina niet gevonden</h1>
-				<p>
-					Probeer het nog een keer. Of keer terug naar <Link to="/">home</Link>.
-				</p>
+				<ToolkitHeadline title="Pagina niet gevonden" subtitle="Probeer het nog een keer." />
 			</Layout>
 		);
 	}
