@@ -7,6 +7,7 @@ import SEO from "../components/Seo";
 
 export default ({ data }) => {
   const post = data.markdownRemark;
+
   return (
     <Layout>
       <SEO title={post.frontmatter.title} description={post.excerpt} />
@@ -21,7 +22,7 @@ export default ({ data }) => {
                 {post.frontmatter.title}
               </h1>
               <p className="post-meta">
-                Geplaatst op {post.frontmatter.date} in {post.frontmatter.categories}
+                Geplaatst op {post.frontmatter.date} in  {post.frontmatter.categories}
               </p>
             </div>
             <div className="post-header__image gcs-xs-1 gce-xs-13 gcs-lg-6 gce-lg-13">

@@ -2,8 +2,8 @@
 	display: block;
 	hyphens: auto;
 	word-wrap: break-word;
-	font-size: 1.125rem;
-	line-height: 2rem;
+	font-size: rem(16);
+	line-height: rem(24);
 	> *:first-child {
 		margin-top: 0;
 	}	
