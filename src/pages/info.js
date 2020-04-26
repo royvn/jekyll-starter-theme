@@ -46,7 +46,7 @@ const AboutPage = () => (
       }
       `} render={data => (
         <article className="page-content content">
-          <ToolkitHeadline title="Over" subtitle="Hi! Ik ontwerp en ontwikkel graag gebruiksvriendelijke interfaces" />
+          <ToolkitHeadline title="Info" subtitle="Design, Front-end development &amp; Shopify." />
           <Banner image={data.image1.childImageSharp.fluid}/>
           <p>
             Hoi, ik ben <b>Roy van Neden</b>. Petrolhead, interaction designer en front-end developer uit Leidschendam woonachtig in Den Haag.

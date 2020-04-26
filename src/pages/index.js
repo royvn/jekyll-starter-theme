@@ -21,11 +21,8 @@ class IndexPage extends React.Component {
     return (
       <Layout>
         
-        <SEO title="Home"/>
-        
-        <Notice title="Website is momenteel in ontwikkeling!" link="/blog/" />
-
-        <Hero image={image} title="Roy van Neden" type={["front-end developer", "Shopify developer", "interaction designer", "UX/UI designer"]} paragraph="Met plezier besteed ik het meeste van mijn tijd aan het ontwerpen, realiseren en verbeteren van digitale producten." />
+        <SEO title="Home" description="Roy van Neden - Front-end developer, Shopify developer &amp; UX/UI designer in regio Den Haag"/>
+        <Hero image={image} title="Roy van Neden" type={["front-end developer", "Shopify developer", "UX/UI designer"]} paragraph="Met plezier besteed ik mijn tijd aan het ontwerpen, realiseren en verbeteren van digitale producten." />
 
         {/* <section className="toolkit">
           <div className="grid page-width page-spacer align-items-center">
