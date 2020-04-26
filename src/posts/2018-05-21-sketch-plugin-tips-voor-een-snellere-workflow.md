@@ -23,7 +23,7 @@ Met de combinatie `CMD` + `'` en tab voer je acties uit zoals run, goto, insert,
 
 De plugin Sketch Relabel Button doet wat de naam al aangeeft. Met de toetsencombinatie `CMD` + `J` pas je gemakkelijk het label van een button aan. Na bewerking is bijvoorbeeld de padding van je button automatisch aangepast. Bespaart bij meerdere iteraties een hoop tijd!
 
-<video controls src="../uploads/sketch-relabel-button-plugin-voorbeeld.mp4"></video>
+<video controls playsinline src="/sketch-measure-plugin-voorbeeld.mp4"></video>
 
 [Download Sketch Relabel Button](https://github.com/kenmoore/sketch-relabel-button)
 
@@ -31,7 +31,7 @@ De plugin Sketch Relabel Button doet wat de naam al aangeeft. Met de toetsencomb
 
 Om een design te vertalen naar het ontwikkelteam is het nodig om afmetingen en meer duidelijk te maken. Mocht je niet gebruik kunnen maken van tools zoals bijvoorbeeld [Gallery](https://material.io/tools/gallery/) van Google, die dit automatisch voor je doet, dan is Sketch Measure een goede optie. Via het plugin menu kan je verschillende richtlijnen maken waarbij jij en anderen specificaties kunnen aflezen.
 
-<video controls src="../uploads/sketch-measure-plugin-voorbeeld.mp4"></video>
+<video controls playsinline src="/sketch-measure-plugin-voorbeeld.mp4"></video>
 
 [Download Sketch Measure](http://utom.design/measure/)
 
@@ -49,7 +49,7 @@ Klaar met een ontwerp? Hoe ziet je ontwerp er voor kleurenblinden uit? Sketch he
 
 Craft bevat meerdere handige tools van [InVision](https://www.invisionapp.com/craft) in één plugin. Zo is het mogelijk om delen van je design te dupliceren/beheren. Ook kan je willekeurige foto’s en verschillende soorten teksten genereren.
 
-<video controls src="../uploads/sketch-craft-plugin-voorbeeld.mp4"></video>
+<video controls playsinline src="/sketch-craft-plugin-voorbeeld.mp4"></video>
 
 [Download Craft](https://www.invisionapp.com/craft)
 
