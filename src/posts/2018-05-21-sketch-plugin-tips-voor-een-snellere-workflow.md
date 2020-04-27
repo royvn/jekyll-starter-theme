@@ -23,7 +23,7 @@ Met de combinatie `CMD` + `'` en tab voer je acties uit zoals run, goto, insert,
 
 De plugin Sketch Relabel Button doet wat de naam al aangeeft. Met de toetsencombinatie `CMD` + `J` pas je gemakkelijk het label van een button aan. Na bewerking is bijvoorbeeld de padding van je button automatisch aangepast. Bespaart bij meerdere iteraties een hoop tijd!
 
-<video controls playsinline src="/sketch-measure-plugin-voorbeeld.mp4"></video>
+<video controls playsinline src="/sketch-relabel-button-plugin-voorbeeld.mp4"></video>
 
 [Download Sketch Relabel Button](https://github.com/kenmoore/sketch-relabel-button)
 
