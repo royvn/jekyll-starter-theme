@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-		siteUrl: `https://royvn.github.io`,
+		siteUrl: `https://roy.vanneden.nl`,
 		title: `Roy van Neden`,
 		description: `Designer & developer.`,
     author: `Roy van Neden`
@@ -68,7 +68,8 @@ module.exports = {
         respectDNT: true,
         defer: true
       }
-    }
+    },
+    `gatsby-plugin-sitemap`
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
