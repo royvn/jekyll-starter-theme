@@ -5,7 +5,7 @@ description: Voor het uploaden van je foto’s naar Instagram heb je normaal alt
 date: 2018-01-08
 image: ../uploads/instagram-0.jpg
 categories: [Notities]
-tags: [Social]
+tags: [Instagram]
 author: royvn
 ---
 

@@ -5,7 +5,7 @@ description: Stukken code zijn beter beheersbaar in kleinere stukken, dit geldt 
 date: 2018-11-24
 image: ../uploads/het-verschil-tussen-require-en-import.jpg
 categories: [Development]
-tags: [JS]
+tags: [Javascript]
 author: royvn
 ---
 
