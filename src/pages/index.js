@@ -3,16 +3,13 @@ import { Link, graphql } from "gatsby";
 
 import Layout from "../components/Layout";
 import Hero from "../components/Hero";
+import Intro from "../components/Intro";
+
 import SEO from "../components/Seo";
 import LatestPost from "../components/LatestPost";
-import Notice from '../components/Notice';
+
 import TabsWithImage from '../components/Tabs';
 
-import image from "../images/hero.jpg";
-import imageFloat1 from "../images/project-1.jpg";
-import imageFloat2 from "../images/project-2.jpg";
-import imageFloat3 from "../images/project-3.jpg";
-import imageFloat4 from "../images/project-4.jpg";
 
 class IndexPage extends React.Component {
 
@@ -20,25 +17,10 @@ class IndexPage extends React.Component {
     const { data } = this.props;
     return (
       <Layout>
-        
         <SEO title="Home" description="Roy van Neden - Front-end developer, Shopify developer &amp; UX/UI designer in regio Den Haag"/>
-        <Hero image={image} title="Roy van Neden" type={["front-end developer", "Shopify developer", "UX/UI designer"]} paragraph="Met plezier besteed ik mijn tijd aan het ontwerpen, realiseren en verbeteren van digitale producten." />
+        <Intro image={data.image.childImageSharp.fluid} label="Intro" title="" emoji="👋" paragraph="Front-end developer, Shopify theme developer, UX/UI designer &amp; meer."/>
 
-        {/* <section className="toolkit">
-          <div className="grid page-width page-spacer align-items-center">
-            <div className="grid__item gcs-xs-1 gce-xs-13 gcs-lg-4 gce-lg-10 text-center">
-              <p className="headline-subtitle">
-                Wat ik doe
-              </p>
-              <h2 className="headline-title">
-                Van concept tot realisatie
-              </h2>
-            </div>
-          </div>    
-          <TabsWithImage />
-        </section> */}
-
-        <section className="toolkit toolkit--dark-mode">
+        <div className="toolkit">
           <div className="grid page-width page-spacer align-items-center">
             <div className="grid__item gcs-xs-1 gce-xs-13 gcs-lg-4 gce-lg-10 text-center">
               <h2 className="headline-title">
@@ -55,37 +37,7 @@ class IndexPage extends React.Component {
               <LatestPost key={node.id} node={node} />
             ))}
           </div>
-        </section>
-        
-        <section className="toolkit">
-          <div className="grid page-width page-spacer align-items-center">
-            <div className="grid__item gcs-xs-1 gce-xs-13 text-center">
-              <h2 className="headline-title">
-                Een selectie van projecten
-              </h2>
-              <span className="btn btn--blue btn--disabled">Binnenkort online</span>
-            </div>
-          </div>    
-          <div className="floating-projects">
-          <div className="row custom-row">
-            <div>
-              <img src={imageFloat1} alt="Project screenshot 1" className="img-fluid w-100" />
-            </div>
-            <div>
-              <img src={imageFloat2} alt="Project screenshot 2" className="img-fluid w-100" />
-            </div>
-            <div>
-              <img src={imageFloat3} alt="Project screenshot 3" className="img-fluid w-100" />
-            </div>
-            <div>
-              <img src={imageFloat4} alt="Project screenshot 4" className="img-fluid w-100" />
-            </div>
-            <div>
-              <img src={imageFloat1} alt="Project screenshot 5" className="img-fluid w-100" />
-            </div>
-          </div>
-          </div>
-        </section>
+        </div>
 
       </Layout>
     );    
@@ -114,6 +66,14 @@ export const query = graphql`
 					}
 				}
 			}
-		}
+    }
+    image: file(relativePath: {eq: "royvn.jpg"}) {
+      id
+      childImageSharp {
+        fluid(maxWidth: 1000, quality: 100) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
 	}
 `;

@@ -19,7 +19,7 @@ function FeaturedPost(props) {
 					<p>
 						{props.node.excerpt}
 					</p>
-					<span to={props.node.fields.slug} className="btn btn--block btn--outline-blue">
+					<span to={props.node.fields.slug} className="btn btn--block btn--outline-primary">
 						Lees verder
 					</span>
 					</div>

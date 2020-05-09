@@ -30,7 +30,7 @@ class Footer extends React.Component {
 				}
 				`} render={data => (
 					<footer className="footer">
-						<div className="grid page-width page-spacer">
+						<div className="footer__widgets grid page-width page-spacer">
 							<div className="grid__item gcs-xs-1 gce-xs-13 gcs-md-1 gce-md-4">
 								<div className="widget">
 									<p className="widget-title">
@@ -100,26 +100,28 @@ class Footer extends React.Component {
 								<WidgetList title="Recent van blog" list={data.allMarkdownRemark.edges} />
 							</div>
 						</div>
-						<div className="grid page-width page-spacer">
-							<div className="grid__item gcs-xs-1 gce-xs-13">
-								<p className="license">
-									© 1992 - {new Date().getFullYear()}, Built with
-									{` `}
-									<a href="https://www.gatsbyjs.org" target="_blank" rel="noopener noreferrer">
-									Gatsby
-									</a> and {` `} 
-									<a href="https://reactjs.org/" target="_blank" rel="noopener noreferrer">
-									React
-									</a>
-									.
-									Hosted on 
-									{` `}
-									<a href="https://github.com/royvn/royvn.github.io" target="_blank" rel="noopener noreferrer">
-									Github
-									</a>. 
-									{` `}
-									Created in The Hague, the Netherlands.
-								</p>
+						<div className="footer__license">
+							<div className="grid page-width page-spacer">
+								<div className="grid__item gcs-xs-1 gce-xs-13">
+									<p>
+										© 1992 - {new Date().getFullYear()}, Built with
+										{` `}
+										<a href="https://www.gatsbyjs.org" target="_blank" rel="noopener noreferrer">
+										Gatsby
+										</a> and {` `} 
+										<a href="https://reactjs.org/" target="_blank" rel="noopener noreferrer">
+										React
+										</a>
+										.
+										Hosted on 
+										{` `}
+										<a href="https://github.com/royvn/royvn.github.io" target="_blank" rel="noopener noreferrer">
+										Github
+										</a>. 
+										{` `}
+										Created with passion in The Hague, the Netherlands.
+									</p>
+								</div>
 							</div>
 						</div>
 					</footer>

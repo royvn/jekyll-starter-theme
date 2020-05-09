@@ -4,7 +4,10 @@
 	z-index: 1;
 	background-color: $black;
 	color: $white;
-	min-height: 72vh;
+	min-height: 80vh;
+	@include media-breakpoint-up(md) {
+		min-height: 72vh;
+	}
 	display: flex;
 	align-items: center;
 	padding: 6rem 0;
@@ -100,11 +103,13 @@
 	margin-left: auto;
 	margin-right: auto;
 	margin-top: 3rem;
+	cursor: pointer;
 	span {
 		letter-spacing: 2px;
 		transition: letter-spacing 0.48s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 	}
-	&:before, &:after {
+	&:before, 
+	&:after {
 		content: '';
 		display: block;
 		position: absolute;
@@ -125,6 +130,10 @@
 		top: 0.5rem;
 		border-radius: 0.25rem;
 		margin-left: -2px;
+		animation-name: mouse;
+		animation-duration: 0.96s;
+		animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+		animation-iteration-count: infinite;
 	}
 	&:hover, 
 	&:focus, 
@@ -136,12 +145,6 @@
 		color: inherit;
 		span {
 			letter-spacing: 4px;
-		}
-		&:after {
-			animation-name: mouse;
-			animation-duration: 0.96s;
-			animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
-			animation-iteration-count: infinite;
 		}
 	}
 	span {

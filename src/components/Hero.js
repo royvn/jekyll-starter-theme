@@ -2,14 +2,12 @@ import React from "react";
 import { Link } from "gatsby";
 import Typed from "typed.js";
 
-// import css from "./hero.module.scss";
-
 class Hero extends React.Component {
 
   componentDidMount() {
     let options = {
       strings: this.props.type,
-      typeSpeed: 88,
+      typeSpeed: 48,
       backSpeed: 48,
       loop: true,
       loopCount: Infinity,
@@ -43,9 +41,11 @@ class Hero extends React.Component {
             <p className="hero__paragraph">
               {this.props.paragraph}
             </p>
-            <Link to="/info/" className="btn btn--blue">
-                Meer over mij
-            </Link>
+            <button type="submit" className="mouse" onClick={this.handleMouseClick}>
+              <span className="sr-only">
+                Scroll verder
+              </span>
+            </button>
           </div>
         </div>
       </div>

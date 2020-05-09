@@ -9,15 +9,16 @@ class Notice extends React.Component {
 
 	render() {
 		return (
-			<div className="notice">
-				<Link to={ this.props.link } className="notice__item" activeClassName="notice__item--active">
-					<div className="page-width page-spacer">
-						<span className="notice__text">
-							{ this.props.title }
-						</span>
-					</div>
-				</Link>
-			</div>
+			<Link to={ this.props.link } className="notice" activeClassName="notice--active">
+				<div className="notice__content page-width page-spacer">
+					<span className="notice__text">
+						{ this.props.title }
+					</span>
+					<span className="btn btn--light btn--sm">
+						{ this.props.button_text }
+					</span>
+				</div>
+			</Link>
 		);
   }
   

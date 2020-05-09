@@ -19,24 +19,9 @@
 	}
 	&:hover, 
 	&:focus {
-		transform: scale(1.08);
 		color: $black;
 	}
 	&:active {
-		transform: scale(1.04);
-	}
-	&:before {
-		content: '';
-		position: absolute;
-		top: 0;
-		left: 0;
-		right: 0;
-		bottom: 0;
-		width: 100%;
-		height: 100%;
-		background-color: rgba(0,0,0,0.16);
-		transform: translateX(-100%);
-		transition: all .16s ease-in-out;
 	}
 	&.btn--block {
 		display: block;
@@ -45,18 +30,23 @@
 	&.btn--light {
 		background-color: $white;
 		border-color: $white;
-		color: $blue;
+		color: $primary;
 		&:hover {
-			color: darken($blue, 32%);
+			color: darken($primary, 16%);
 		}
 	}
-	&.btn--blue {
-		background-color: $blue;
-		border-color: $blue;
+	&.btn--sm {
+		padding: rem(5) rem(8);
+		font-size: rem(12);
+		line-height: rem(20);
+	}
+	&.btn--primary {
+		background-color: $primary;
+		border-color: $primary;
 		color: $white;
 		&:hover {
-			background-color: darken($blue, 16%);
-			border-color: darken($blue, 16%);
+			background-color: darken($primary, 16%);
+			border-color: darken($primary, 16%);
 			color: $white;
 		}
 	}
@@ -67,7 +57,7 @@
 			}
 		}
 	}
-	&.btn--outline-blue {
+	&.btn--outline-primary {
 		border-color: $blue;
 		color: $blue;
 		&:hover, 

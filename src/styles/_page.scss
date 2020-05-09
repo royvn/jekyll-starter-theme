@@ -1,26 +1,26 @@
-.main {
-	padding-top: rem(72);
-}
-
 .page-header {
 	margin: 1.5rem 0 3rem 0;
 	@include media-breakpoint-up(md) {
 		margin: 4.5rem 0 6rem 0;
 	}
 	.page-header__title {
-		padding-left: rem(48);
+		font-family: $headings-font-family;
+		line-height: $headings-line-height;
+		font-weight: $headings-font-weight;
 		font-size: rem(12);
 		line-height: rem(20);
 		text-transform: uppercase;
 		letter-spacing: rem(2);
+		padding-left: rem(48);
 		position: relative;
 		margin: 0;
+		color: $white;
 		&:before {
 			content: '';
 			display: block;
 			width: 1.5rem;
 			height: 2px;
-			background-color: $black;
+			background-color: $white;
 			position: absolute;
 			left: 0;
 			top: 50%;
@@ -41,14 +41,22 @@
 	}
 }
 
-
 .page-content {
-	margin: 3rem 0;
+	margin: rem(48) 0;
 	@include media-breakpoint-up(md) {
-		margin: 6rem 0;
+		margin: rem(96) 0;
 	}
-	&.content {
-		> p, > ul, > h1, > h2, > h3, > h4, > h5, > h6, > blockquote, > .widget {
+	&.markdown {
+		> p, 
+		> ul, 
+		> h1, 
+		> h2, 
+		> h3, 
+		> h4, 
+		> h5, 
+		> h6, 
+		> blockquote, 
+		> .widget {
       @include grid;
       max-width: 40rem;
 		}		

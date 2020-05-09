@@ -12,7 +12,7 @@ function CallToAction(props) {
           <p className="">
             Paragraph
           </p>
-          <Link to="/contact/" className="btn btn--blue">
+          <Link to="/contact/" className="btn btn--primary">
             Button
           </Link>
         </div>

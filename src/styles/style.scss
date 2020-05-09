@@ -1,10 +1,10 @@
 // Import font Poppins used for the headings
-@import url('https://fonts.googleapis.com/css?family=Poppins:400,400i,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Roboto:ital,wght@0,400;0,500;0,700;1,400&display=swap');
 
 // Makes browsers render all elements more consistently and in line with modern standards
 @import 'normalize.css/normalize';
 
-// Import bootstrap mixins
+// Import bootstrap functions and mixins
 @import "../../node_modules/bootstrap/scss/functions";
 @import "../../node_modules/bootstrap/scss/variables";
 @import "../../node_modules/bootstrap/scss/mixins";
@@ -33,20 +33,22 @@ body {
 	font-size: $default-font-size;
 	line-height: 1.5;
 	text-align: left;
-  background-color: $white;
-  color: $black;
+  background-color: $black;
+  color: $white;
 }
 
-ul, ol, p {
+ul, 
+ol, 
+p {
 	margin-top: 0;
 }
 
 a {
-	color: $blue;
+	color: $primary;
 	text-decoration: none;
 	&:hover, 
 	&:focus {
-		color: darken($blue, 8%);
+		color: darken($primary, 8%);
 	}
 }
 
@@ -56,9 +58,9 @@ a {
 @import "buttons";
 @import "grid";
 
-// Components
 @import "notice";
 @import "header";
+@import "hamburger";
 @import "navigation";
 @import "search";
 @import "footer";
@@ -66,10 +68,9 @@ a {
 @import "post";
 @import "featured-post";
 @import "page";
-@import "content";
+@import "markdown";
 @import "holder";
 
-// includes
 @import 'includes/banner';
 @import 'includes/hero';
 @import 'includes/what-i-do';
@@ -79,5 +80,4 @@ a {
 @import 'headline';
 
 // Builder
-@import 'floating-images';
 @import 'helpers';

@@ -1,14 +1,43 @@
 import React from "react";
-import { graphql } from "gatsby";
+import { graphql, StaticQuery } from "gatsby";
 
 import Layout from "../components/Layout";
 import SEO from "../components/Seo";
-import ToolkitHeadline from "../components/ToolkitHeadline"
+import ToolkitHeadline from "../components/ToolkitHeadline";
+import Banner from "../components/ToolkitBanner";
+
 const ContactPage = () => (
   <Layout>
     <SEO title="Contact" description="Laat iets van je horen, gezellig en leuk!" />
-    <div className="page-content content">
-      <ToolkitHeadline title="Contact" subtitle="Laat iets van je horen, gezellig en leuk!" />
+    <div className="page-content markdown">
+      <ToolkitHeadline title="Contact" subtitle="Laat iets van je horen!" />
+      <StaticQuery query={graphql`
+      query {
+        allMarkdownRemark(filter: {}, limit: 5) {
+          edges {
+            node {
+              id
+              fields {
+                slug
+              }
+              frontmatter {
+                title
+              }
+            }
+          }
+        }
+        image1: file(relativePath: {eq: "vissershaven.jpg"}) {
+          id
+          childImageSharp {
+            fluid(maxWidth: 1200, quality: 100) {
+              ...GatsbyImageSharpFluid_withWebp
+            }
+          }
+        }
+      }
+      `} render={data => (
+        <Banner image={data.image1.childImageSharp.fluid}/>
+      )} />
       <p>
         Wil je iets vragen of met mij in contact komen? Stuur gerust een berichtje op <a href="https://www.linkedin.com/in/roy-van-neden-10549761/">Linkedin</a>! Direct mailen kan ook naar roy.van.neden@gmail.com.
       </p>

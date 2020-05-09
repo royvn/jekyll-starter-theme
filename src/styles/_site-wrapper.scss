@@ -1,12 +1,5 @@
 .site-wrapper {
 	position: relative;
 	width: 100%;
-	padding-top: 6rem;
-}
-
-.page--home, 
-.layout--project {
-	.site-wrapper {
-		padding-top: 0;
-	}
+	padding-top: rem(80);
 }

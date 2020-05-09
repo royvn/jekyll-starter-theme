@@ -8,10 +8,14 @@ import ToolkitHeadline from "../components/ToolkitHeadline";
 import Banner from "../components/ToolkitBanner";
 import WidgetList from "../components/WidgetList";
 import CallToAction from "../components/CallToAction";
+import Hero from "../components/Hero";
+
+import image from "../images/hero.jpg";
 
 const AboutPage = () => (
   <Layout>
     <SEO title="Info" description="Designer &amp; developer in regio Den Haag" />
+    <Hero image={image} title="Roy van Neden" type={["Front-end developer", "Shopify theme developer", "UX/UI designer &amp; meer"]} paragraph="Met plezier besteed ik mijn tijd aan het ontwerpen, realiseren en verbeteren van digitale producten." />
     <StaticQuery query={graphql`
       query {
         allMarkdownRemark(filter: {}, limit: 5) {
@@ -45,9 +49,8 @@ const AboutPage = () => (
         }
       }
       `} render={data => (
-        <article className="page-content content">
-          <ToolkitHeadline title="Info" subtitle="Design, Front-end development &amp; Shopify." />
-          <Banner image={data.image1.childImageSharp.fluid}/>
+        <article className="page-content markdown" id="wat-ik-doe">
+          <ToolkitHeadline title="Info" subtitle="Front-end development, Shopify development &amp; Design" />
           <p>
             Hoi, ik ben <b>Roy van Neden</b>. Petrolhead, interaction designer en front-end developer uit Leidschendam woonachtig in Den Haag.
           </p>
@@ -67,6 +70,7 @@ const AboutPage = () => (
           <p>
             Alan Cooper
           </p>
+          <Banner image={data.image1.childImageSharp.fluid}/>
           <h2>
             Vaardigheden
           </h2>
@@ -150,7 +154,7 @@ const AboutPage = () => (
           </p>
           <WidgetList title="Recent van blog" list={data.allMarkdownRemark.edges} />
           <p>
-            <Link to="/blog" className="btn btn--blue">
+            <Link to="/blog/" className="btn btn--primary">
               Bekijk blog
             </Link>
           </p>

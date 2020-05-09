@@ -1,0 +1,95 @@
+.markdown {
+	display: block;
+	hyphens: auto;
+	word-wrap: break-word;
+	font-size: rem(16);
+	line-height: rem(24);
+	color: lighten($black, 64%);
+	> p:first-child {
+		font-size: 1.125rem;
+		line-height: 2rem;
+	}	
+	> *:last-child {
+		margin-bottom: 0;
+	}
+	h1, 
+	h2, 
+	h3, 
+	h4, 
+	h5,
+	h6 {
+		color: $white;
+		margin-top: 2rem;
+	}
+	ul {
+		padding-left: 2.75rem;
+	}
+	b {
+		 color: $white;
+	}
+	p, 
+	ul, 
+	.embed-responsive, 
+	video, 
+	.widget, 
+	.gatsby-image-wrapper,
+	.holder {
+		margin-bottom: 1rem;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	img, 
+	video {
+    display: block;
+		width: 100%;
+		max-width: 100%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+	}
+	iframe {
+		border: none;
+	}
+	blockquote {
+		color: $white;
+		margin: 1rem 0;
+		font-weight: 600;
+		font-family: $headings-font-family;
+		font-style: italic;
+		font-size: 1.5rem;
+		line-height: 2rem;
+		p:last-child {
+			margin: 0;
+		}
+	}
+	pre {
+		font-family: $monospace-font-family;
+		background-color: lighten($black, 8%);
+		padding: rem(24);
+		font-size: rem(14);
+		line-height: rem(24);
+		overflow: auto;
+	}
+	ul {
+		list-style: none;
+		padding-left: 0;
+		li {
+			position: relative;
+			padding-left: rem(12);
+			&:before {
+				content: '';
+				display: block;
+				width: rem(4);
+				height: rem(4);
+				background-color: $white;
+				position: absolute;
+				left: 0;
+				top: rem(10);
+			}
+		}
+	}
+	hr {
+		 border: 1px solid rgba($white, 0.08);
+		 margin: rem(32) 0;
+	}
+}
