@@ -1,71 +1,73 @@
 .hamburger {
 	position: relative;
 	display: block;
-	@include media-breakpoint-up(lg) {
+	@include media-breakpoint-up(md) {
 		display: none;
 	}
-	background-color: transparent;
-	background-color: red;
+	background-color: $black;
+	color: $white;
 	border: none;
 	cursor: pointer;
 	
 	font-size: rem(14);
 	line-height: rem(24);
-	padding: rem(8) rem(16) rem(8) rem(40);
+	font-weight: bold;
+
+	padding: rem(8) rem(16) rem(8) rem(16);
 
 	margin-left: auto;
 
 	transition: transform .24s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-	z-index: ($zindex-fixed)+3;
+	// z-index: ($zindex-fixed)+3;
 	&:hover, 
 	&:active, 
 	&:focus {
 		outline: none;
 	}
-	> span {
-		display: block;
-		width: rem(24);
-		height: rem(24);
-		position: absolute;
-		top: 50%;
-		left: rem(8);
-		margin-top: -(rem(12));
-		span {
-			display: block;
-			width: 1.5rem;
-			height: 2px;
-			position: absolute;
-			top: 50%;
-			left: 50%;
-			transform: translateX(-50%) translateY(-50%);
-			background-color: $white;
-			.header--highlighted & {
-				background-color: $black;
-			}
-			transition: all .24s cubic-bezier(0.55, 0.085, 0.68, 0.53);
-			transition-property: transform, width, height, top, left, margin-top;
-			&:first-child {
-				margin-top: -6px;
-			}
-			&:last-child {
-				margin-top: 6px;
-			}
-		}
-	}
-	&.hamburger--open {
-		> span {
-			transform: rotate(135deg);
-		}
-		span span {
-			background-color: $black;
-			&:first-child {
-				margin-top: 0;
-				width: 0;
-			}
-			&:last-child {
-				margin-top: 0;
-				transform: translateX(-50%) translateY(-50%) rotate(90deg);
-			}
-		}
-	}
+	// > span {
+	// 	display: block;
+	// 	width: rem(24);
+	// 	height: rem(24);
+	// 	position: absolute;
+	// 	top: 50%;
+	// 	left: rem(16);
+	// 	margin-top: -(rem(12));
+	// 	span {
+	// 		display: block;
+	// 		width: 1.5rem;
+	// 		height: 2px;
+	// 		position: absolute;
+	// 		top: 50%;
+	// 		left: 50%;
+	// 		transform: translateX(-50%) translateY(-50%);
+	// 		background-color: $white;
+	// 		.header--highlighted & {
+	// 			background-color: $black;
+	// 		}
+	// 		transition: all .24s cubic-bezier(0.55, 0.085, 0.68, 0.53);
+	// 		transition-property: transform, width, height, top, left, margin-top;
+	// 		&:first-child {
+	// 			margin-top: -6px;
+	// 		}
+	// 		&:last-child {
+	// 			margin-top: 6px;
+	// 		}
+	// 	}
+	// }
+	// &.hamburger--open {
+	// 	> span {
+	// 		transform: rotate(135deg);
+	// 	}
+	// 	span span {
+	// 		background-color: $white;
+	// 		&:first-child {
+	// 			margin-top: 0;
+	// 			width: 0;
+	// 		}
+	// 		&:last-child {
+	// 			margin-top: 0;
+	// 			transform: translateX(-50%) translateY(-50%) rotate(90deg);
+	// 		}
+	// 	}
+	// }
 }

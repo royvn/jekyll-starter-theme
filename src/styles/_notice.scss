@@ -1,7 +1,7 @@
 .notice {
   display: block;
   color: inherit;
-  padding: rem(8) rem(16);
+  padding: rem(8) rem(0);
   background-color: $primary;
   text-decoration: none;
   font-size: rem(14);
@@ -25,12 +25,15 @@
   }
   .notice__content {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     align-items: center;
     justify-content: center;
   }
   .notice__text {
     display: block;
     margin-right: rem(16);
+  }
+  .notice__btn {
+    flex: 0 0 auto;
   }
 }

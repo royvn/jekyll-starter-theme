@@ -28,7 +28,7 @@ const Layout = ({ children }) => {
   return (
     <div className="wrapper">
       <a href="#content" className="sr-only">Skip to content</a>
-      <Notice title="Bekijk mijn laatste blog over Shopify Theme Development!" link="/blog/shopify-theme-development/" button_text="Bekijk nu"/>
+      <Notice title="Lees mijn laatste blog over CSS variabelen en preprocessor variabelen" link="/blog/css-variabelen-en-preprocessor-variabelen/" button_text="Nu lezen"/>
       <Header siteTitle={data.site.siteMetadata.title} />
       <main className="main" id="content">
         {children}

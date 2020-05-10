@@ -10,7 +10,6 @@ import LatestPost from "../components/LatestPost";
 
 import TabsWithImage from '../components/Tabs';
 
-
 class IndexPage extends React.Component {
 
   render() {

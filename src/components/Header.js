@@ -56,13 +56,8 @@ class Header extends React.Component {
 							{this.props.siteTitle}
 						</Link>
 					</div>
-					<button type="button" onClick={this.handleHamburgerClick} className={`hamburger${this.state.isNavigationToggled ? ' hamburger--open' : ''}`}>
+					<button type="button" onClick={this.handleHamburgerClick} className={`hamburger`}>
 						Menu
-						<span>
-							<span></span>
-							<span></span>
-							<span></span>
-						</span>
 					</button>
 					<nav className={`navigation ${this.state.isNavigationToggled ? 'navigation--open' : ''}`}>
 						<ul className="nav nav--primary">

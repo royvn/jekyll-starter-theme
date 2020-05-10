@@ -7,7 +7,6 @@ import SEO from "../components/Seo";
 import ToolkitHeadline from "../components/ToolkitHeadline";
 import Banner from "../components/ToolkitBanner";
 import WidgetList from "../components/WidgetList";
-import CallToAction from "../components/CallToAction";
 import Hero from "../components/Hero";
 
 import image from "../images/hero.jpg";

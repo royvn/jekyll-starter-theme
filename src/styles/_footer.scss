@@ -1,6 +1,6 @@
 .footer {
 	position: relative;
-	background-color: $black;
+	background-color: lighten($black, 8%);
 	color: $white;
 	font-size: rem(14);
 	line-height: rem(20);
