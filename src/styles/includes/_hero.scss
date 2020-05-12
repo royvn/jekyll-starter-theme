@@ -60,17 +60,13 @@
 		font-family: $headings-font-family;
 	}
 	.hero__title {
-		font-size: 2rem;
-		line-height: 2.5rem;
-		@include media-breakpoint-up(md) {
-			font-size: 2.5rem;
-			line-height: 3rem;
+		font-size: rem(40);
+		line-height: rem(48);
+		@include media-breakpoint-up(md){
+			font-size: rem(56);
+			line-height: rem(64);
 		}
-		@include media-breakpoint-up(lg) {
-			font-size: 3rem;
-			line-height: 3.5rem;
-		}
-		margin-bottom: 1.5rem;
+		margin-bottom: rem(16);
 	}
 	.hero__paragraph {
 		margin-bottom: 1.5rem;

@@ -9,7 +9,7 @@ import ToolkitHeadline from "../components/ToolkitHeadline";
 const BlogPage = ({data}) => (
   <Layout>
     <SEO title="Blog" description="Zo nu en dan deel ik op mijn blog dingen die ik interessant vind of geleerd hebt. Kijk gerust rond 🙈." />
-    <ToolkitHeadline title="Blog" subtitle="Zo nu en dan deel ik op mijn blog dingen die ik interessant vind of geleerd heb" />
+    <ToolkitHeadline title="Blog" subtitle="Blijf nog even wat lezen!" />
     <div className="grid page-width page-spacer">
       <div className="grid__item gcs-xs-1 gce-xs-13 featured-posts">
         {data.allMarkdownRemark.edges.map(({node}) => (
