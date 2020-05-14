@@ -17,8 +17,12 @@
 		}
 	}
 	.post-title {
-		font-size: 3.5rem;
-		line-height: 4rem;
+		font-size: rem(40);
+		line-height: rem(48);
+		@include media-breakpoint-up(md){
+			font-size: rem(56);
+			line-height: rem(64);
+		}
 		margin: 1rem 0;
 	}
 	.post-header, 
