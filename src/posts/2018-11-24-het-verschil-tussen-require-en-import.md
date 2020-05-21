@@ -21,10 +21,19 @@ Om in ES5 toch gebruik te kunnen maken van modules is er in node een functie bes
 
 Stel dat je de volgende structuur hebt. En dat we in index.js iets vanuit test.js willen importeren.
 
-* project
-  * src
-      * test.js
-      * index.js
+<ul>
+  <li>
+    src
+    <ul>
+      <li>
+        test.js
+      </li>
+      <li>
+        index.js
+      </li>
+    </ul>
+  </li>
+</ul>
 
 ```js
 // test.js

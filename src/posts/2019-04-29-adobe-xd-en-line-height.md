@@ -9,7 +9,7 @@ tags: [Adobe]
 author: royvn
 ---
 
-Als designer werk je met verschillende tools. Hierbij loop je soms tegen dingen aan die je werkproces verstoren. Zo ik ook laatst bij het maken van een ontwerp in [Adobe XD](https://www.adobe.com/nl/products/xd.html). In de eerste instantie lijkt het een werkbare tool. Tijdens het aflezen van design specificaties viel het echter op dat XD apart met de [line-height](https://developer.mozilla.org/en-US/docs/Web/CSS/line-height) en de daarmee verbonden hoogte van een tekst object omgaat.
+Als designer & developer werk je met verschillende tools. Hierbij loop je soms tegen dingen aan die je werkproces verstoren. Zo ook bij [Adobe XD](https://www.adobe.com/nl/products/xd.html). In de eerste instantie lijkt het een werkbare tool. Tijdens het aflezen van design specificaties viel het echter op dat XD apart met de [line-height](https://developer.mozilla.org/en-US/docs/Web/CSS/line-height) en de daarmee verbonden hoogte van een tekst object omgaat.
 
 ## Probleem
 
@@ -25,11 +25,7 @@ Op basis hiervan verwacht je dat afmetingen overeen moeten komen met een CSS pix
 
 ## Voorbeeld
 
-Stel dat je voor een website een titel van 1 regel ontwerpt met een font-size van 24 pixels en een line-height van 32 pixels. Hoe hoog is dan de titel in CSS pixels in je browser?
-
-Ja, heb je iets bedacht?
-
-De titel zou zoals je verwacht in CSS 32 pixels hoog moeten zijn. Zo werkt het in je browser. Als de titel over twee regels gaat zou dat 32+32=64 pixels hoog moeten worden. Logisch toch? Adobe XD denkt er anders over, namelijk 40 pixels voor een enkele regel en 72 pixels voor een dubbele (afhankelijk van lettertype). Dat is een verschil van 8 pixels 😬 (lettertype [Poppins](https://fonts.google.com/specimen/Poppins)).
+Stel dat je voor een website een titel van 1 regel ontwerpt met een font-size van 24 pixels en een line-height van 32 pixels. De titel zou zoals je verwacht in CSS 32 pixels hoog moeten zijn. Zo werkt het in je browser. Als de titel over twee regels gaat zou dat 32+32=64 pixels hoog moeten worden. Logisch toch? Adobe XD denkt er anders over, namelijk 40 pixels voor een enkele regel en 72 pixels voor een dubbele (afhankelijk van lettertype). Dat is een verschil van 8 pixels 😬 (lettertype [Poppins](https://fonts.google.com/specimen/Poppins)).
 
 <div class="holder holder--16x9">
   <iframe class="holder__embed" src="https://giphy.com/embed/pPhyAv5t9V8djyRFJH"></iframe>
@@ -57,4 +53,4 @@ Adobe XD behandelt de hoogte van een tekst element, die mede ontstaat door de li
 
 Vindt je ook dat Adobe XD line-height en de daarmee verbonden hoogte moet functioneren zoals op het web? Stem dan op de volgende [feature](https://adobexd.uservoice.com/forums/353007-adobe-xd-feature-requests/suggestions/13813872-line-height-should-function-as-it-does-on-the-web) request bij het Adobe forum.
 
-Gelukkig heeft de andere tool genaamd [Sketch](https://www.sketch.com/) niet last van dit probleem ❤️.
+Gelukkig hebben andere tools zoals bijvoorbeeld [Sketch](https://www.sketch.com/) en [Figma](https://www.figma.com/) niet last van dit probleem ❤️.

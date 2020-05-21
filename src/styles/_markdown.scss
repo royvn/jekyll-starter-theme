@@ -6,8 +6,8 @@
 	line-height: rem(24);
 	color: lighten($black, 64%);
 	> p:first-child {
-		font-size: 1.125rem;
-		line-height: 2rem;
+		font-size: rem(18);
+		line-height: rem(26);
 	}	
 	> *:last-child {
 		margin-bottom: 0;

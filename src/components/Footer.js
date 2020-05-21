@@ -119,7 +119,7 @@ class Footer extends React.Component {
 										Github
 										</a>. 
 										{` `}
-										Created with passion in The Hague, the Netherlands.
+										Created with passion in The Hague, The Netherlands.
 									</p>
 								</div>
 							</div>
