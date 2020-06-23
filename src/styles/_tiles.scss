@@ -65,11 +65,11 @@
 	}
 	.tile__author {
 		display: grid;
-		grid-template-columns: 24px 1fr;
-		grid-gap: .5rem;
+		grid-template-columns: rem(24) 1fr;
+		grid-gap: rem(8);
 		align-items: center;
 		color: inherit;
-		margin-bottom: 1rem;
+		margin-bottom: rem(16);
 		&:hover, &:focus {
 			text-decoration: none;
 		}
@@ -83,7 +83,9 @@
 		line-height: 1.75rem;
 	}
 	.btn {
-		&:hover, &:focus, &:active {
+		&:hover, 
+		&:focus, 
+		&:active {
 			transform: none;
 		}
 	}

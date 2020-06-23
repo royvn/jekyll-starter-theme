@@ -5,8 +5,8 @@
 	}
 	.post-back-to-blog {
 		display: inline-flex;
-		font-size: 1rem;
-		line-height: 1.5rem;
+		font-size: rem(16);
+		line-height: rem(24);
 		color: inherit;
 		font-weight: 600;
 		&:hover, 
@@ -30,12 +30,12 @@
 		margin-bottom: rem(48);
 	}
 	.post-meta {
-		margin-bottom: 1.5rem;
+		margin-bottom: rem(24);
 		color: lighten($black, 48%);
 		margin-bottom: 0;
 	}
 	.post-author {
-		margin-bottom: 1.5rem;
+		margin-bottom: rem(24);
 		img {
 			display: block;
 			width: 5rem;
@@ -48,10 +48,10 @@
 		}
 		.post-author__label {
 			text-transform: uppercase;
-			letter-spacing: 1px;
+			letter-spacing: rem(1);
 			margin-bottom: 0;
-			font-size: 0.75rem;
-			line-height: 1rem;
+			font-size: rem(14);
+			line-height: rem(16);
 			color: lighten($black, 48%);
 			margin-bottom: 0.25rem;
 		}
