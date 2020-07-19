@@ -4,6 +4,7 @@ import Img from "gatsby-image";
 
 import Layout from "../components/Layout";
 import SEO from "../components/Seo";
+import Donation from "../components/Donation";
 
 export default ({ data }) => {
   const post = data.markdownRemark;
@@ -18,6 +19,25 @@ export default ({ data }) => {
     categories += category;
   }
 
+  let donationOptions = [
+    {
+      title: 'pakje rooibos thee',
+      price: '1,59'
+    },
+    {
+      title: 'pizza pomodori buffalo',
+      price: '5,39'
+    },
+    {
+      title: 'Magic Trackpad 2',
+      price: '149,00'
+    },
+    {
+      title: 'Jaguar F-Type',
+      price: '60.000,00'
+    }
+  ];
+
   return (
     <Layout>
       <SEO title={post.frontmatter.title} description={post.excerpt} />
@@ -26,20 +46,27 @@ export default ({ data }) => {
             <Link to="/blog/" className="post-back-to-blog">
               Terug naar overzicht
             </Link>
-            <h1 className="post-title">
-              {post.frontmatter.title}
-            </h1>
-            <p className="post-meta">
-              Geplaatst op {post.frontmatter.date} in {categories}.
-            </p>
+            {post.frontmatter.title && 
+              <h1 className="post-title">
+                {post.frontmatter.title}
+              </h1>
+            }
+            {post.frontmatter.date && categories &&
+              <p className="post-meta">
+                Geplaatst op {post.frontmatter.date} in {categories}.
+              </p>
+            }
           </header>
-          <div className="post-image gcs-xs-1 gce-xs-13 gcs-lg-1 gce-lg-13">
-            <Img fluid={post.frontmatter.image.childImageSharp.fluid} alt={post.frontmatter.title} style={{maxWidth: 1024}} />
-          </div>
+          { post.frontmatter.image &&
+            <div className="post-image gcs-xs-1 gce-xs-13 gcs-lg-1 gce-lg-13">
+              <Img fluid={post.frontmatter.image.childImageSharp.fluid} alt={post.frontmatter.title} style={{maxWidth: 1024}} />
+            </div>
+          }
           <div className="post-content gcs-xs-1 gce-xs-13 gcs-lg-3 gce-lg-11">
             <div dangerouslySetInnerHTML={{ __html: post.html }} className="markdown" />
           </div>
         </article>
+        <Donation title="Vind je dit leuk?" options={donationOptions} button_url="https://www.paypal.me/royvn" />
     </Layout>
   )
 };
