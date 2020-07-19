@@ -1,16 +1,19 @@
-.btn {
+.button {
 	position: relative;
 	background-color: transparent;
+	color: inherit;
 	border: 1px solid transparent;
-	display: inline-flex;
-	font-size: 0.875rem;
-	line-height: 1.5rem;
-	padding: 0.6875rem 1.5rem;
-	margin: 0;
+	display: inline-block;
+	vertical-align: middle;
+	text-align: center;
 	font-family: $headings-font-family;
-	font-weight: 600;
-	border-radius: 0.25rem;
-	transition: all .16s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+	font-size: rem(14);
+	font-weight: 500;
+	line-height: rem(24);
+	padding: rem(7) rem(16);
+	margin: 0;
+	border-radius: rem(4);
+	transition: all .32s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 	overflow: hidden;
 	&:hover, 
 	&:focus, 
@@ -21,13 +24,24 @@
 	&:focus {
 		color: $black;
 	}
-	&:active {
+	&:before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0,0,0,0.16);
+		transform: translateX(-100%);
+		transition: all .24s ease-in-out;
 	}
-	&.btn--block {
+	&.button--block {
 		display: block;
 		text-align: center;
 	}
-	&.btn--light {
+	&.button--light {
 		background-color: $white;
 		border-color: $white;
 		color: $primary;
@@ -35,12 +49,22 @@
 			color: darken($primary, 16%);
 		}
 	}
-	&.btn--sm {
+	&.button--sm {
 		padding: rem(5) rem(8);
 		font-size: rem(12);
 		line-height: rem(20);
 	}
-	&.btn--primary {
+	&.button--md {
+		font-size: rem(14);
+		line-height: rem(24);
+		padding: rem(7) rem(16);
+	}
+	&.button--lg {
+		padding: rem(11) rem(24);
+		font-size: rem(16);
+		line-height: rem(24);
+	}
+	&.button--primary {
 		background-color: $primary;
 		border-color: $primary;
 		color: $white;
@@ -50,14 +74,14 @@
 			color: $white;
 		}
 	}
-	&.btn--effect {
+	// &.button--effect {
 		&:hover {
 			&:before {
 				transform: translateX(0%);
 			}
 		}
-	}
-	&.btn--outline-primary {
+	// }
+	&.button--outline-primary {
 		border-color: $blue;
 		color: $blue;
 		&:hover, 
@@ -66,7 +90,7 @@
 			color: $white;
 		}
 	}
-	&.btn--disabled {
+	&.button--disabled {
 		cursor: not-allowed;
 		opacity: 0.48;
 	}

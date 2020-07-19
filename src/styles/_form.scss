@@ -1,0 +1,36 @@
+.icon {
+  position: relative;
+  display: block;
+  width: rem(24);
+  padding-bottom: rem(24);
+  svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    width: 100%;
+  }
+}
+
+.form-select {
+  position: relative;
+  &:after {
+    content: '';
+    display: block;
+  }
+  .icon {
+    position: absolute;
+    right: rem(16);
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  select {
+    appearance: none;
+    display: block;
+    width: 100%;
+    border: 1px solid $black;
+    font-size: rem(14);
+    line-height: rem(24);
+    padding: rem(7) rem(48) rem(7) rem(16);
+  }
+}

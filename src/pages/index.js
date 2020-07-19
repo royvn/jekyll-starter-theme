@@ -28,7 +28,7 @@ class IndexPage extends React.Component {
               <p className="headline-paragraph">
                 Zo nu en dan deel ik op mijn blog dingen die ik interessant vind of geleerd hebt. Kijk gerust rond <span role="img">🙈</span>.
               </p>
-              <Link to="/blog/" className="btn btn--light">Alle artikelen</Link>
+              <Link to="/blog/" className="button button--lg button--light">Alle artikelen</Link>
             </div>
           </div>    
           <div className="latest-posts">

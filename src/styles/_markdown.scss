@@ -65,10 +65,34 @@
 	pre {
 		font-family: $monospace-font-family;
 		background-color: lighten($black, 8%);
-		padding: rem(24);
 		font-size: rem(14);
 		line-height: rem(24);
 		overflow: auto;
+		max-height: rem(480);
+		position: relative;
+		border-radius: rem(8);
+		&:before, 
+		&:after {
+			content: '';
+			display: block;
+			position: sticky;
+			left: 0;
+			right: 0;
+			height: rem(24);
+			background-color: red;
+		}
+		&:before {
+			top: 0;
+			background: linear-gradient(to bottom,  rgba(38,36,46,1) 0%,rgba(38,36,46,0) 100%);
+		}
+		&:after {
+			bottom: 0;
+			background: linear-gradient(to bottom,  rgba(38,36,46,0) 0%,rgba(38,36,46,1) 100%);
+		}
+		code {
+			display: block;
+			padding: 0 rem(24);
+		}
 	}
 	ul {
 		list-style: none;

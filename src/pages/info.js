@@ -153,7 +153,7 @@ const AboutPage = () => (
           </p>
           <WidgetList title="Recent van blog" list={data.allMarkdownRemark.edges} />
           <p>
-            <Link to="/blog/" className="btn btn--primary">
+            <Link to="/blog/" className="button button--primary">
               Bekijk blog
             </Link>
           </p>

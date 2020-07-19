@@ -14,7 +14,7 @@ class Notice extends React.Component {
 					<span className="notice__text">
 						{ this.props.title }
 					</span>
-					<span className="notice__btn btn btn--light btn--sm">
+					<span className="notice__button button button--light button--sm">
 						{ this.props.button_text }
 					</span>
 				</div>

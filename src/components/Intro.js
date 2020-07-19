@@ -16,24 +16,30 @@ class Intro extends React.Component {
           </div>
           <div className="grid__item gcs-xs-1 gce-xs-13 gcs-md-7 gce-md-13">
             <div className={css.content}>
-              <p className={css.label}>
-                {this.props.label}
-              </p>
-              <h1 className={css.title}>
-                <span>
-                  <span className={css.opacity}>
-                    Hallo daar
+              {this.props.label &&
+                <p className={css.label}>
+                  {this.props.label}
+                </p>
+              }
+              {this.props.emoji && 
+                <h1 className={css.title}>
+                  <span>
+                    <span className={css.opacity}>
+                      Hallo daar
+                    </span>
+                    <span className={css.hand}>
+                      {this.props.emoji}
+                    </span>
                   </span>
-                  <span className={css.hand}>
-                    {this.props.emoji}
-                  </span>
-                </span>
-                Ik ben Roy!
-              </h1>
-              <p className={`${css.paragraph}`}>
-                {this.props.paragraph}
-              </p>
-              <Link to="/info/" className="btn btn--primary">
+                  Ik ben Roy!
+                </h1>
+              }
+              {this.props.paragraph &&
+                <p className={`${css.paragraph}`}>
+                  {this.props.paragraph}
+                </p>
+              }
+              <Link to="/info/" className="button button--lg  button--primary">
                 Meer over mij
               </Link>
             </div>
