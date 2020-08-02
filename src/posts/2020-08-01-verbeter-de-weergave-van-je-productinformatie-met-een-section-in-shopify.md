@@ -538,11 +538,12 @@ Vervolgens voegen we nog [scss](https://sass-lang.com/) styling toe.
 ```
 
 5. Voeg het volgende stukje code in `product.liquid` toe op de plaats waar je de blokken wilt hebben.
-6. Vul de productbeschrijving, metafields en section blokken toe.
 
 ```html
 {%- section 'product-collapsible' -%}
 ```
+
+6. Vul de productbeschrijving, metafields en section blokken toe.
 
 <div class="holder holder--16x9">
   <iframe class="holder__embed" src="https://giphy.com/embed/H4zC1A2FZ0ViA6GcxD"></iframe>
