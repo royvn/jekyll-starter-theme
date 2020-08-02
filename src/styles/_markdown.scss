@@ -63,6 +63,8 @@
 		}
 	}
 	pre {
+		display: block;
+		width: 100%;
 		font-family: $monospace-font-family;
 		background-color: lighten($black, 8%);
 		font-size: rem(14);
