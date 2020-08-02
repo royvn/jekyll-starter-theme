@@ -2,7 +2,7 @@
 slug: /verbeter-de-weergave-van-je-productinformatie-in-shopify/
 title: Verbeter de weergave van je productinformatie in Shopify
 date: "2020-08-01"
-description: Een informatieve productbeschrijving is één van de meerdere [must haves](https://www.nngroup.com/articles/ecommerce-product-pages/) bij een ecommerce productpagina. Het beknopt houden kan nog best een uitdaging zijn als je veel informatie kwijt moet.
+description: Een informatieve productbeschrijving is één van de meerdere must haves bij een ecommerce productpagina. Het beknopt houden kan nog best een uitdaging zijn als je veel informatie kwijt moet.
 image: ../uploads/shopify-collapsible.jpg
 categories: [Development]
 tags: [Shopify, Freebie, tutorial]
