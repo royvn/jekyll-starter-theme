@@ -31,10 +31,6 @@ export default ({ data }) => {
     {
       title: 'Magic Trackpad 2',
       price: '149,00'
-    },
-    {
-      title: 'Jaguar F-Type',
-      price: '60.000,00'
     }
   ];
 

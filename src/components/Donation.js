@@ -6,7 +6,7 @@ class Donation extends React.Component {
 		super(props);
 		this.state = {
       isDonationDropdownOpen: false,
-      active: 1,
+      active: 0,
       items: this.props.options
     }
     this.handleDonationDropdown = this.handleDonationDropdown.bind(this);
@@ -40,8 +40,8 @@ class Donation extends React.Component {
             {this.props.options && 
               <p className="donation__subtitle">
               <span>Selecteer en doneer als blijk van waardering een </span>
-                <div className={`donation-dropdown ${this.state.isDonationDropdownOpen ? 'donation-dropdown--active' : ''}`}>
-                  <div className="donation-dropdown-overlay" onClick={this.handleDonationDropdown}></div>
+                <span className={`donation-dropdown ${this.state.isDonationDropdownOpen ? 'donation-dropdown--active' : ''}`}>
+                  <span className="donation-dropdown-overlay" onClick={this.handleDonationDropdown}></span>
                   <button type="button" className="donation-dropdown-select" onClick={this.handleDonationDropdown}>
                     <span className="donation-dropdown-current">
                       {this.state.items[this.state.active].title}
@@ -59,7 +59,7 @@ class Donation extends React.Component {
                       </li>
                     ))}
                   </ul>
-                </div>
+                </span>
                 <span> van &euro; {this.state.items[this.state.active].price}.</span>
               </p>
             }
