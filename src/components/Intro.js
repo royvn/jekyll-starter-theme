@@ -12,7 +12,9 @@ class Intro extends React.Component {
       <div className={`toolkit ${css.intro}`}>
         <div className="grid page-width page-spacer align-items-center">
           <div className="grid__item gcs-xs-1 gce-xs-13 gcs-md-1 gce-md-7">
-            <Img fluid={this.props.image} alt="Dit ben ik" style={{maxWidth: 1000}} />
+            {this.props.image && 
+              <Img fluid={this.props.image} alt="Dit ben ik" style={{maxWidth: 1000}} />
+            }
           </div>
           <div className="grid__item gcs-xs-1 gce-xs-13 gcs-md-7 gce-md-13">
             <div className={css.content}>

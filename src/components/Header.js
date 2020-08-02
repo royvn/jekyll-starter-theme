@@ -51,11 +51,13 @@ class Header extends React.Component {
 		return (
 			<header className={`header ${this.state.isNavigationToggled ? 'navigation--open' : ''} ${this.state.isHighlighted ? 'header--highlighted' : ''}`}>
 				<div className="header__content page-width page-spacer">
-					<div className="brand">
-						<Link to="/" className="brand__title">
-							{this.props.siteTitle}
-						</Link>
-					</div>
+					{this.props.siteTitle && 
+						<div className="brand">
+							<Link to="/" className="brand__title">
+								{this.props.siteTitle}
+							</Link>
+						</div>
+					}
 					<button type="button" onClick={this.handleHamburgerClick} className={`hamburger`}>
 						Menu
 					</button>

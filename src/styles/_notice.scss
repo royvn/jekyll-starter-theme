@@ -32,6 +32,9 @@
   .notice__text {
     display: block;
     margin-right: rem(16);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
   .notice__button {
     flex: 0 0 auto;
