@@ -311,8 +311,8 @@ Vervolgens voegen we nog [scss](https://sass-lang.com/) styling toe.
 
 1. Ga naar je Shopify theme
 2. Klik bij je theme op edit code
-2. Maak een nieuwe section product-collapsibles.liquid aan
-3. Kopieer de volgende code in je zojuist aangemaakte product-collapsibles.liquid.
+3. Maak een nieuwe section product-collapsibles.liquid aan
+4. Kopieer de volgende code in je zojuist aangemaakte product-collapsibles.liquid.
 
 ```html
 {%- capture collapsible_description -%}
@@ -537,7 +537,8 @@ Vervolgens voegen we nog [scss](https://sass-lang.com/) styling toe.
 
 ```
 
-4. Voeg het volgende stukje code in `product.liquid` toe op de plaats waar je de blokken wilt hebben.
+5. Voeg het volgende stukje code in `product.liquid` toe op de plaats waar je de blokken wilt hebben.
+6. Vul de productbeschrijving, metafields en section blokken toe.
 
 ```html
 {%- section 'product-collapsible' -%}
