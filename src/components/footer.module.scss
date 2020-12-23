@@ -1,0 +1,44 @@
+@import "../../node_modules/bootstrap/scss/functions";
+@import "../../node_modules/bootstrap/scss/variables";
+@import "../../node_modules/bootstrap/scss/mixins";
+@import "../styles/mixins/mixins";
+@import "../styles/settings";
+
+.footer {
+	position: relative;
+	background-color: $black;
+	color: $white;
+	font-size: rem(16);
+	line-height: rem(24);
+}
+
+.content {
+	padding: rem(96) 0;
+}
+
+.paragraph {
+	color: $silver;
+	max-width: 80%;
+}
+
+.bitcoin {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.button {
+	margin-top: rem(24);
+	margin-bottom: 0;
+}
+
+.info {
+	font-size: rem(14);
+	line-height: rem(24);
+	padding-top: rem(48);
+	padding-bottom: rem(48);
+	color: $silver;
+	p {
+		margin: 0;
+	}
+}

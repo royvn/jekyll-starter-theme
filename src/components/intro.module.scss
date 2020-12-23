@@ -4,58 +4,35 @@
 @import "../styles/mixins/mixins";
 @import "../styles/settings";
 
+.intro {
+  position: relative;
+  @include media-breakpoint-up(md) {
+    margin-top: rem(16);
+  }
+}
+
 .opacity {
   opacity: 0.48;
 }
 
 .content {
-  margin-top: rem(16);
-  @include media-breakpoint-up(md){
-    margin-top: 0;
-    padding-left: rem(40);
-  }
-}
-
-.label {
   position: relative;
-  font-family: $headings-font-family;
-  font-weight: 600;
-  font-size: rem(12);
-  line-height: rem(20);
-  text-transform: uppercase;
-  letter-spacing: rem(2);
-  margin-bottom: rem(16);
-  &:before {
-    content: '';
-    display: block;
-    width: rem(72);
-    height: rem(2);
-    background-color: $white;
-    position: absolute;
-    top: 50%;
-    left: -(rem(88));
-    transform: translateY(-50%);
-  }
-
-}
-
-.title {
-  font-size: rem(40);
-  line-height: rem(48);
-  @include media-breakpoint-up(md){
-    font-size: rem(56);
-    line-height: rem(64);
-  }
-  margin-bottom: rem(16);
-  > span {
-    display: block;
+  z-index: 1;
+  margin-bottom: rem(48);
+  @include media-breakpoint-up(md) {
+    margin-bottom: rem(0);
   }
 }
 
-.paragraph {
-  font-size: rem(20);
-  line-height: rem(28);  
-  margin-bottom: rem(32);
+.image {
+  position: relative;
+  @include media-breakpoint-up(md) {
+    left: -(rem(106));
+  }
+}
+
+.buttons {
+  margin-top: rem(32);
 }
 
 .hand {
@@ -77,3 +54,4 @@
     transform: rotate(0deg);
   }
 }
+

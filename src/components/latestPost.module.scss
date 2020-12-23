@@ -1,3 +1,9 @@
+@import "../../node_modules/bootstrap/scss/functions";
+@import "../../node_modules/bootstrap/scss/variables";
+@import "../../node_modules/bootstrap/scss/mixins";
+@import "../styles/mixins/mixins";
+@import "../styles/settings";
+
 .latest-posts {
 	display: flex;
 	flex-wrap: nowrap;
@@ -32,7 +38,7 @@
     &:hover~.latest-post {
         transform:  translateX(6rem);
     }
-	> .latest-post__permalink { 
+	> .permalink { 
 		color: inherit; 
 		flex: auto;
 		display: flex;
@@ -42,14 +48,14 @@
 			text-decoration: none;
 		}
 	}
-	.latest-post__date {
+	.date {
 		opacity: 0.64;	
 	}
-	.latest-post__title {
+	.title {
 		font-size: 1.25rem;
 		line-height: 1.75rem;
 	}
-	.latest-post__tags {
+	.tags {
 		margin-top: auto;
 		opacity: 0.64;
 		font-size: 0.875rem;

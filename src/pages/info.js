@@ -4,10 +4,10 @@ import Img from "gatsby-image";
 
 import Layout from "../components/Layout";
 import SEO from "../components/Seo";
-import ToolkitHeadline from "../components/ToolkitHeadline";
-import Banner from "../components/ToolkitBanner";
+import Banner from "../components/Banner";
 import WidgetList from "../components/WidgetList";
 import Hero from "../components/Hero";
+import Services from "../components/Services";
 
 import image from "../images/hero.jpg";
 
@@ -15,6 +15,7 @@ const AboutPage = () => (
   <Layout>
     <SEO title="Info" description="Designer &amp; developer in regio Den Haag" />
     <Hero image={image} title="Roy van Neden" type={["Front-end developer", "Shopify theme developer", "UX/UI designer &amp; meer"]} paragraph="Met plezier besteed ik mijn tijd aan het ontwerpen, realiseren en verbeteren van digitale producten." />
+    <Services/>
     <StaticQuery query={graphql`
       query {
         allMarkdownRemark(filter: {fileAbsolutePath: {regex: "content/posts/"}}, limit: 4, sort: {order: DESC, fields: frontmatter___date}) {
@@ -49,7 +50,8 @@ const AboutPage = () => (
       }
       `} render={data => (
         <article className="page-content markdown" id="wat-ik-doe">
-          <ToolkitHeadline title="Info" subtitle="Front-end development, Shopify development &amp; Design" />
+          Info
+          Front-end development, Shopify development &amp; Design
           <p>
             Hoi, ik ben <b>Roy van Neden</b>. Petrolhead, interaction designer en front-end developer uit Leidschendam woonachtig in Den Haag.
           </p>
@@ -80,7 +82,7 @@ const AboutPage = () => (
             Workflow
           </h2>
           <p>
-            Het fijnst en snelst werk ik met macOS, Sketch, Visual studio code, Git en Google Gallery.
+            Het fijnst en snelst werk ik met macOS, Sketch of Figma, Visual studio code, Git en Google Gallery.
           </p>
           <h2>
             Werkervaring

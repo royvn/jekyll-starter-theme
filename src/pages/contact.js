@@ -3,14 +3,16 @@ import { graphql, StaticQuery } from "gatsby";
 
 import Layout from "../components/Layout";
 import SEO from "../components/Seo";
-import ToolkitHeadline from "../components/ToolkitHeadline";
-import Banner from "../components/ToolkitBanner";
+import Banner from "../components/Banner";
 
 const ContactPage = () => (
   <Layout>
     <SEO title="Contact" description="Laat iets van je horen, gezellig en leuk!" />
     <div className="page-content markdown">
-      <ToolkitHeadline title="Contact" subtitle="Laat iets van je horen!" />
+      <p>
+      Contact
+      Laat iets van je horen!
+      </p>
       <StaticQuery query={graphql`
       query {
         allMarkdownRemark(filter: {}, limit: 5) {

@@ -18,14 +18,14 @@
 	h4, 
 	h5,
 	h6 {
-		color: $white;
+		color: $black;
 		margin-top: 2rem;
 	}
 	ul {
 		padding-left: 2.75rem;
 	}
 	b {
-		 color: $white;
+		 color: $black;
 	}
 	p, 
 	ul, 
@@ -51,13 +51,12 @@
 		border: none;
 	}
 	blockquote {
-		color: $white;
-		margin: 1rem 0;
 		font-weight: 600;
 		font-family: $headings-font-family;
 		font-style: italic;
 		font-size: 1.5rem;
 		line-height: 2rem;
+		margin: 1rem 0;
 		p:last-child {
 			margin: 0;
 		}
@@ -81,7 +80,6 @@
 			left: 0;
 			right: 0;
 			height: rem(24);
-			background-color: red;
 		}
 		&:before {
 			top: 0;

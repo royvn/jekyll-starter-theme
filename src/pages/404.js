@@ -3,7 +3,6 @@ import { Link } from "gatsby";
 
 import Layout from "../components/layout";
 import SEO from "../components/seo";
-import ToolkitHeadline from '../components/ToolkitHeadline';
 
 class NotFound extends React.Component {
 	render() {
@@ -11,7 +10,9 @@ class NotFound extends React.Component {
 			<Layout>
 				<SEO title="404, pagina niet gevonden" />
 				<div className="page-content content">
-					<ToolkitHeadline title="Pagina niet gevonden" subtitle="Probeer het nog een keer." />
+					<p>
+						Pagina niet gevonden. Probeer het nog een keer.
+					</p>
 				</div>
 			</Layout>
 		);

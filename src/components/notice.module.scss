@@ -1,0 +1,45 @@
+@import "../../node_modules/bootstrap/scss/functions";
+@import "../../node_modules/bootstrap/scss/variables";
+@import "../../node_modules/bootstrap/scss/mixins";
+@import "../styles/mixins/mixins";
+@import "../styles/settings";
+
+.notice {
+  display: block;
+  padding: rem(12) rem(0);
+  background-color: $black;
+  color: $primary;
+  text-decoration: none;
+  font-size: rem(14);
+  line-height: rem(24);
+  font-weight: normal;
+  transition: all .32s cubic-bezier(0.55, 0.085, 0.68, 0.53);
+  &:hover,
+  &:focus, 
+  &:active {
+    text-decoration: none;
+    background-color: $primary;
+    color: $black;
+  }
+  &.notice--active {
+    display: none;
+  }
+}
+
+.content {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.text {
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.button {
+  flex: 0 0 auto;
+}

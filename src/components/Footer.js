@@ -1,5 +1,7 @@
 import React from "react";
 import { Link, StaticQuery, graphql } from "gatsby";
+import css from "./footer.module.scss";
+import Outro from "./Outro";
 
 import WidgetList from "./WidgetList";
 
@@ -25,80 +27,33 @@ class Footer extends React.Component {
 					}
 				}
 				`} render={data => (
-					<footer className="footer">
-						<div className="footer__widgets grid page-width page-spacer">
-							<div className="grid__item gcs-xs-1 gce-xs-13 gcs-md-1 gce-md-4">
-								<div className="widget">
-									<p className="widget-title">
-										{this.props.siteTitle}
+					<footer className={css.footer}>
+						{/* <WidgetList title="Recent van blog" list={data.allMarkdownRemark.edges} /> */}
+						
+						<Outro subtitle="Hoi recruiters" title="Currently building Shopify themes at CODE - a Shopify plus agency" paragraph="Ik ben momenteel dan ook niet opzoek naar een nieuwe baan. Wil je een seintje krijgen wanneer wel? Meld je dan aan voor een notificatie!" button_mailto="roy.van.neden@gmail.com" button_text="Stuur een mailtje" />
+
+						<div className={`${css.info} container page-width page-spacer`}>
+							<div className="row">
+								<div className="col-xs-12 col-md-6 col-lg-3">
+									<p>
+										roy.vanneden.nl
 									</p>		
 								</div>
-							</div>
-							<div className="grid__item gcs-xs-1 gce-xs-7 gcs-md-4 gce-md-7">
-								<div className="widget">
-									<p className="widget-title">
-										Hoofdmenu
+								<div className="col-xs-12 col-md-6 col-lg-3">
+									<p>
+										Doneer Bitcoin
+										<input type="text" value="1CEZkvXA6dtfknK2YjTZpqtdQDYsBh5Ymi" className={`${css.bitcoin}`} readOnly/>
+										<button>
+											Copy bitcoin address
+										</button>
 									</p>
-									<ul className="widget-list">
-										<li className="widget-list-item">
-											<Link to="/" className="widget-list-link" activeClassName="widget-list-link--active">
-												Home
-											</Link>
-										</li>
-										<li className="widget-list-item">
-											<Link to="/info/" className="widget-list-link" activeClassName="widget-list-link--active">
-												Info
-											</Link>
-										</li>
-										<li className="widget-list-item">
-											<Link to="/blog/" className="widget-list-link" activeClassName="widget-list-link--active">
-												Blog
-											</Link>
-										</li>
-										<li className="widget-list-item">
-											<Link to="/contact/" className="widget-list-link" activeClassName="widget-list-link--active">
-												Contact
-											</Link>
-										</li>
-									</ul>
 								</div>
-							</div>
-							<div className="grid__item gcs-xs-8 gce-xs-13 gcs-md-7 gce-md-10">
-								<div className="widget">
-									<p className="widget-title">
-										Social
+								<div className="col-xs-12 col-md-6 col-lg-3">
+									<p>
+										Shopify partner
 									</p>
-									<ul className="widget-list">
-										<li className="widget-list-item">
-											<a href="https://github.com/royvn" target="_blank" rel="noopener noreferrer" className="widget-list-link">
-												Github
-											</a>
-										</li>
-										<li className="widget-list-item">
-											<a href="https://www.instagram.com/royvn/" target="_blank" rel="noopener noreferrer" className="widget-list-link">
-												Instagram
-											</a>
-										</li>
-										<li className="widget-list-item">
-											<a href="https://www.linkedin.com/in/roy-van-neden-10549761/" target="_blank" rel="noopener noreferrer" className="widget-list-link">
-												Linkedin
-											</a>
-										</li>
-										<li className="widget-list-item">
-											<a href="https://twitter.com/royvn_" target="_blank" rel="noopener noreferrer" className="widget-list-link">
-												Twitter
-											</a>
-										</li>
-									</ul>
 								</div>
-							</div>
-							<div className="grid__item gcs-xs-1 gce-xs-13 gcs-md-10 gce-md-13">
-								<WidgetList title="Recent van blog" list={data.allMarkdownRemark.edges} />
-							</div>
-						</div>
-						<div className="footer__license">
-							<div className="grid page-width page-spacer">
-								<div className="grid__item gcs-xs-1 gce-xs-13">
+								<div className="col-xs-12 col-md-6 col-lg-3">
 									<p>
 										© 1992 - {new Date().getFullYear()}, Built with
 										{` `}
@@ -113,9 +68,7 @@ class Footer extends React.Component {
 										{` `}
 										<a href="https://github.com/royvn/royvn.github.io" target="_blank" rel="noopener noreferrer">
 										Github
-										</a>. 
-										{` `}
-										Created with passion in The Hague, The Netherlands.
+										</a>.
 									</p>
 								</div>
 							</div>

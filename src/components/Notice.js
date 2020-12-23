@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "gatsby";
-
+import css from "./notice.module.scss";
 class Notice extends React.Component {
 
 	constructor (props) {
@@ -9,15 +9,15 @@ class Notice extends React.Component {
 
 	render() {
 		return (
-			<Link to={this.props.link} className="notice" activeClassName="notice--active">
-				<div className="notice__content page-width page-spacer">
+			<Link to={this.props.link} className={css.notice} activeClassName="notice--active">
+				<div className={` ${css.content} page-width page-spacer`}>
 					{this.props.title &&
-						<span className="notice__text">
+						<span className={css.text}>
 							{this.props.title}
 						</span>
 					}
 					{this.props.button_text && 
-						<span className="notice__button button button--light button--sm">
+						<span className={` ${css.button} button button--light button--sm`}>
 							{this.props.button_text}
 						</span>
 					}

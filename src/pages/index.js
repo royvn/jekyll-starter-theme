@@ -2,43 +2,27 @@ import React from "react";
 import { Link, graphql } from "gatsby";
 
 import Layout from "../components/Layout";
-import Hero from "../components/Hero";
-import Intro from "../components/Intro";
-
 import SEO from "../components/Seo";
-import LatestPost from "../components/LatestPost";
 
-import TabsWithImage from '../components/Tabs';
+import Intro from "../components/Intro";
+import Banner from "../components/Banner";
+import LatestPosts from "../components/LatestPosts";
+import Services from "../components/Services";
+import Highlights from "../components/Highlights";
+import Landing from "../components/Landing";
 
 class IndexPage extends React.Component {
 
   render() {
     const { data } = this.props;
     return (
-      <Layout>
-        <SEO title="Home" description="Roy van Neden - Front-end developer, Shopify developer &amp; UX/UI designer in regio Den Haag"/>
-        <Intro image={data.image.childImageSharp.fluid} label="Intro" title="" emoji="👋" paragraph="Front-end developer, Shopify theme developer, UX/UI designer &amp; meer."/>
-
-        <div className="toolkit">
-          <div className="grid page-width page-spacer align-items-center">
-            <div className="grid__item gcs-xs-1 gce-xs-13 gcs-lg-4 gce-lg-10 text-center">
-              <h2 className="headline-title">
-                Blog
-              </h2>
-              <p className="headline-paragraph">
-                Zo nu en dan deel ik op mijn blog dingen die ik interessant vind of geleerd heb. Kijk gerust rond <span role="img">🙈</span>.
-              </p>
-              <Link to="/blog/" className="button button--lg button--light">Alle artikelen</Link>
-            </div>
-          </div>    
-          <div className="latest-posts">
-            {data.allMarkdownRemark.edges.map(({node}) => (
-              <LatestPost key={node.id} node={node} />
-            ))}
-          </div>
-        </div>
-
-      </Layout>
+      <div>
+        <SEO title="Home" description="Roy van Neden | Front-end Developer &amp; Shopify Expert"/>
+        <Landing />
+        {/* <Highlights/> */}
+        {/* <Banner title="Shopify - Aerial Theme" subtitle="Helemaal zelf ontworpen en ontwikkeld Ecommerce theme!" button_text="Button text" button_to="/blog/" /> */}
+        {/* <LatestPosts data={data.allMarkdownRemark.edges} /> */}
+      </div>
     );    
   }
 
@@ -69,7 +53,7 @@ export const query = graphql`
     image: file(relativePath: {eq: "royvn.jpg"}) {
       id
       childImageSharp {
-        fluid(maxWidth: 1000, quality: 100) {
+        fluid(quality: 100) {
           ...GatsbyImageSharpFluid_withWebp
         }
       }

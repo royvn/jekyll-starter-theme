@@ -9,42 +9,38 @@ class Intro extends React.Component {
 
   render() {
     return (
-      <div className={`toolkit ${css.intro}`}>
-        <div className="grid page-width page-spacer align-items-center">
-          <div className="grid__item gcs-xs-1 gce-xs-13 gcs-md-1 gce-md-7">
-            {this.props.image && 
-              <Img fluid={this.props.image} alt="Dit ben ik" style={{maxWidth: 1000}} />
-            }
-          </div>
-          <div className="grid__item gcs-xs-1 gce-xs-13 gcs-md-7 gce-md-13">
-            <div className={css.content}>
-              {this.props.label &&
-                <p className={css.label}>
-                  {this.props.label}
-                </p>
-              }
-              {this.props.emoji && 
-                <h1 className={css.title}>
-                  <span>
-                    <span className={css.opacity}>
-                      Hallo daar
-                    </span>
-                    <span className={css.hand}>
-                      {this.props.emoji}
-                    </span>
-                  </span>
-                  Ik ben Roy!
-                </h1>
-              }
-              {this.props.paragraph &&
-                <p className={`${css.paragraph}`}>
-                  {this.props.paragraph}
-                </p>
-              }
-              <Link to="/info/" className="button button--lg  button--primary">
-                Meer over mij
-              </Link>
+      <div className={`section ${css.intro}`}>
+        <div className="container page-width page-spacer">
+          <div className="row align-items-center">
+            <div className="col-xs-12 col-lg-5">
+              <div className={css.content}>
+                {this.props.label &&
+                  <p className="subtitle">
+                    {this.props.label}
+                  </p>
+                }
+                {this.props.title && 
+                  <h1 className={`h1`}>
+                    {this.props.title}
+                  </h1>
+                }
+                {this.props.paragraph &&
+                  <p className={`rte rte--lg ${css.paragraph}`}>
+                    {this.props.paragraph}
+                  </p>
+                }
+                <div className={`${css.buttons} buttons`}>
+                  <Link to="/info/" className={`${css.button} button button--lg button--primary`}>
+                    Meer over mij
+                  </Link>
+                  <Link to="/blog/" className={`${css.button} button button--lg button--secondary`}>
+                    Naar blog
+                  </Link>
+                </div>
+
+              </div>
             </div>
+              
           </div>
         </div>
       </div>
