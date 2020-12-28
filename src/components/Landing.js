@@ -2,6 +2,7 @@ import React from "react";
 import { Link, graphql } from "gatsby";
 
 class Landing extends React.Component {
+
   constructor (props) {
     super(props);
   }
@@ -27,10 +28,11 @@ class Landing extends React.Component {
   }
 
   handleVisualSwitch(event) {
-    console.log('this', this);
-    console.log('event.target', event.target);
-    console.log(event.target);
-    // dataLinkType.nodeValue
+    let handle = event.target.dataset.handle;
+    document.querySelectorAll(`.visual-item`).forEach((element) => {
+      element.classList.remove('visual-item--active');
+    });
+    document.querySelector(`.visual-${handle}`).classList.add('visual-item--active');
   }
 
   render() {
@@ -38,11 +40,21 @@ class Landing extends React.Component {
       <div className="landing">
 
         <div className="visual">
-          <div className="">
-            Picture me
+          <div className="visual-item visual-item--active visual-home">
+            Image 1
           </div>
-          <div></div>
-          <div></div>
+          <div className="visual-item visual-info">
+            Image 2
+          </div>
+          <div className="visual-item visual-blog">
+            Image 3
+          </div>
+          <div className="visual-item visual-contact">
+            Image 4
+          </div>
+          <div className="visual-item visual-code">
+            Image 5
+          </div>
         </div>
 
         <div className="container">
@@ -54,30 +66,30 @@ class Landing extends React.Component {
                   Hi, I'm Roy.
                 </p>
                 <p>
-                  Frontend developer in The Hague, currently building Shopify themes at <a href="https://www.code.nl" target="_blank" rel="noopener">CODE</a>!
+                  Frontend developer in The Hague, currently building awesome Shopify themes at <a href="https://www.code.nl" target="_blank" rel="noopener" onMouseOver={this.handleVisualSwitch} data-handle="code">CODE</a>.
                 </p>
               </div>
             </div>
 
             <div className="col-xs-12 col-md-6 col-lg-4 offset-lg-2">
               <ul className="nav nav--primary rte rte--lg">
-                <li className="nav-item" data-link-type="home" onMouseOver={this.handleVisualSwitch}>
-                  <Link to="/" className="nav-link" activeClassName="nav-link--active">
+                <li className="nav-item">
+                  <Link to="/" className="nav-link" activeClassName="nav-link--active" onMouseOver={this.handleVisualSwitch} data-handle="home">
                     Home
                   </Link>
                 </li>
-                <li className="nav-item" data-link-type="info">
-                  <Link to="/info/" className="nav-link" activeClassName="nav-link--active" onMouseOver={this.handleVisualSwitch}>
+                <li className="nav-item">
+                  <Link to="/info/" className="nav-link" activeClassName="nav-link--active" onMouseOver={this.handleVisualSwitch} data-handle="info">
                     Info
                   </Link>
                 </li>
-                <li className="nav-item" data-link-type="blog">
-                  <Link to="/blog/" className="nav-link" activeClassName="nav-link--active" onMouseOver={this.handleVisualSwitch}>
+                <li className="nav-item">
+                  <Link to="/blog/" className="nav-link" activeClassName="nav-link--active" onMouseOver={this.handleVisualSwitch} data-handle="blog">
                     Blog
                   </Link>
                 </li>
-                <li className="nav-item" data-link-type="contact">
-                  <Link to="/contact/" className="nav-link" activeClassName="nav-link--active" onMouseOver={this.handleVisualSwitch}>
+                <li className="nav-item">
+                  <Link to="/contact/" className="nav-link" activeClassName="nav-link--active" onMouseOver={this.handleVisualSwitch} data-handle="contact">
                     Contact
                   </Link>
                 </li>

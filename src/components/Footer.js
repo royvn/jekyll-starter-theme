@@ -30,7 +30,7 @@ class Footer extends React.Component {
 					<footer className={css.footer}>
 						{/* <WidgetList title="Recent van blog" list={data.allMarkdownRemark.edges} /> */}
 						
-						<Outro subtitle="Hoi recruiters" title="Currently building Shopify themes at CODE - a Shopify plus agency" paragraph="Ik ben momenteel dan ook niet opzoek naar een nieuwe baan. Wil je een seintje krijgen wanneer wel? Meld je dan aan voor een notificatie!" button_mailto="roy.van.neden@gmail.com" button_text="Stuur een mailtje" />
+						<Outro subtitle="Hoi recruiters" title="Ik ontwikkel met plezier shops bij CODE - a Shopify plus agency" paragraph="Ik ben dan ook niet opzoek naar een nieuwe baan. Wil je een seintje krijgen wanneer ik wel beschikbaar ben? Meld je dan aan voor een notificatie!" button_mailto="roy.van.neden@gmail.com" button_text="Stuur een mailtje" />
 
 						<div className={`${css.info} container page-width page-spacer`}>
 							<div className="row">
@@ -43,7 +43,7 @@ class Footer extends React.Component {
 									<p>
 										Doneer Bitcoin
 										<input type="text" value="1CEZkvXA6dtfknK2YjTZpqtdQDYsBh5Ymi" className={`${css.bitcoin}`} readOnly/>
-										<button>
+										<button onClick={this.handleCopy}>
 											Copy bitcoin address
 										</button>
 									</p>

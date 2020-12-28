@@ -50,8 +50,6 @@ const AboutPage = () => (
       }
       `} render={data => (
         <article className="page-content markdown" id="wat-ik-doe">
-          Info
-          Front-end development, Shopify development &amp; Design
           <p>
             Hoi, ik ben <b>Roy van Neden</b>. Petrolhead, interaction designer en front-end developer uit Leidschendam woonachtig in Den Haag.
           </p>

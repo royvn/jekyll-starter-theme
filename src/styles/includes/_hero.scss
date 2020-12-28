@@ -50,30 +50,30 @@
 		}
 	}
 	.hero__subtitle {
-		font-size: 0.875rem;
-		line-height: 1.5rem;
+		// font-size: 0.875rem;
+		// line-height: 1.5rem;
 		margin-bottom: 1.5rem;
-		text-transform: uppercase;
-		letter-spacing: 2px;
-		font-weight: 600;
-		color: $blue;
-		font-family: $headings-font-family;
+		// text-transform: uppercase;
+		// letter-spacing: 2px;
+		// font-weight: 600;
+		// color: $blue;
+		// font-family: $headings-font-family;
 	}
 	.hero__title {
-		font-size: rem(40);
-		line-height: rem(48);
-		@include media-breakpoint-up(md){
-			font-size: rem(56);
-			line-height: rem(64);
-		}
+		// font-size: rem(40);
+		// line-height: rem(48);
+		// @include media-breakpoint-up(md){
+		// 	font-size: rem(56);
+		// 	line-height: rem(64);
+		// }
 		margin-bottom: rem(16);
 	}
 	.hero__paragraph {
 		margin-bottom: 1.5rem;
-		@include media-breakpoint-up(md) {
-			font-size: 1.25rem;
-			max-width: 40rem;
-		}
+		// @include media-breakpoint-up(md) {
+		// 	font-size: 1.25rem;
+		// 	max-width: 40rem;
+		// }
 		margin-left: auto;
 		margin-right: auto;
 	}

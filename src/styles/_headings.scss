@@ -13,60 +13,60 @@ h6, .h6 {
 
 h1, 
 .h1 {
-  font-size: rem($h1-font-size);
+  font-size: rem(40);
   line-height: rem(48);
   @include media-breakpoint-up(md) {
-    font-size: rem($h1-font-size-md);
-    line-height: rem(64);
+    font-size: rem(48);
+    line-height: rem(56);
   }
 }
 
 h2, 
 .h2 {
-  font-size: rem($h2-font-size);
+  font-size: rem(32);
   line-height: rem(40);
   @include media-breakpoint-up(md) {
-    font-size: rem($h2-font-size-md);
-    line-height: rem(56);
+    font-size: rem(40);
+    line-height: rem(48);
   }
 }
 
 h3, 
 .h3 {
-  font-size: rem($h3-font-size);
+  font-size: rem(28);
   line-height: rem(36);
   @include media-breakpoint-up(md) {
-    font-size: rem($h3-font-size-md);
+    font-size: rem(40);
     line-height: rem(48);
   }
 }
 
 h4, 
 .h4 {
-  font-size: rem($h4-font-size);
+  font-size: rem(18);
   line-height: rem(26);
   @include media-breakpoint-up(md) {
-    font-size: rem($h4-font-size-md);
+    font-size: rem(20);
     line-height: rem(28);
   }
 }
 
 h5, 
 .h5 {
-  font-size: rem($h5-font-size);
+  font-size: rem(14);
   line-height: rem(22);
   @include media-breakpoint-up(md) {
-    font-size: rem($h5-font-size-md);
+    font-size: rem(16);
     line-height: rem(24);
   }
 }
 
 h6, 
 .h6 {
-  font-size: rem($h6-font-size);
+  font-size: rem(12);
   line-height: rem(20);
   @include media-breakpoint-up(md) {
-    font-size: rem($h6-font-size-md);
+    font-size: rem(14);
     line-height: rem(22);
   }
 }
