@@ -18,7 +18,6 @@
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 0;
-    color: darken($white, 24%);
     max-width: rem(480);
   }
   .button {
@@ -90,9 +89,6 @@
     transition: all .32s ease-in-out;
     .donation-dropdown--active & {
       transform: rotate(180deg);
-    }
-    svg {
-      fill: $white;
     }
   }
 }

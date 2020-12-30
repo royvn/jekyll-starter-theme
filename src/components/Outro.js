@@ -1,11 +1,14 @@
 import React from 'react';
-import css from "./footer.module.scss"; // todo split files
+import {Link} from 'gatsby';
+import Img from "gatsby-image";
+
+import css from "./footer.module.scss";
 
 function Outro(props) {
   return (
     <div className="container page-width page-spacer">
-      <div className="row">
-        <div className="col-xs-12 col-md-6 col-lg-6">
+      <div className={` ${css.row} row`}>
+        <div className="col-xs-12 col-md-6 col-lg-5">
           <div className={css.content}>
             
             {props.subtitle && 
@@ -26,18 +29,39 @@ function Outro(props) {
               </p>
             }
 
-            {props.button_mailto && props.button_text &&
-              <a href={`mailto:${props.button_mailto}`} className="button button--primary button--lg">
-                {props.button_text}
-              </a>
+            {props.link_to && props.link_text || props.button_href && props.button_text &&
+              <div className={`${css.buttons} buttons`}>
+
+                {props.link_to && props.link_text &&
+                  <Link to={props.link_to} className="button button--primary button--lg">
+                    {props.link_text}
+                  </Link>
+                }
+  
+                {props.button_href && props.button_text &&
+                  <a href={props.button_href} rel="noopener" className="button button--primary button--lg">
+                    {props.button_text}
+                  </a>
+                }
+
+              </div>
             }
 
           </div>
         </div>
-        <div className="col-xs-12 col-md-6">
-          <p>
-            image image
-          </p>
+        <div className="col-xs-12 col-md-6 col-lg-7">
+          <div className="row">
+            <div className="col-6">
+              {props.image_1 &&
+                <Img fluid={props.image_1} alt="" style={{maxWidth: 1000}} />
+              }
+            </div>
+            <div className="col-6">
+              {props.image_2 &&
+                <Img fluid={props.image_2} alt="" style={{maxWidth: 1000}} />
+              }
+            </div>
+          </div> 
         </div>
       </div>
     </div>

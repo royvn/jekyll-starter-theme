@@ -15,7 +15,6 @@ const AboutPage = () => (
   <Layout>
     <SEO title="Info" description="Designer &amp; developer in regio Den Haag" />
     <Hero image={image} title="Roy van Neden" type={["Front-end developer", "Shopify theme developer", "UX/UI designer &amp; meer"]} paragraph="Met plezier besteed ik mijn tijd aan het ontwerpen, realiseren en verbeteren van digitale producten." />
-    <Services/>
     <StaticQuery query={graphql`
       query {
         allMarkdownRemark(filter: {fileAbsolutePath: {regex: "content/posts/"}}, limit: 4, sort: {order: DESC, fields: frontmatter___date}) {

@@ -7,8 +7,9 @@ import SEO from "../components/Seo";
 import Donation from "../components/Donation";
 
 export default ({ data }) => {
+  
   const post = data.markdownRemark;
-
+  
   // Get the categories in format
   let categories = '';
   for (const [key, value] of post.frontmatter.categories.entries()) {
@@ -18,7 +19,7 @@ export default ({ data }) => {
     }
     categories += category;
   }
-
+  
   let donationOptions = [
     {
       title: 'pakje rooibos thee',
@@ -33,41 +34,41 @@ export default ({ data }) => {
       price: '149,00'
     }
   ];
-
+  
   return (
     <Layout>
       <SEO title={post.frontmatter.title} description={post.excerpt} />
-      <article className="post page-width page-spacer grid">
-          <header className="post-header gcs-xs-1 gce-xs-13 gcs-lg-3 gce-lg-11">
-            <Link to="/blog/" className="post-back-to-blog">
-              Terug naar overzicht
-            </Link>
-            {post.frontmatter.title && 
-              <h1 className="post-title">
-                {post.frontmatter.title}
-              </h1>
-            }
-            {post.frontmatter.date && categories &&
-              <p className="post-meta">
-                Geplaatst op {post.frontmatter.date} in {categories}.
-              </p>
-            }
-          </header>
-          { post.frontmatter.image &&
-            <div className="post-image gcs-xs-1 gce-xs-13 gcs-lg-1 gce-lg-13">
-              <Img fluid={post.frontmatter.image.childImageSharp.fluid} alt={post.frontmatter.title} style={{maxWidth: 1024}} />
-            </div>
+      <article className="post container page-width page-spacer">
+        <header className="post-header">
+          <Link to="/blog/" className="post-back-to-blog">
+          Terug naar overzicht
+          </Link>
+          {post.frontmatter.title && 
+            <h1 className="post-title">
+            {post.frontmatter.title}
+            </h1>
           }
-          <div className="post-content gcs-xs-1 gce-xs-13 gcs-lg-3 gce-lg-11">
-            <div dangerouslySetInnerHTML={{ __html: post.html }} className="markdown" />
+          {post.frontmatter.date && categories &&
+            <p className="post-meta">
+            Geplaatst op {post.frontmatter.date} in {categories}.
+            </p>
+          }
+        </header>
+        {post.frontmatter.image &&
+          <div className="post-image">
+          <Img fluid={post.frontmatter.image.childImageSharp.fluid} alt={post.frontmatter.title} style={{maxWidth: 1024}} />
           </div>
-        </article>
-        <Donation title="Vind je dit leuk?" options={donationOptions} button_url="https://www.paypal.me/royvn" />
+        }
+        <div className="post-content">
+          <div dangerouslySetInnerHTML={{ __html: post.html }} className="markdown" />
+        </div>
+      </article>
+      <Donation title="Vind je dit leuk?" options={donationOptions} button_url="https://www.paypal.me/royvn" />
     </Layout>
-  )
-};
-
-export const query = graphql`
+    )
+  };
+  
+  export const query = graphql`
   query($slug: String!) {
     markdownRemark(fields: { slug: { eq: $slug } }) {
       html
@@ -89,4 +90,4 @@ export const query = graphql`
       timeToRead
     }
   }
-`;
+  `;

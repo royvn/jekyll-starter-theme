@@ -1,11 +1,13 @@
 $white: #FDFDFD;
-$black: #07090F;
-$yellow: #F7CB15;
 $green: #53D67C;
 $dark-green: #2B9720;
-$silver: #E5EAFA;
-$grey: #7C7287;
 $orange: #F55D3E;
+
+$paper: #FAFAFA;
+$grey: #7C7287;
+$frozen: #E5EAFA;
+$black: #07090F;
+$yellow: #F7CB15;
 
 $primary: $green;
 $secondary: $yellow;
@@ -17,9 +19,9 @@ $monospace-font-family: 'Roboto Mono', monospace;
 
 $headings-font-family: $default-font-family;
 $headings-line-height: 1.25;
-$headings-font-weight: 600;
+$headings-font-weight: 700;
 
-$body-background: $white;
+$body-background: $paper;
 $body-color: $black;
 
 $grid-spacer: rem(64);

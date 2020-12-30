@@ -1,6 +1,6 @@
 import React from "react";
-import { Link, graphql } from "gatsby";
-
+import { Link, graphql, StaticQuery } from "gatsby";
+import Img from "gatsby-image";
 class Landing extends React.Component {
 
   constructor (props) {
@@ -37,69 +37,93 @@ class Landing extends React.Component {
 
   render() {
     return(
-      <div className="landing">
 
-        <div className="visual">
-          <div className="visual-item visual-item--active visual-home">
-            Image 1
-          </div>
-          <div className="visual-item visual-info">
-            Image 2
-          </div>
-          <div className="visual-item visual-blog">
-            Image 3
-          </div>
-          <div className="visual-item visual-contact">
-            Image 4
-          </div>
-          <div className="visual-item visual-code">
-            Image 5
-          </div>
-        </div>
 
-        <div className="container">
-          <div className="row align-items-center">
+      <StaticQuery query={graphql`
+      query {
+        landing1: file(relativePath: {eq: "landing-1.png"}) {
+          id
+          childImageSharp {
+            fluid(maxWidth: 1000, quality: 100) {
+              ...GatsbyImageSharpFluid_withWebp
+            }
+          }
+        }
+        landing2: file(relativePath: {eq: "landing-2.png"}) {
+          id
+          childImageSharp {
+            fluid(maxWidth: 1000, quality: 100) {
+              ...GatsbyImageSharpFluid_withWebp
+            }
+          }
+        }
+        landing3: file(relativePath: {eq: "landing-3.png"}) {
+          id
+          childImageSharp {
+            fluid(maxWidth: 1000, quality: 100) {
+              ...GatsbyImageSharpFluid_withWebp
+            }
+          }
+        }
+        landing4: file(relativePath: {eq: "landing-4.png"}) {
+          id
+          childImageSharp {
+            fluid(maxWidth: 1000, quality: 100) {
+              ...GatsbyImageSharpFluid_withWebp
+            }
+          }
+        }
+        landing5: file(relativePath: {eq: "landing-5.png"}) {
+          id
+          childImageSharp {
+            fluid(maxWidth: 1000, quality: 100) {
+              ...GatsbyImageSharpFluid_withWebp
+            }
+          }
+        }
+      }
+      `} render={data => (
+        <div className="landing">
 
-            <div className="col-xs-12 col-md-6 col-lg-6">
-              <div className="rte rte--lg">
-                <p>
-                  Hi, I'm Roy.
-                </p>
-                <p>
-                  Frontend developer in The Hague, currently building awesome Shopify themes at <a href="https://www.code.nl" target="_blank" rel="noopener" onMouseOver={this.handleVisualSwitch} data-handle="code">CODE</a>.
-                </p>
+          <div className="visual">
+            <div className="visual-item visual-item--active visual-home">
+              <Img fluid={data.landing1.childImageSharp.fluid} style={{maxWidth: 1000}} />
+            </div>
+            <div className="visual-item visual-info">
+              <Img fluid={data.landing2.childImageSharp.fluid} style={{maxWidth: 1000}} />
+            </div>
+            <div className="visual-item visual-the-hague">
+              <Img fluid={data.landing3.childImageSharp.fluid} style={{maxWidth: 1000}} />
+            </div>
+            <div className="visual-item visual-shopify">
+              <Img fluid={data.landing4.childImageSharp.fluid} style={{maxWidth: 1000}} />
+            </div>
+            <div className="visual-item visual-code">
+              <Img fluid={data.landing5.childImageSharp.fluid} style={{maxWidth: 1000}} />
+            </div>
+          </div>
+
+          <div className="container page-width page-spacer">
+            <div className="row align-items-center">
+
+              <div className="col-xs-12 col-md-6 col-lg-7">
+                <div className="h1">
+                  <p>
+                    Hi, I'm <Link to="/info/" onMouseOver={this.handleVisualSwitch} data-handle="info">Roy</Link>.
+                  </p>
+                  <p>
+                    Frontend developer in <a onMouseOver={this.handleVisualSwitch} data-handle="the-hague">The Hague</a>, currently building awesome <a href="https://www.shopify.nl" target="_blank" rel="noopener" onMouseOver={this.handleVisualSwitch} data-handle="shopify">Shopify</a> stores at <a href="https://www.code.nl" target="_blank" rel="noopener" onMouseOver={this.handleVisualSwitch} data-handle="code">CODE</a>.
+                  </p>
+                </div>
               </div>
-            </div>
 
-            <div className="col-xs-12 col-md-6 col-lg-4 offset-lg-2">
-              <ul className="nav nav--primary rte rte--lg">
-                <li className="nav-item">
-                  <Link to="/" className="nav-link" activeClassName="nav-link--active" onMouseOver={this.handleVisualSwitch} data-handle="home">
-                    Home
-                  </Link>
-                </li>
-                <li className="nav-item">
-                  <Link to="/info/" className="nav-link" activeClassName="nav-link--active" onMouseOver={this.handleVisualSwitch} data-handle="info">
-                    Info
-                  </Link>
-                </li>
-                <li className="nav-item">
-                  <Link to="/blog/" className="nav-link" activeClassName="nav-link--active" onMouseOver={this.handleVisualSwitch} data-handle="blog">
-                    Blog
-                  </Link>
-                </li>
-                <li className="nav-item">
-                  <Link to="/contact/" className="nav-link" activeClassName="nav-link--active" onMouseOver={this.handleVisualSwitch} data-handle="contact">
-                    Contact
-                  </Link>
-                </li>
-              </ul>
             </div>
-
           </div>
+
         </div>
 
-      </div>
+        )} />
+
     );
   }
 }

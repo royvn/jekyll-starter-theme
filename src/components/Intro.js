@@ -29,14 +29,14 @@ class Intro extends React.Component {
                     {this.props.paragraph}
                   </p>
                 }
-                <div className={`${css.buttons} buttons`}>
+                {/* <div className={`${css.buttons} buttons`}>
                   <Link to="/info/" className={`${css.button} button button--lg button--primary`}>
                     Meer over mij
                   </Link>
                   <Link to="/blog/" className={`${css.button} button button--lg button--secondary`}>
                     Naar blog
                   </Link>
-                </div>
+                </div> */}
 
               </div>
             </div>

@@ -16,13 +16,14 @@ class IndexPage extends React.Component {
   render() {
     const { data } = this.props;
     return (
-      <div>
+      <Layout>
         <SEO title="Home" description="Roy van Neden | Front-end Developer &amp; Shopify Expert"/>
         <Landing />
+        <Services/>
+        <LatestPosts title="Blog &amp; inzichten" data={data.allMarkdownRemark.edges} />
         {/* <Highlights/> */}
         {/* <Banner title="Shopify - Aerial Theme" subtitle="Helemaal zelf ontworpen en ontwikkeld Ecommerce theme!" button_text="Button text" button_to="/blog/" /> */}
-        {/* <LatestPosts data={data.allMarkdownRemark.edges} /> */}
-      </div>
+      </Layout>
     );    
   }
 

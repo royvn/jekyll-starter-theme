@@ -6,9 +6,10 @@
 
 .intro {
   position: relative;
-  @include media-breakpoint-up(md) {
-    margin-top: rem(16);
-  }
+  margin-top: 0;
+  background: $yellow;
+  color: $white;
+  padding: rem(48) 0;
 }
 
 .opacity {

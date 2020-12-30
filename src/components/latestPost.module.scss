@@ -6,17 +6,6 @@
 
 .latest-posts {
 	display: flex;
-	flex-wrap: nowrap;
-	overflow-x: auto;
-	padding-top: 3rem;
-	padding-bottom: 3rem;
-	padding-left: 4%;
-	.latest-post:first-child {
-		margin-left: 1.5rem;
-	}
-	.latest-post:not(:first-child) {
-		margin-left: -6rem;
-	}
 }
 
 .latest-post {

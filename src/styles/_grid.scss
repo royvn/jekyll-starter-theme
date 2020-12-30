@@ -1,11 +1,11 @@
 .page-width {	
-	max-width: rem(1200);
+	max-width: rem(1280);
 	margin: 0 auto;
 }
 
 .page-spacer {
 	padding: 0 rem(24);
-	@include media-breakpoint-up(lg) {
-		padding: 0 $grid-spacer;
-	}
+	// @include media-breakpoint-up(lg) {
+		// padding: 0 $grid-spacer;
+	// }
 }

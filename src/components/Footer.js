@@ -1,11 +1,21 @@
 import React from "react";
 import { Link, StaticQuery, graphql } from "gatsby";
-import css from "./footer.module.scss";
 import Outro from "./Outro";
-
 import WidgetList from "./WidgetList";
 
+import css from "./footer.module.scss";
+
 class Footer extends React.Component {
+
+	constructor(props) {
+		super(props);
+	}
+
+	handleCopy () {
+		let input = document.getElementById('bitcoinAdress');
+		input.select();
+		document.execCommand('copy');
+	}
 
 	render() {
 		const { data } = this.props;
@@ -25,37 +35,92 @@ class Footer extends React.Component {
 							}
 						}
 					}
+					image2: file(relativePath: {eq: "boat.png"}) {
+						id
+						childImageSharp {
+							fluid(maxWidth: 342, quality: 100) {
+								...GatsbyImageSharpFluid_withWebp
+							}
+						}
+					}
+					image1: file(relativePath: {eq: "macbook.png"}) {
+						id
+						childImageSharp {
+							fluid(maxWidth: 342, quality: 100) {
+								...GatsbyImageSharpFluid_withWebp
+							}
+						}
+					}
 				}
 				`} render={data => (
 					<footer className={css.footer}>
 						{/* <WidgetList title="Recent van blog" list={data.allMarkdownRemark.edges} /> */}
 						
-						<Outro subtitle="Hoi recruiters" title="Ik ontwikkel met plezier shops bij CODE - a Shopify plus agency" paragraph="Ik ben dan ook niet opzoek naar een nieuwe baan. Wil je een seintje krijgen wanneer ik wel beschikbaar ben? Meld je dan aan voor een notificatie!" button_mailto="roy.van.neden@gmail.com" button_text="Stuur een mailtje" />
-
+						<Outro 
+							subtitle="Wat ik doe" 
+							title="Ik ontwikkel Shopify Themes bij CODE" 
+							paragraph="Ben je zoekende naar een Shopify Expert? Neem dan een kijkje bij CODE - a Shopify Plus Agency! De nummer 1 in Europa." 
+							button_href="https://code.nl" 
+							button_text="Meer info"
+							image_1={data.image1.childImageSharp.fluid}
+							image_2={data.image2.childImageSharp.fluid}
+							 />
+							 
 						<div className={`${css.info} container page-width page-spacer`}>
 							<div className="row">
 								<div className="col-xs-12 col-md-6 col-lg-3">
-									<p>
+									<p className="h6">
 										roy.vanneden.nl
 									</p>		
-								</div>
-								<div className="col-xs-12 col-md-6 col-lg-3">
 									<p>
+										Made with <span role="img">❤️</span> in The Hague
+									</p>
+								</div>
+
+								<div className="col-xs-12 col-md-6 col-lg-3">
+									<p className="h6">
 										Doneer Bitcoin
-										<input type="text" value="1CEZkvXA6dtfknK2YjTZpqtdQDYsBh5Ymi" className={`${css.bitcoin}`} readOnly/>
-										<button onClick={this.handleCopy}>
-											Copy bitcoin address
+									</p>
+									<div className={css.bitcoin} onClick={this.handleCopy}>
+										<input type="text" value="1CEZkvXA6dtfknK2YjTZpqtdQDYsBh5Ymi" className={`${css.bitcoin}`} id="bitcoinAdress" readOnly/>
+										<button type="button">
+											<svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/></svg>
+											<span className="sr-only">
+												Copy Bitcoin address
+											</span>
 										</button>
+									</div>
+								</div>
+
+								<div className="col-xs-12 col-md-6 col-lg-3">
+									<p className="h6">
+										Handige links
+									</p>
+									<p>
+										<a href="https://github.com/royvn" target="_blank" rel="noopener noreferrer">
+											Github
+										</a>,
+										{` `}
+										<a href="https://www.instagram.com/royvn/" target="_blank" rel="noopener noreferrer">
+											Instagram
+										</a>,
+										{` `}
+										<a href="https://www.linkedin.com/in/roy-van-neden-10549761/" target="_blank" rel="noopener noreferrer">
+											Linkedin
+										</a>,
+										{` `}
+										<a href="https://twitter.com/royvn_" target="_blank" rel="noopener noreferrer">
+											Twitter
+										</a>.
 									</p>
 								</div>
+
 								<div className="col-xs-12 col-md-6 col-lg-3">
-									<p>
-										Shopify partner
+									<p className="h6">
+										© 1992 - {new Date().getFullYear()}
 									</p>
-								</div>
-								<div className="col-xs-12 col-md-6 col-lg-3">
 									<p>
-										© 1992 - {new Date().getFullYear()}, Built with
+										Built with
 										{` `}
 										<a href="https://www.gatsbyjs.org" target="_blank" rel="noopener noreferrer">
 										Gatsby
