@@ -1,10 +1,9 @@
 .post {		
 	margin: rem(48) auto;
 	@include media-breakpoint-up(lg) {
-		margin: rem(96) auto;
+		margin: rem(48) auto rem(96) auto;
 	}
 	.post-back-to-blog {
-		display: inline-flex;
 		font-size: rem(16);
 		line-height: rem(24);
 		color: inherit;

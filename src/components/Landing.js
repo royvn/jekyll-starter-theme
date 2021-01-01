@@ -112,7 +112,7 @@ class Landing extends React.Component {
                     Hi, I'm <Link to="/info/" onMouseOver={this.handleVisualSwitch} data-handle="info">Roy</Link>.
                   </p>
                   <p>
-                    Frontend developer in <a onMouseOver={this.handleVisualSwitch} data-handle="the-hague">The Hague</a>, currently building awesome <a href="https://www.shopify.nl" target="_blank" rel="noopener" onMouseOver={this.handleVisualSwitch} data-handle="shopify">Shopify</a> stores at <a href="https://www.code.nl" target="_blank" rel="noopener" onMouseOver={this.handleVisualSwitch} data-handle="code">CODE</a>.
+                    Frontend developer in <a onMouseOver={this.handleVisualSwitch} data-handle="the-hague">The Hague</a>, currently building awesome <a href="https://www.shopify.nl" target="_blank" rel="noopener noreferrer" onMouseOver={this.handleVisualSwitch} data-handle="shopify">Shopify</a> stores at <a href="https://www.code.nl" target="_blank" rel="noopener noreferrer" onMouseOver={this.handleVisualSwitch} data-handle="code">CODE</a>.
                   </p>
                 </div>
               </div>

@@ -1,4 +1,5 @@
 import React from "react";
+import {Link} from "gatsby";
 import css from "./services.module.scss";
 
 class Services extends React.Component {
@@ -24,9 +25,9 @@ class Services extends React.Component {
                   <p className="rte rte--md">
                     Van een fijne navigatie en interactie tot een geheel design componenten systeem met een focus op ecommerce.
                   </p>
-                  <a>
+                  <Link to="/" className="button button--primary button--sm">
                     Meer info
-                  </a>
+                  </Link>
                 </div> 
               </div>
             </div>
@@ -40,9 +41,9 @@ class Services extends React.Component {
                   <p className="rte rte--md">
                     Je eigen unieke geoptimaliseerde Shopify Theme met support en doorontwikkeling.
                   </p>
-                  <a>
+                  <Link to="/" className="button button--primary button--sm">
                     Meer info
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -56,9 +57,9 @@ class Services extends React.Component {
                   <p className="rte rte--md">
                     Doorloop en leer in je eigen tempo hoe je met Shopify aan de slag kan gaan!
                   </p>
-                  <a>
+                  <Link to="/" className="button button--primary button--sm">
                     Meer info
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>

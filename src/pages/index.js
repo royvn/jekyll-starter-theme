@@ -19,10 +19,10 @@ class IndexPage extends React.Component {
       <Layout>
         <SEO title="Home" description="Roy van Neden | Front-end Developer &amp; Shopify Expert"/>
         <Landing />
-        <Services/>
+        {/* <Services/> */}
         <LatestPosts title="Blog &amp; inzichten" data={data.allMarkdownRemark.edges} />
         {/* <Highlights/> */}
-        {/* <Banner title="Shopify - Aerial Theme" subtitle="Helemaal zelf ontworpen en ontwikkeld Ecommerce theme!" button_text="Button text" button_to="/blog/" /> */}
+        {/* <Banner title="Shopify - Aerial Theme" subtitle="Helemaal zelf ontworpen en ontwikkeld Ecommerce theme!" link_to="/blog/" link_text="Button text" /> */}
       </Layout>
     );    
   }

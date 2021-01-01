@@ -39,7 +39,7 @@ function Outro(props) {
                 }
   
                 {props.button_href && props.button_text &&
-                  <a href={props.button_href} rel="noopener" className="button button--primary button--lg">
+                  <a href={props.button_href} rel="noopener noreferrer" className="button button--primary button--lg">
                     {props.button_text}
                   </a>
                 }

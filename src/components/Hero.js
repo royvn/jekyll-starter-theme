@@ -1,6 +1,9 @@
 import React from "react";
 import { Link } from "gatsby";
+import Img from "gatsby-image";
 import Typed from "typed.js";
+
+import css from "./hero.module.scss";
 
 class Hero extends React.Component {
 
@@ -25,27 +28,34 @@ class Hero extends React.Component {
 	}
 
   render() {
-    const heroStyle ={
-      backgroundImage: 'url(' + this.props.image +')'
-    };
+
     return (
-      <div className="hero hero--dark-mode" style={heroStyle}>
-        <div className="grid page-width page-spacer">
-          <div className="grid__item gcs-xs-1 gce-xs-13 gcs-lg-3 gce-lg-11 text-center">
-            <h1 className="hero__title">
-              {this.props.title} <span className="t-48">&mdash;</span>
-              <div>
-                <span className="type"></span>
-              </div>
-            </h1>
-            <p className="hero__paragraph">
-              {this.props.paragraph}
-            </p>
-            <button type="submit" className="mouse" onClick={this.handleMouseClick}>
-              <span className="sr-only">
-                Scroll verder
-              </span>
-            </button>
+      <div className={`${css.hero} ${css.heroDarkMode}`}>
+        {this.props.image && 
+          <Img fluid={this.props.image} alt={this.props.image_alt} className={css.image} />
+        }
+        <div className="container page-width page-spacer">
+          <div className="row text-center">
+            <div className="col-12 col-md-12">
+              {this.props.title &&
+                <h1 className={css.title}>
+                  {this.props.title} <span className="t-48">&mdash;</span>
+                  <div>
+                    <span className="type"></span>
+                  </div>
+                </h1>
+              }
+              {this.props.paragraph && 
+                <p className={css.paragraph}>
+                  {this.props.paragraph}
+                </p>
+              }
+              <button type="submit" className="mouse" onClick={this.handleMouseClick}>
+                <span className="sr-only">
+                  Scroll verder
+                </span>
+              </button>
+            </div>
           </div>
         </div>
       </div>

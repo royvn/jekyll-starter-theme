@@ -40,19 +40,23 @@ export default ({ data }) => {
       <SEO title={post.frontmatter.title} description={post.excerpt} />
       <article className="post container page-width page-spacer">
         <header className="post-header">
-          <Link to="/blog/" className="post-back-to-blog">
-          Terug naar overzicht
-          </Link>
-          {post.frontmatter.title && 
-            <h1 className="post-title">
-            {post.frontmatter.title}
-            </h1>
-          }
-          {post.frontmatter.date && categories &&
-            <p className="post-meta">
-            Geplaatst op {post.frontmatter.date} in {categories}.
-            </p>
-          }
+          <div className="row">
+            <div className="col-12 col-md-10 col-lg-8 offset-lg-2">
+              <Link to="/blog/" className="post-back-to-blog">
+              Terug naar overzicht
+              </Link>
+              {post.frontmatter.title && 
+                <h1 className="post-title">
+                {post.frontmatter.title}
+                </h1>
+              }
+              {post.frontmatter.date && categories &&
+                <p className="post-meta">
+                Geplaatst op {post.frontmatter.date} in {categories}.
+                </p>
+              }
+            </div>
+          </div>
         </header>
         {post.frontmatter.image &&
           <div className="post-image">

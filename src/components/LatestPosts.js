@@ -18,7 +18,7 @@ class LatestPosts extends React.Component {
             }
             {this.props.rte &&
               <p className="rte rte--md">
-                Op mijn blog schrijf ik over dingen die ik interessant vind of geleerd heb. Kijk gerust rond <span role="img">🙈</span>.
+                Op mijn blog schrijf ik over dingen die ik interessant vind of geleerd heb. Kijk gerust rond <span role="img" aria-label="Monkey">🙈</span>.
               </p>
             }
             {this.props.link_to && this.props.link_text &&
