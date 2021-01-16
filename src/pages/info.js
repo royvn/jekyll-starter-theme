@@ -4,12 +4,9 @@ import Img from "gatsby-image";
 
 import Layout from "../components/Layout";
 import SEO from "../components/Seo";
+import Hero from "../components/Hero";
 import Banner from "../components/Banner";
 import WidgetList from "../components/WidgetList";
-import Hero from "../components/Hero";
-import Services from "../components/Services";
-
-import image from "../images/hero.jpg";
 
 const AboutPage = () => (
   <StaticQuery query={graphql`
@@ -30,8 +27,8 @@ const AboutPage = () => (
       heroImage: file(relativePath: {eq: "hero.jpg"}) {
         id
         childImageSharp {
-          fluid(maxWidth: 1200, quality: 100) {
-            ...GatsbyImageSharpFluid_withWebp
+          fluid(maxWidth: 1600, quality: 100) {
+            ...GatsbyImageSharpFluid
           }
         }
       }

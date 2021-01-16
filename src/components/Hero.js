@@ -32,7 +32,15 @@ class Hero extends React.Component {
     return (
       <div className={`${css.hero} ${css.heroDarkMode}`}>
         {this.props.image && 
-          <Img fluid={this.props.image} alt={this.props.image_alt} className={css.image} />
+          <Img 
+            fluid={this.props.image} 
+            alt={this.props.image_alt} 
+            className={css.image} 
+            imgStyle={{backgroundColor: 'orange'}}
+            backgroundColor={{backgroundColor: 'purple'}}
+            placeholderStyle={{paddingBottom: 0, backgroundColor: 'red'}} 
+            style={{position:'absolute'}} 
+            />
         }
         <div className="container page-spacer">
           <div className="row text-center">
@@ -50,7 +58,7 @@ class Hero extends React.Component {
                   {this.props.paragraph}
                 </p>
               }
-              <button type="submit" className="mouse" onClick={this.handleMouseClick}>
+              <button type="button" className={css.mouse} onClick={this.handleMouseClick}>
                 <span className="sr-only">
                   Scroll verder
                 </span>
