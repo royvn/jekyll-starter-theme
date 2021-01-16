@@ -2,8 +2,6 @@ import React from "react";
 import { Link, StaticQuery, graphql } from "gatsby";
 import Img from "gatsby-image";
 
-import Notice from "./Notice";
-
 class Header extends React.Component {
 	
 	constructor(props) {
@@ -14,11 +12,11 @@ class Header extends React.Component {
 			isNavigationToggled: false
 		}
 		this.handleHamburgerClick = this.handleHamburgerClick.bind(this);
-		this.handleHeaderHighlight = this.handleHeaderHighlight.bind(this);
+		this.handleHeaderScroll = this.handleHeaderScroll.bind(this);
 		this.handleCloseAnimation = this.handleCloseAnimation.bind(this);
 	}
 		
-	handleHeaderHighlight() {
+	handleHeaderScroll() {
 		
 		let currentScrollYPosition = window.scrollY;
 
@@ -35,7 +33,7 @@ class Header extends React.Component {
 	}
 
 	componentDidMount() {
-		window.addEventListener('scroll', this.handleHeaderHighlight);
+		window.addEventListener('scroll', this.handleHeaderScroll);
 	}
 	
 	handleHamburgerClick() {
@@ -63,23 +61,22 @@ class Header extends React.Component {
 				}
 			}
 			`} render={data => (
-				<header className={`header ${this.state.isNavigationToggled ? 'navigation--open' : ''} ${this.state.isHighlighted ? 'header--highlighted' : ''}`}>
-					<Notice title="Verbeter de weergave van je productinformatie in Shopify" link="/blog/verbeter-de-weergave-van-je-productinformatie-in-shopify/" />
-					<div className="bar">
-						<div className="bar__content page-width page-spacer">
-							<div className="bar__content__item">
+				<header className={`header ${this.state.isNavigationToggled ? 'navigation--open' : ''} ${this.state.isHighlighted ? 'header--sticky' : ''}`}>
+					<div className="header__container page-spacer">
+						<div className="header__content">
+							<div className="header__content__item">
 								{this.props.siteTitle && 
-									<Link to="/">
+									<div className="me">
 										<span className="sr-only">
 											{this.props.siteTitle}
 										</span>
-										<div className="me">
+										<Link to="/">
 											<Img fluid={data.logo.childImageSharp.fluid} />
-										</div>
-									</Link>
+										</Link>
+									</div>
 								}
 							</div>	
-							<div className="bar__content__item">
+							<div className="header__content__item">
 								{/* <button type="button" onClick={this.handleHamburgerClick} className={`hamburger`}>
 									Menu
 								</button> */}
@@ -107,8 +104,8 @@ class Header extends React.Component {
 										</li>
 									</ul>
 								</nav>
-							</div>	
-							<div className="bar__content__item">
+							</div>
+							<div className="header__content__item">
 								<div className="action-buttons">
 									<button type="button" className="action-buttons__item">
 										<span className="sr-only">
@@ -117,8 +114,7 @@ class Header extends React.Component {
 										<svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M6 10c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm12 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm-6 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/></svg>
 									</button>
 								</div>	
-							</div>	
-							
+							</div>								
 						</div>
 					</div>
 				</header>

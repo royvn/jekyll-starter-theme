@@ -10,7 +10,7 @@ class Intro extends React.Component {
   render() {
     return (
       <div className={`section ${css.intro}`}>
-        <div className="container page-width page-spacer">
+        <div className="container page-spacer">
           <div className="row align-items-center">
             <div className="col-xs-12 col-lg-7">
               <div className={css.content}>

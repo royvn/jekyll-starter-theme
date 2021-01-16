@@ -8,17 +8,17 @@ import LatestPost from "../components/LatestPost";
 class LatestPosts extends React.Component {
   render(){
     return (
-      <div>
-        <div className="container page-width page-spacer align-items-center">
+      <div className="section">
+        <div className="container page-spacer align-items-center">
           <div className="">
             {this.props.title &&
               <h2 className="">
                 {this.props.title}
               </h2>
             }
-            {this.props.rte &&
+            {this.props.paragraph &&
               <p className="rte rte--md">
-                Op mijn blog schrijf ik over dingen die ik interessant vind of geleerd heb. Kijk gerust rond <span role="img" aria-label="Monkey">🙈</span>.
+                {this.props.paragraph}
               </p>
             }
             {this.props.link_to && this.props.link_text &&

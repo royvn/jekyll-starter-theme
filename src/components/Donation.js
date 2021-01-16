@@ -29,7 +29,7 @@ class Donation extends React.Component {
 
   render() {
     return (
-      <div className="donation container page-width page-spacer">
+      <div className="donation container page-spacer">
         <div className="gcs-xs-1 gce-xs-13">
           <div className="donation__content">
             {this.props.title &&

@@ -6,7 +6,7 @@ import css from "./footer.module.scss";
 
 function Outro(props) {
   return (
-    <div className="container page-width page-spacer">
+    <div className="container page-spacer">
       <div className={` ${css.row} row`}>
         <div className="col-xs-12 col-md-6 col-lg-5">
           <div className={css.content}>

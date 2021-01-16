@@ -11,7 +11,7 @@ class Services extends React.Component {
   render() {
     return (
       <div className="section">
-        <div className="container page-width page-spacer">
+        <div className="container page-spacer">
           <div className="row">
             <div className="col-xs-12 col-md-6 col-lg-4">
               <div className={`${css.service}`}>

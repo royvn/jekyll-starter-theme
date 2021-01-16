@@ -34,7 +34,7 @@ class Hero extends React.Component {
         {this.props.image && 
           <Img fluid={this.props.image} alt={this.props.image_alt} className={css.image} />
         }
-        <div className="container page-width page-spacer">
+        <div className="container page-spacer">
           <div className="row text-center">
             <div className="col-12 col-md-12">
               {this.props.title &&

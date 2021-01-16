@@ -20,7 +20,7 @@ class IndexPage extends React.Component {
         <SEO title="Home" description="Roy van Neden | Front-end Developer &amp; Shopify Expert"/>
         <Landing />
         {/* <Services/> */}
-        <LatestPosts title="Blog &amp; inzichten" data={data.allMarkdownRemark.edges} />
+        <LatestPosts title="Blog &amp; inzichten" paragraph="Op mijn blog schrijf ik over dingen die ik interessant vind of geleerd heb." data={data.allMarkdownRemark.edges} />
         {/* <Highlights/> */}
         {/* <Banner title="Shopify - Aerial Theme" subtitle="Helemaal zelf ontworpen en ontwikkeld Ecommerce theme!" link_to="/blog/" link_text="Button text" /> */}
       </Layout>

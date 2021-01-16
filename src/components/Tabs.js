@@ -21,7 +21,7 @@ class TabsWithImage extends React.Component {
 
 	render() {
 		return (
-			<div className="grid page-width page-spacer align-items-center">
+			<div className="grid page-spacer align-items-center">
         <div className="grid__item gcs-xs-1 gce-xs-13 gcs-lg-1 gce-lg-6">
           <ul className="nav presentation-tab" id="tab">
             <li>

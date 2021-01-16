@@ -10,7 +10,7 @@ class Notice extends React.Component {
 	render() {
 		return (
 			<Link to={this.props.link} className={css.notice} activeClassName="notice--active">
-				<div className={` ${css.content} page-width page-spacer`}>
+				<div className={` ${css.content} page-spacer`}>
 					{this.props.title &&
 						<span className={css.text}>
 							{this.props.title}

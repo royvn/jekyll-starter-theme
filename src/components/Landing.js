@@ -103,16 +103,13 @@ class Landing extends React.Component {
             </div>
           </div>
 
-          <div className="container page-width page-spacer">
+          <div className="container page-spacer">
             <div className="row align-items-center">
 
-              <div className="col-xs-12 col-md-6 col-lg-7">
+              <div className="col-xs-12 col-md-6 col-lg-10">
                 <div className="h1">
                   <p>
-                    Hi, I'm <Link to="/info/" onMouseOver={this.handleVisualSwitch} data-handle="info">Roy</Link>.
-                  </p>
-                  <p>
-                    Frontend developer in <a onMouseOver={this.handleVisualSwitch} data-handle="the-hague">The Hague</a>, currently building awesome <a href="https://www.shopify.nl" target="_blank" rel="noopener noreferrer" onMouseOver={this.handleVisualSwitch} data-handle="shopify">Shopify</a> stores at <a href="https://www.code.nl" target="_blank" rel="noopener noreferrer" onMouseOver={this.handleVisualSwitch} data-handle="code">CODE</a>.
+                    Hi, I'm <Link to="/info/" onMouseOver={this.handleVisualSwitch} data-handle="info">Roy</Link>, located in <a onMouseOver={this.handleVisualSwitch} data-handle="the-hague">The Hague</a>, building awesome <a href="https://www.shopify.nl" target="_blank" rel="noopener noreferrer" onMouseOver={this.handleVisualSwitch} data-handle="shopify">Shopify</a> themes at <a href="https://www.code.nl" target="_blank" rel="noopener noreferrer" onMouseOver={this.handleVisualSwitch} data-handle="code">CODE</a>.
                   </p>
                 </div>
               </div>

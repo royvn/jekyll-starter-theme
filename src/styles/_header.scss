@@ -1,33 +1,50 @@
 .header {
-	position: fixed;
-	// position: sticky;
-	// top: rem(48);
+	position: sticky;
 	top: 0;
 	right: 0;
 	left: 0;
 	z-index: 10;
 	color: $black;
-	.bar {
-		padding: rem(8) 0;
-		@include media-breakpoint-up(md) {
-			padding: rem(16) 0;
-		}
-		transition: all .32s cubic-bezier(0.55, 0.085, 0.68, 0.53);
-		background-color: $paper;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+	padding: rem(8) 0;
+	background-color: $paper;
+	transition: all .32s cubic-bezier(0.55, 0.085, 0.68, 0.53);
+	@include media-breakpoint-up(md) {
+		padding: rem(16) 0;
 	}
 	&:hover, 
 	&:focus, 
 	&:active {
-		background-color: $yellow;
+		// background-color: $yellow;
 	}
-	&.header--highlighted {
-		background-color: $yellow;
+	&.header--sticky {
+		// background-color: $yellow;
 	}
-	.bar__content {
+	.header__container {
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+		@include media-breakpoint-up(sm) {
+			max-width: 540px;
+		}
+		@include media-breakpoint-up(md) {
+			max-width: 720px;
+		}
+		@include media-breakpoint-up(lg) {
+			max-width: 960px;
+		}
+		@include media-breakpoint-up(xl) {
+			max-width: 1140px;
+		}
+		@include media-breakpoint-up(xxl) {
+			max-width: 1320px;
+		}
+	}
+	.header__content {
 		display: flex;
 		flex-wrap: wrap;
 		align-items: center;
-		.bar__content__item {
+		.header__content__item {
 			&:first-child {
 				width: 20%;
 			}
@@ -75,6 +92,9 @@
 	background-color: $black;
 	border-radius: rem(48);
 	overflow: hidden;
+	a {
+		display: block;
+	}
 }
 
 .header__social-item {

@@ -38,7 +38,7 @@ export default ({ data }) => {
   return (
     <Layout>
       <SEO title={post.frontmatter.title} description={post.excerpt} />
-      <article className="post container page-width page-spacer">
+      <article className="post container page-spacer">
         <header className="post-header">
           <div className="row">
             <div className="col-12 col-md-10 col-lg-8 offset-lg-2">

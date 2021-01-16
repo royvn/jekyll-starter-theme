@@ -12,7 +12,7 @@ class Footer extends React.Component {
 	}
 
 	handleCopy () {
-		let input = document.getElementById('bitcoinAdress');
+		const input = document.getElementById('bitcoinAdress');
 		input.select();
 		document.execCommand('copy');
 	}
@@ -35,7 +35,7 @@ class Footer extends React.Component {
 							}
 						}
 					}
-					image2: file(relativePath: {eq: "boat.png"}) {
+					image1: file(relativePath: {eq: "macbook.png"}) {
 						id
 						childImageSharp {
 							fluid(maxWidth: 342, quality: 100) {
@@ -43,7 +43,7 @@ class Footer extends React.Component {
 							}
 						}
 					}
-					image1: file(relativePath: {eq: "macbook.png"}) {
+					image2: file(relativePath: {eq: "boat.png"}) {
 						id
 						childImageSharp {
 							fluid(maxWidth: 342, quality: 100) {
@@ -59,21 +59,21 @@ class Footer extends React.Component {
 						<Outro 
 							subtitle="Wat ik doe" 
 							title="Ik ontwikkel Shopify Themes bij CODE" 
-							paragraph="Ben je zoekende naar een Shopify Expert? Neem dan een kijkje bij CODE - a Shopify Plus Agency! De nummer 1 in Europa." 
+							paragraph="Ben je zoekende naar een Shopify Expert? Neem dan een kijkje bij CODE - a Shopify Plus Agency!" 
 							button_href="https://code.nl" 
 							button_text="Meer info"
 							image_1={data.image1.childImageSharp.fluid}
 							image_2={data.image2.childImageSharp.fluid}
 							 />
 							 
-						<div className={`${css.info} container page-width page-spacer`}>
+						<div className={`${css.info} container page-spacer`}>
 							<div className="row">
 								<div className="col-xs-12 col-md-6 col-lg-3">
 									<p className="h6">
 										roy.vanneden.nl
 									</p>		
 									<p>
-										Made with <span role="img">❤️</span> in The Hague
+										Made with <span role="img">❤</span> in The Hague
 									</p>
 								</div>
 
@@ -94,7 +94,7 @@ class Footer extends React.Component {
 
 								<div className="col-xs-12 col-md-6 col-lg-3">
 									<p className="h6">
-										Handige links
+										Mijn links
 									</p>
 									<p>
 										<a href="https://github.com/royvn" target="_blank" rel="noopener noreferrer">
