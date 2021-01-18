@@ -8,7 +8,7 @@ function Outro(props) {
   return (
     <div className="container page-spacer">
       <div className={` ${css.row} row`}>
-        <div className="col-xs-12 col-md-6 col-lg-5">
+        <div className="col-12 col-md-6 col-lg-5">
           <div className={css.content}>
             
             {props.subtitle && 
@@ -49,7 +49,7 @@ function Outro(props) {
 
           </div>
         </div>
-        <div className="col-xs-12 col-md-6 col-lg-7">
+        <div className="col-12 col-md-6 col-lg-7">
           <div className="row">
             <div className="col-6">
               {props.image_1 &&

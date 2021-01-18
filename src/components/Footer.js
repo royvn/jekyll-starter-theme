@@ -68,7 +68,8 @@ class Footer extends React.Component {
 							 
 						<div className={`${css.info} container page-spacer`}>
 							<div className="row">
-								<div className="col-xs-12 col-md-6 col-lg-3">
+								
+								<div className={`col-12 col-md-6 col-lg-3 ${css.panel}`}>
 									<p className="h6">
 										roy.vanneden.nl
 									</p>		
@@ -77,7 +78,7 @@ class Footer extends React.Component {
 									</p>
 								</div>
 
-								<div className="col-xs-12 col-md-6 col-lg-3">
+								<div className={`col-12 col-md-6 col-lg-3 ${css.panel}`}>
 									<p className="h6">
 										Doneer Bitcoin
 									</p>
@@ -92,7 +93,7 @@ class Footer extends React.Component {
 									</div>
 								</div>
 
-								<div className="col-xs-12 col-md-6 col-lg-3">
+								<div className={`col-12 col-md-6 col-lg-3 ${css.panel}`}>
 									<p className="h6">
 										Mijn links
 									</p>
@@ -115,7 +116,7 @@ class Footer extends React.Component {
 									</p>
 								</div>
 
-								<div className="col-xs-12 col-md-6 col-lg-3">
+								<div className={`col-12 col-md-6 col-lg-3 ${css.panel}`}>
 									<p className="h6">
 										© 1992 - {new Date().getFullYear()}
 									</p>
@@ -136,6 +137,7 @@ class Footer extends React.Component {
 										</a>.
 									</p>
 								</div>
+
 							</div>
 						</div>
 					</footer>

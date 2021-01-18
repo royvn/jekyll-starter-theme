@@ -12,7 +12,7 @@ class Intro extends React.Component {
       <div className={`section ${css.intro}`}>
         <div className="container page-spacer">
           <div className="row align-items-center">
-            <div className="col-xs-12 col-lg-7">
+            <div className="col-12 col-lg-7">
               <div className={css.content}>
                 {this.props.label &&
                   <p className="subtitle">

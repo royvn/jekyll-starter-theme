@@ -62,7 +62,7 @@ class Header extends React.Component {
 			}
 			`} render={data => (
 				<header className={`header ${this.state.isNavigationToggled ? 'navigation--open' : ''} ${this.state.isHighlighted ? 'header--sticky' : ''}`}>
-					<div className="header__container page-spacer">
+					<div className="container page-spacer">
 						<div className="header__content">
 							<div className="header__content__item">
 								{this.props.siteTitle && 

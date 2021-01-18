@@ -41,6 +41,13 @@ export const query = graphql`
 						title
             date(formatString: "DD MM YYYY")
             tags
+            image {
+              childImageSharp {
+                fluid(maxWidth: 1200, quality: 100) {
+                  ...GatsbyImageSharpFluid_withWebp
+                }
+              }
+            }
 					}
 					excerpt
 					html

@@ -4,59 +4,59 @@
 @import "../styles/mixins/mixins";
 @import "../styles/settings";
 
-.latest-posts {
-	display: flex;
-}
+// .latest-posts {
+// 	display: flex;
+// }
 
-.latest-post {
-	position: relative;
-	border-radius: 0.5rem;
-	background: lighten($black, 6%);
-	color: $white;
-	box-shadow: -.5rem 0 3rem rgba(0,0,0,0.48);
-	display: flex;
-	flex-direction: column;
-	transition: .2s;
-	margin: 0;
-	min-width: 256px;
-	max-width: 280px;
-	min-height: 320px;
-    &:hover {
-        background-color: $blue;
-    }
-    &:hover~.latest-post {
-        transform:  translateX(6rem);
-    }
-	> .permalink { 
-		color: inherit; 
-		flex: auto;
-		display: flex;
-		flex-direction: column;
-		padding: 1.5rem;
-		&:hover, &:focus, &:active {
-			text-decoration: none;
-		}
-	}
-	.date {
-		opacity: 0.64;	
-	}
-	.title {
-		font-size: 1.25rem;
-		line-height: 1.75rem;
-	}
-	.tags {
-		margin-top: auto;
-		opacity: 0.64;
-		font-size: 0.875rem;
-		line-height: 1.5rem;
-		display: flex;
-		flex-wrap: wrap;
-		span {
-			display: block;
-			margin-right: 1rem;
-			&:last-child {
-				margin-right: 0;
-			}
-		}
-	}
-}
+// .latest-post {
+// 	position: relative;
+// 	border-radius: 0.5rem;
+// 	background: lighten($black, 6%);
+// 	color: $white;
+// 	box-shadow: -.5rem 0 3rem rgba(0,0,0,0.48);
+// 	display: flex;
+// 	flex-direction: column;
+// 	transition: .2s;
+// 	margin: 0;
+// 	min-width: 256px;
+// 	max-width: 280px;
+// 	min-height: 320px;
+//     &:hover {
+//         background-color: $blue;
+//     }
+//     &:hover~.latest-post {
+//         transform:  translateX(6rem);
+//     }
+// 	> .permalink { 
+// 		color: inherit; 
+// 		flex: auto;
+// 		display: flex;
+// 		flex-direction: column;
+// 		padding: 1.5rem;
+// 		&:hover, &:focus, &:active {
+// 			text-decoration: none;
+// 		}
+// 	}
+// 	.date {
+// 		opacity: 0.64;	
+// 	}
+// 	.title {
+// 		font-size: 1.25rem;
+// 		line-height: 1.75rem;
+// 	}
+// 	.tags {
+// 		margin-top: auto;
+// 		opacity: 0.64;
+// 		font-size: 0.875rem;
+// 		line-height: 1.5rem;
+// 		display: flex;
+// 		flex-wrap: wrap;
+// 		span {
+// 			display: block;
+// 			margin-right: 1rem;
+// 			&:last-child {
+// 				margin-right: 0;
+// 			}
+// 		}
+// 	}
+// }

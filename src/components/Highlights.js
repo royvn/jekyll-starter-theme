@@ -40,7 +40,7 @@ class Highlights extends React.Component {
         <button type="button" className="button button--primary" onClick={this.test}>Test callback</button>
         <div className="container">
           <div className="row">
-            <div className="col col-xs-12 col-md-6 col-lg-6">
+            <div className="col col-12 col-md-6 col-lg-6">
               Lees content hier uit.
             </div> 
           </div>
