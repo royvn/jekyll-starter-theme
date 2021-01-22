@@ -1,6 +1,10 @@
+@import "../../node_modules/bootstrap/scss/functions";
+@import "../../node_modules/bootstrap/scss/variables";
+@import "../../node_modules/bootstrap/scss/mixins";
+
 /* Text meant only for screen readers. */
 .sr-only {
-	@include sr-only;
+	@include visually-hidden;
 }
 
 /* Do not show the outline on the skip link target. */
