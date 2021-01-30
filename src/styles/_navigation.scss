@@ -1,9 +1,4 @@
 .navigation {
-	position: fixed;
-	z-index: $zindex-fixed;
-	right: 0;
-	bottom: 0;
-	left: 0;
 	background-color: $white;
 	color: $black;
 	display: flex;
@@ -16,17 +11,13 @@
 		left: unset;
 		right: 0;
 		z-index: unset;
-		flex-wrap: wrap;
 		margin-left: auto;
 		align-items: center;
 		justify-content: center;
 		width: auto;
 	}
 	&.navigation--open {
-		display: block;
-		@include media-breakpoint-up(md){
-			display: flex;
-		}
+		display: flex;
 		transform: translateY(0%);
 		.nav-item {
 			visibility: visible;
@@ -40,7 +31,7 @@
 	.nav-group {
 		margin-bottom: rem(48);
 	}
-	.nav-group-title {
+	.nav-title {
 		display: block;
 		font-size: rem(16);
 		line-height: rem(24);

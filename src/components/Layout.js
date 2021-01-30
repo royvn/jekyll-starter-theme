@@ -5,6 +5,7 @@ import { useStaticQuery, graphql } from "gatsby";
 import Notice from "./Notice";
 import Header from "./Header";
 import Footer from "./Footer";
+import TabBar from "./TabBar";
 
 const Layout = ({ children }) => {
 
@@ -27,6 +28,7 @@ const Layout = ({ children }) => {
         {children}
       </main>
       <Footer siteTitle={data.site.siteMetadata.title} />
+      <TabBar />
     </div>
   )
 }
