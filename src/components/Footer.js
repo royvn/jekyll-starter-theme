@@ -74,7 +74,7 @@ class Footer extends React.Component {
 										roy.vanneden.nl
 									</p>		
 									<p>
-										Made with <span role="img">❤</span> in The Hague
+										Made with <span role="img">❤</span> in The Hague.
 									</p>
 								</div>
 

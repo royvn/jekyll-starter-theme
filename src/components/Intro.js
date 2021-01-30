@@ -25,19 +25,10 @@ class Intro extends React.Component {
                   </h1>
                 }
                 {this.props.paragraph &&
-                  <p className={`rte rte--lg ${css.paragraph}`}>
+                  <p className={`rte rte--md ${css.paragraph}`}>
                     {this.props.paragraph}
                   </p>
                 }
-                {/* <div className={`${css.buttons} buttons`}>
-                  <Link to="/info/" className={`${css.button} button button--lg button--primary`}>
-                    Meer over mij
-                  </Link>
-                  <Link to="/blog/" className={`${css.button} button button--lg button--secondary`}>
-                    Naar blog
-                  </Link>
-                </div> */}
-
               </div>
             </div>
               
@@ -46,6 +37,7 @@ class Intro extends React.Component {
       </div>
     );
   }
+
 }
 
 export default Intro;
