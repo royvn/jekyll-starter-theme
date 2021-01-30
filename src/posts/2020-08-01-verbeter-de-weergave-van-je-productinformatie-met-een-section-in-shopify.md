@@ -219,14 +219,14 @@ Nu we de product beschrijving, metafields en *blocks* hebben uitgelezen willen w
 ```js
 {% javascript %}
   function handleCollapsible() {
-    document.querySelectorAll('[data-toggle-product-collapsible]').forEach(function(collapsible) {
-      collapsible.addEventListener('click', function() {
-        this.parentElement.classList.toggle('product-collapsible--closed');
-      });
+    document.addEventListener('click', function(event){
+      if('toggleProductCollapsible' in event.target.dataset) {
+        event.target.parentElement.classList.toggle('product-collapsible--closed');
+      }
     });
   }
   handleCollapsible();
-  document.querySelector('body').addEventListener('shopify:section:load', function(){
+  document.addEventListener('shopify:section:load', function(){
     handleCollapsible();
   });
 {% endjavascript %}
@@ -464,15 +464,14 @@ Vervolgens voegen we nog [scss](https://sass-lang.com/) styling toe.
 
 {% javascript %}
   function handleCollapsible() {
-    document.querySelectorAll('[data-toggle-product-collapsible]').forEach(function(collapsible) {
-      collapsible.addEventListener('click', function() {
-        console.log('data-toggle-product-collapsible check click');
-        this.parentElement.classList.toggle('product-collapsible--closed');
-      });
+    document.addEventListener('click', function(event){
+      if('toggleProductCollapsible' in event.target.dataset) {
+        event.target.parentElement.classList.toggle('product-collapsible--closed');
+      }
     });
   }
   handleCollapsible();
-  document.querySelector('body').addEventListener('shopify:section:load', function(){
+  document.addEventListener('shopify:section:load', function(){
     handleCollapsible();
   });
 

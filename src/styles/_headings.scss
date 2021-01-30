@@ -73,11 +73,11 @@ h6,
 
 .subtitle {
   font-size: rem(12);
-  line-height: rem(24);
+  line-height: rem(20);
   letter-spacing: rem(2);
   text-transform: uppercase;
   font-weight: 500;
-  margin-bottom: rem(4);
+  margin-bottom: rem(8);
   &--primary {
     color: $primary;
   }
