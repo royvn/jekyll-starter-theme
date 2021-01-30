@@ -16,9 +16,14 @@ function LatestPost(props) {
 					</p>
 				}
 				{props.node.frontmatter.title &&
-					<h3 className={css.title}>
+					<h3 className={`h4 ${css.title}`}>
 						{props.node.frontmatter.title}
 					</h3>
+				}
+				{props.node.excerpt &&
+					<p>
+						{props.node.excerpt}
+					</p>
 				}
 				{props.node.frontmatter.tags && 
 					<div className={css.tags}>

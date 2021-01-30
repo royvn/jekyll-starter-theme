@@ -43,7 +43,7 @@ export default ({ data }) => {
           <div className="row">
             <div className="col-12 col-md-10 col-lg-8 offset-lg-2">
               <Link to="/blog/" className="post-back-to-blog">
-              Terug naar overzicht
+                Terug naar overzicht
               </Link>
               {post.frontmatter.title && 
                 <h1 className="post-title">

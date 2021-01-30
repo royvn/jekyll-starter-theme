@@ -1,8 +1,19 @@
-.donation {
+@import "../../node_modules/bootstrap/scss/functions";
+@import "../../node_modules/bootstrap/scss/variables";
+@import "../../node_modules/bootstrap/scss/mixins";
+@import "../styles/mixins/mixins";
+@import "../styles/settings";
+
+.test {
   margin: rem(48) auto;
   @include media-breakpoint-up(lg) {
     margin: rem(96) auto;
   }
+}
+
+.donation {
+  padding: rem(48);
+  background: linear-gradient(209.21deg, rgb(75, 190, 255) 13.57%, rgb(33, 107, 218) 98.38%);
   .donation__content {
     text-align: center;
   }
