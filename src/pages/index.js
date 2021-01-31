@@ -33,7 +33,7 @@ export default IndexPage;
 
 export const query = graphql`
 	{
-		allMarkdownRemark(filter: {fileAbsolutePath: {regex: "content/posts/"}}, limit: 10, sort: {order: DESC, fields: frontmatter___date}) {
+		allMarkdownRemark(filter: {fileAbsolutePath: {regex: "content/posts/"}}, limit: 8, sort: {order: DESC, fields: frontmatter___date}) {
 			edges {
 				node {
 					id

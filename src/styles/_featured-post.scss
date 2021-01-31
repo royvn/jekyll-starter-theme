@@ -45,6 +45,10 @@
 		.featured-post__slug {
 			color: $white;
 		}
+		.button {
+			border-color: $white;
+			color: $white;
+		}
 	}
 	.featured-post__title, 
 	.entry-meta,
@@ -55,6 +59,7 @@
 		position: relative;
 		z-index: 2;
 		color: inherit;
+		height: 100%;
 	}
 	.featured-post__content {
 		display: flex;

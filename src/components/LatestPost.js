@@ -1,11 +1,12 @@
 import React from "react";
 import { Link, Img } from "gatsby";
+
 import css from "./latestPost.module.scss";
 
 function LatestPost(props) {
 	console.log('props', props.node);
 	return (
-		<article className={`swiper-slide ${css.latestPost}`}>
+		<article className={`${css.latestPost}`}>
 			<Link to={props.node.fields.slug} className={css.permalink}>
 				{props.node.image &&
 					<Img fluid={props.node.image} alt={props.node} style={{maxWidth: 1000}} />
