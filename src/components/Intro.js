@@ -31,7 +31,12 @@ class Intro extends React.Component {
                 }
               </div>
             </div>
-              
+            <div className="col-12 col-lg-5">
+              {this.props.totalPosts &&
+              <div className="rte rte--lg text-right">
+                {this.props.totalPosts}
+              </div>}
+            </div>  
           </div>
         </div>
       </div>

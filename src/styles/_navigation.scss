@@ -1,43 +1,38 @@
 .navigation {
-	background-color: $white;
-	color: $black;
-	display: flex;
-	flex-wrap: wrap;
-	width: 100%;
+	display: none;
 	@include media-breakpoint-up(md) {
-		background-color: transparent;
-		color: inherit;
-		position: relative;
-		left: unset;
-		right: 0;
-		z-index: unset;
-		margin-left: auto;
+		display: flex;
+		flex-wrap: wrap;
 		align-items: center;
 		justify-content: center;
+		width: 100%;
+		background-color: transparent;
+		color: inherit;
+		margin-left: auto;
 		width: auto;
 	}
-	&.navigation--open {
-		display: flex;
-		transform: translateY(0%);
-		.nav-item {
-			visibility: visible;
-			opacity: 1;
-			transition-property: all;
-			transform: translateY(0);
-			transition-duration: 0.48s;
-			transition-timing-function: ease;
-		}
-	}
-	.nav-group {
-		margin-bottom: rem(48);
-	}
-	.nav-title {
-		display: block;
-		font-size: rem(16);
-		line-height: rem(24);
-		margin-bottom: 1rem;
-		opacity: 0.48;
-	}
+	// &.navigation--open {
+	// 	display: flex;
+	// 	transform: translateY(0%);
+	// 	.nav-item {
+	// 		visibility: visible;
+	// 		opacity: 1;
+	// 		transition-property: all;
+	// 		transform: translateY(0);
+	// 		transition-duration: 0.48s;
+	// 		transition-timing-function: ease;
+	// 	}
+	// }
+	// .nav-group {
+	// 	margin-bottom: rem(48);
+	// }
+	// .nav-title {
+	// 	display: block;
+	// 	font-size: rem(16);
+	// 	line-height: rem(24);
+	// 	margin-bottom: 1rem;
+	// 	opacity: 0.48;
+	// }
 	.nav {
 		list-style: none;
 		padding: 0;
@@ -110,22 +105,22 @@
 	}
 }
 
-.action-buttons {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: flex-end;
-	.action-buttons__item {
-		border: none;
-		background-color: transparent;
-		margin: 0;
-		padding: rem(12);
-		svg {
-			display: block;
-		}
-		&:hover, 
-		&:focus, 
-		&:active {
-			outline: none;
-		}
-	}
-}
+// .action-buttons {
+// 	display: flex;
+// 	flex-wrap: wrap;
+// 	justify-content: flex-end;
+// 	.action-buttons__item {
+// 		border: none;
+// 		background-color: transparent;
+// 		margin: 0;
+// 		padding: rem(12);
+// 		svg {
+// 			display: block;
+// 		}
+// 		&:hover, 
+// 		&:focus, 
+// 		&:active {
+// 			outline: none;
+// 		}
+// 	}
+// }

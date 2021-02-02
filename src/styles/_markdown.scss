@@ -17,14 +17,11 @@
 	h4, 
 	h5,
 	h6 {
-		color: $black;
+		color: inherit;
 		margin-top: 2rem;
 	}
 	ul {
 		padding-left: 2.75rem;
-	}
-	b {
-		 color: $black;
 	}
 	p, 
 	ul, 
@@ -50,7 +47,6 @@
 		border: none;
 	}
 	blockquote {
-		font-weight: 600;
 		font-family: $headings-font-family;
 		font-style: italic;
 		font-size: 1.5rem;

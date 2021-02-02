@@ -1,0 +1,25 @@
+.swiper-container {
+  overflow: visible;
+}
+
+.swiper-slide {
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+}
+
+.swiper-button {
+  display: block;
+  appearance: none;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  &-prev {
+    left: 0;
+  }
+  &-next {
+    right: 0;
+  }
+}

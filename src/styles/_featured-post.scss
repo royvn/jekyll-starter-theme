@@ -22,6 +22,8 @@
 	flex-direction: column;
 	justify-content: stretch;
 	position: relative;
+	// border-radius: rem(16);
+	// overflow: hidden;
 	&:before {
 		content: '';
 		position: absolute;

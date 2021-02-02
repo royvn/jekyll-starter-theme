@@ -9,7 +9,7 @@ import Intro from "../components/Intro";
 const BlogPage = ({data}) => (
   <Layout>
     <SEO title="Blog" description="Hier schrijf ik over front-end development en design gerelateerde onderwerpen." />
-    <Intro title="Blog" paragraph="Hier schrijf ik over front-end development en design gerelateerde onderwerpen."/>
+    <Intro title="Blog" paragraph="Hier schrijf ik over front-end development en design gerelateerde onderwerpen." totalPosts={data.allMarkdownRemark.edges.length} />
     <div className="container page-spacer">
       <div className="grid__item gcs-xs-1 gce-xs-13 featured-posts">
         {data.allMarkdownRemark.edges.map(({node}) => (

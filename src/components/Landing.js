@@ -106,7 +106,7 @@ class Landing extends React.Component {
           <div className="container page-spacer">
             <div className="row align-items-center">
 
-              <div className="col-12 col-md-6 col-lg-10">
+              <div className="col-12 col-md-6 offset-md-3 col-lg-8 offset-lg-2 text-center">
                 <div className="h1">
                   <p>
                     Hi, I'm <Link to="/info/" onMouseOver={this.handleVisualSwitch} data-handle="info">Roy</Link>, located in <a onMouseOver={this.handleVisualSwitch} data-handle="the-hague">The Hague</a>, building awesome <a href="https://www.shopify.nl" target="_blank" rel="noopener noreferrer" onMouseOver={this.handleVisualSwitch} data-handle="shopify">Shopify</a> themes at <a href="https://www.code.nl" target="_blank" rel="noopener noreferrer" onMouseOver={this.handleVisualSwitch} data-handle="code">CODE</a>.

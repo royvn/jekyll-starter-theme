@@ -58,8 +58,8 @@ class Footer extends React.Component {
 						
 						<Outro 
 							subtitle="Wat ik doe" 
-							title="Ik ontwikkel Shopify Themes bij CODE" 
-							paragraph="Ben je zoekende naar een Shopify Expert? Neem dan een kijkje bij CODE - a Shopify Plus Agency!" 
+							title="Ik ontwikkel webshops bij CODE - a Shopify Plus agency" 
+							paragraph="Ben je zoekende naar een Shopify Expert? Neem dan een kijkje bij mijn huidige werkgever!" 
 							button_href="https://code.nl" 
 							button_text="Meer info"
 							image_1={data.image1.childImageSharp.fluid}
