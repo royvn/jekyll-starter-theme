@@ -6,7 +6,7 @@ import css from "./banner.module.scss";
 
 function Banner(props) {
 	return (
-		<div className="section">
+		<div className="section section--margin">
 			<div className={css.banner}>
 				{props.title && 
 					<h2>

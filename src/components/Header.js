@@ -62,60 +62,43 @@ class Header extends React.Component {
 			}
 			`} render={data => (
 				<header className={`header ${this.state.isNavigationToggled ? 'navigation--open' : ''} ${this.state.isHighlighted ? 'header--sticky' : ''}`}>
-					<div className="container page-spacer">
-						<div className="header__content">
-							<div className="header__content__item">
-								{this.props.siteTitle && 
-									<div className="me">
-										<span className="sr-only">
-											{this.props.siteTitle}
-										</span>
-										<Link to="/">
-											<Img fluid={data.logo.childImageSharp.fluid} />
-										</Link>
-									</div>
-								}
-							</div>	
-							<div className="header__content__item">
-								{/* <button type="button" onClick={this.handleHamburgerClick} className={`hamburger`}>
-									Menu
-								</button> */}
-								<nav className={`navigation ${this.state.isNavigationToggled ? 'navigation--open' : ''}`}>
-									<ul className="nav nav--primary">
-										<li className="nav-item" data-hover-type="home">
-											<Link to="/" className="nav-link" activeClassName="nav-link--active">
-												Home
-											</Link>
-										</li>
-										<li className="nav-item" data-hover-type="info">
-											<Link to="/info/" className="nav-link" activeClassName="nav-link--active">
-												Info
-											</Link>
-										</li>
-										<li className="nav-item" data-hover-type="blog">
-											<Link to="/blog/" className="nav-link" activeClassName="nav-link--active">
-												Blog
-											</Link>
-										</li>
-										<li className="nav-item" data-hover-type="contact">
-											<Link to="/contact/" className="nav-link" activeClassName="nav-link--active">
-												Contact
-											</Link>
-										</li>
-									</ul>
-								</nav>
+					<div className={`page-spacer header__content`}>
+						{this.props.siteTitle && 
+							<div className="me">
+								<span className="sr-only">
+									{this.props.siteTitle}
+								</span>
+								<Link to="/">
+									<Img fluid={data.logo.childImageSharp.fluid} />
+								</Link>
 							</div>
-							<div className="header__content__item">
-								{/* <div className="action-buttons">
-									<button type="button" className="action-buttons__item">
-										<span className="sr-only">
-											Social media
-										</span>
-										<svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M6 10c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm12 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm-6 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/></svg>
-									</button>
-								</div>	 */}
-							</div>								
-						</div>
+						}
+						
+						<nav className={`navigation ${this.state.isNavigationToggled ? 'navigation--open' : ''}`}>
+							<ul className="nav nav--primary">
+								{/* <li className="nav-item" data-hover-type="home">
+									<Link to="/" className="nav-link" activeClassName="nav-link--active">
+										Home
+									</Link>
+								</li> */}
+								<li className="nav-item" data-hover-type="info">
+									<Link to="/info/" className="nav-link" activeClassName="nav-link--active">
+										Info
+									</Link>
+								</li>
+								<li className="nav-item" data-hover-type="blog">
+									<Link to="/blog/" className="nav-link" activeClassName="nav-link--active">
+										Blog
+									</Link>
+								</li>
+								<li className="nav-item" data-hover-type="contact">
+									<Link to="/contact/" className="nav-link" activeClassName="nav-link--active">
+										Contact
+									</Link>
+								</li>
+							</ul>
+						</nav>
+													
 					</div>
 				</header>
 			)}/>

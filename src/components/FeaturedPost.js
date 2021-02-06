@@ -27,11 +27,11 @@ function FeaturedPost(props) {
 							{props.node.excerpt}
 						</p>
 					}
-					<span className={`button button--block ${css.featuredPostButton}`}>
+					{/* <span className={`button button--block ${css.featuredPostButton}`}>
 						Lees verder
-					</span>
-					</div>
-				</Link>
+					</span> */}
+				</div>
+			</Link>
 		</article>
 	);
 }

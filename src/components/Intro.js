@@ -9,7 +9,7 @@ class Intro extends React.Component {
 
   render() {
     return (
-      <div className={`section ${css.intro}`}>
+      <div className={`section section--margin ${css.intro}`}>
         <div className="container page-spacer">
           <div className="row align-items-center">
             <div className="col-12 col-lg-7">
@@ -25,18 +25,18 @@ class Intro extends React.Component {
                   </h1>
                 }
                 {this.props.paragraph &&
-                  <p className={`rte rte--md ${css.paragraph}`}>
+                  <p className={`rte rte--lg`}>
                     {this.props.paragraph}
                   </p>
                 }
               </div>
             </div>
-            <div className="col-12 col-lg-5">
+            {/* <div className="col-12 col-lg-5">
               {this.props.totalPosts &&
               <div className="rte rte--lg text-right">
                 {this.props.totalPosts}
               </div>}
-            </div>  
+            </div>   */}
           </div>
         </div>
       </div>

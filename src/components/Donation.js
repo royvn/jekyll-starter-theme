@@ -30,7 +30,7 @@ class Donation extends React.Component {
 
   render() {
     return (
-      <div className="section">
+      <div className="section section--margin">
         <div className={`container page-spacer`}>
           <div className="row">
             <div className="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2">

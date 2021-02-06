@@ -34,7 +34,7 @@ body {
 	font-size: $default-font-size;
 	line-height: 1.5;
 	text-align: left;
-  background-color: $body-background;
+  background-color: lighten($body-background, 4%);
   color: $body-color;
 }
 
@@ -127,4 +127,23 @@ a {
 	&--active {
 		display: block;
 	}
+}
+
+.double-layout {
+	@include media-breakpoint-up(md) {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+	}
+	.double-layout__left {
+		padding: rem(96) rem(24) rem(48) rem(24);
+		@include media-breakpoint-up(md) {
+			padding: rem(104) rem(64) rem(64) rem(64);
+		}
+	}
+}
+
+.swiper-button-disabled {
+	transform: translateY(-50%) scale(0);
+	opacity: 0;
+	visibility: hidden;
 }

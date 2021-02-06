@@ -1,5 +1,5 @@
 import React from 'react';
-import {Link} from 'gatsby';
+import { Link } from 'gatsby';
 import Img from "gatsby-image";
 
 import css from "./footer.module.scss";
@@ -8,7 +8,7 @@ function Outro(props) {
   return (
     <div className="container page-spacer">
       <div className={` ${css.row} row`}>
-        <div className="col-12 col-md-6 col-lg-5">
+        <div className="col-12 col-lg-5">
           <div className={css.content}>
             
             {props.subtitle && 
@@ -29,7 +29,7 @@ function Outro(props) {
               </p>
             }
 
-            {props.link_to && props.link_text || props.button_href && props.button_text &&
+            {(props.link_to && props.link_text) || (props.button_href && props.button_text) &&
               <div className={`${css.buttons} buttons`}>
 
                 {props.link_to && props.link_text &&
@@ -49,7 +49,7 @@ function Outro(props) {
 
           </div>
         </div>
-        <div className="col-12 col-md-6 col-lg-7">
+        <div className="col-12 col-lg-7">
           <div className="row">
             <div className="col-6">
               {props.image_1 &&

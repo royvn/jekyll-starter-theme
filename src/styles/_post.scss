@@ -1,7 +1,7 @@
 .post {		
-	margin: rem(48) auto;
+	margin: rem(96) auto rem(48) auto;
 	@include media-breakpoint-up(lg) {
-		margin: rem(48) auto rem(96) auto;
+		margin: rem(104) auto rem(96) auto;
 	}
 	.post-back-to-blog {
 		font-size: rem(16);
@@ -23,6 +23,8 @@
 			line-height: rem(64);
 		}
 		margin: 1rem 0;
+		hyphens: auto;
+    word-break: break-word;
 	}
 	.post-header {
 		text-align: center;

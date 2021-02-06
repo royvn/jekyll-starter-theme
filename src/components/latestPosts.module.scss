@@ -1,3 +1,14 @@
+@import "../../node_modules/bootstrap/scss/functions";
+@import "../../node_modules/bootstrap/scss/variables";
+@import "../../node_modules/bootstrap/scss/mixins";
+@import "../styles/mixins/mixins";
+@import "../styles/settings";
+
+.section {
+  position: relative;
+  overflow: hidden;
+}
+
 .swiper-container {
   overflow: visible;
 }
@@ -10,16 +21,42 @@
 }
 
 .swiper-button {
-  display: block;
   appearance: none;
+  cursor: pointer;
+  display: none;
+  @include media-breakpoint-up(md) {
+    display: block;
+  }
   position: absolute;
+  border: none;
+  background-color: rgba($primary, 0.25);
+  padding: rem(8);
   top: 50%;
   transform: translateY(-50%);
   z-index: 2;
+  border-radius: 50%;
+  transition: all 0.32s ease-in-out;
+  opacity: 1;
+  visibility: visible;
+  &:hover, 
+  &:focus, 
+  &:active {
+    background-color: rgba($primary, 1);
+    outline: none;
+  }
+  &:hover {
+    transform: translateY(-50%) scale(1.08);
+  }
+  &:active {
+    transform: translateY(-50%) scale(1);
+  }
   &-prev {
-    left: 0;
+    left: -(rem(20));
   }
   &-next {
-    right: 0;
+    right: -(rem(20));
+  }
+  svg {
+    display: block;
   }
 }

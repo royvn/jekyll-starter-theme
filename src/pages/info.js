@@ -63,7 +63,7 @@ const AboutPage = () => (
       <Hero image={data.heroImage.childImageSharp.fluid} image_alt="" title="Roy van Neden" type={["Front-end developer", "Shopify theme developer", "UX/UI designer &amp; meer"]} paragraph="Met plezier besteed ik mijn tijd aan het ontwerpen, realiseren en verbeteren van digitale producten." />
       <article className="page-content markdown" id="wat-ik-doe">
         <p>
-          Hoi, ik ben <b>Roy van Neden</b>. Petrolhead, interaction designer en front-end developer uit Leidschendam woonachtig in Den Haag.
+          Hoi, ik ben <b>Roy van Neden</b>. Petrolhead, digital designer, front-end developer en meer uit Leidschendam woonachtig in Den Haag.
         </p>
         <Img fluid={data.image2.childImageSharp.fluid} alt="Dit ben ik" style={{maxWidth: 320}} />
         <p>

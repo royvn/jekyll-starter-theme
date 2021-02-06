@@ -1,17 +1,19 @@
 .header {
-	position: sticky;
+	position: absolute;
 	top: 0;
 	right: 0;
 	left: 0;
 	z-index: 10;
-	color: $black;
-	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-	padding: rem(8) 0;
-	background-color: $paper;
+	// background-color: $paper;
+	// color: $black;
+	color: $white;
+	padding: rem(24) 0;
+	// margin: rem(48) 0 0 0;
+	// box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 	transition: all .32s cubic-bezier(0.55, 0.085, 0.68, 0.53);
-	@include media-breakpoint-up(md) {
-		padding: rem(16) 0;
-	}
+	// @include media-breakpoint-up(md) {
+		// padding: rem(16) 0;
+	// }
 	// &:hover, 
 	// &:focus, 
 	// &:active {
@@ -23,7 +25,8 @@
 	.header__content {
 		display: flex;
 		flex-wrap: wrap;
-		align-items: center;
+		justify-content: space-between;
+
 		.header__content__item {
 			&:first-child {
 				width: 20%;

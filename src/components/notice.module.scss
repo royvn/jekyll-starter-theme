@@ -5,24 +5,36 @@
 @import "../styles/settings";
 
 .notice {
-  display: block;
+  display: none;
+  @include media-breakpoint-up(md) {
+    display: block;
+  }
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: $zindex-fixed;
   padding: rem(12) rem(0);
-  background-color: $black;
-  color: $primary;
+  background-color: $primary;
+  color: $black;
   text-decoration: none;
   font-size: rem(14);
   line-height: rem(24);
   font-weight: normal;
   transition: all .32s cubic-bezier(0.55, 0.085, 0.68, 0.53);
+  transform: translateY(0%);
   &:hover,
   &:focus, 
   &:active {
     text-decoration: none;
-    background-color: $primary;
-    color: $black;
+    background-color: $black;
+    color: $primary;
   }
   &.notice--active {
     display: none;
+  }
+  &.notice--hide {
+    transform: translateY(100%);
   }
 }
 

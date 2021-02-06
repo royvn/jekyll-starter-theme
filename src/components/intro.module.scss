@@ -6,8 +6,10 @@
 
 .intro {
   position: relative;
-  margin-top: 0;
-  padding: rem(48) 0;
+  margin-top: rem(96);
+  @include media-breakpoint-up(md) {
+    margin-top: rem(104);
+  }
 }
 
 .opacity {
