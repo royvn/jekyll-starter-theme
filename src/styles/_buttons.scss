@@ -96,9 +96,9 @@
 .buttons {
   display: flex;
   flex-wrap: wrap;
-  margin-bottom: -(rem(8));
+  margin-bottom: -(rem(16));
   .button {
-    margin-right: rem(8);
-    margin-bottom: rem(8);
+    margin-right: rem(16);
+    margin-bottom: rem(16);
   }
 }

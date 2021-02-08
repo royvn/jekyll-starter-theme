@@ -8,13 +8,15 @@ import Intro from "../components/Intro";
 
 const BlogPage = ({data}) => (
   <Layout>
-    <SEO title="Blog" description="Hier schrijf ik over front-end development en design gerelateerde onderwerpen." />
-    <Intro title="Blog" paragraph="Hier schrijf ik over front-end development en design gerelateerde onderwerpen." totalPosts={data.allMarkdownRemark.edges.length} />
-    <div className="container page-spacer">
-      <div className="grid__item gcs-xs-1 gce-xs-13 featured-posts">
-        {data.allMarkdownRemark.edges.map(({node}) => (
-          <FeaturedPost key={node.id} node={node} />
-        ))}
+    <SEO title="Blog" description="Hier deel en verzamel ik dingen over front-end development, design, Shopify &amp; Ecommerce." />
+    <Intro title="Blog" paragraph="Hier deel en verzamel ik dingen over front-end development, design, Shopify &amp; Ecommerce." totalPosts={data.allMarkdownRemark.edges.length} />
+    <div className="section section--margin">
+      <div className="container page-spacer">
+        <div className="featured-posts">
+          {data.allMarkdownRemark.edges.map(({node}) => (
+            <FeaturedPost key={node.id} node={node} />
+          ))}
+        </div>
       </div>
     </div>
   </Layout>

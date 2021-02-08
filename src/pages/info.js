@@ -60,20 +60,16 @@ const AboutPage = () => (
   `} render={data => (
     <Layout>
       <SEO title="Info" description="Designer &amp; developer in regio Den Haag" />
-      <Hero image={data.heroImage.childImageSharp.fluid} image_alt="" title="Roy van Neden" type={["Front-end developer", "Shopify theme developer", "UX/UI designer &amp; meer"]} paragraph="Met plezier besteed ik mijn tijd aan het ontwerpen, realiseren en verbeteren van digitale producten." />
+      <Hero image={data.heroImage.childImageSharp.fluid} image_alt="Mijn achtertuin" subtitle="In het kort" title="Hi, ik ben Roy" paragraph="Front-end developer met design roots. Focus ligt nu op Ecommerce &amp; Shopify development." />
       <article className="page-content markdown" id="wat-ik-doe">
         <p>
-          Hoi, ik ben <b>Roy van Neden</b>. Petrolhead, digital designer, front-end developer en meer uit Leidschendam woonachtig in Den Haag.
-        </p>
-        <Img fluid={data.image2.childImageSharp.fluid} alt="Dit ben ik" style={{maxWidth: 320}} />
-        <p>
-          Dit ben ik.
+          Hoi, ik ben <b>Roy van Neden</b>. Petrolhead, front-end developer, digital designer en meer uit Leidschendam woonachtig in Den Haag.
         </p>
         <p>
-          Met plezier besteed ik het meeste van mijn tijd aan het ontwerpen en realiseren van digitale producten.
+          Met plezier besteed ik het meeste van mijn tijd aan het realiseren van digitale tools en shops.
         </p>
         <p>
-          In 2015 behaalde ik mijn Bachelor Communication & Multimedia Design aan de Haagse Hogeschool. De jaren daarna ben ik bij vele uiteenlopende projecten betrokken geweest. Van concept tot realisatie. Ik vind het leuk om in teamverband te werken en iteratief een product steeds verder uit te bouwen.
+          In 2015 behaalde ik mijn Bachelor Communication & Multimedia Design aan de Haagse Hogeschool. De jaren daarna ben ik bij vele uiteenlopende projecten betrokken geweest. Van concept tot realisatie. Ik vind het leuk om in teamverband te werken en iteratief een product steeds verder uit te bouwen. Structuur en kwaliteit vind ik daarbij belangrijk om het onderhoud of doen van wijzigingen zo makkelijk mogelijk te maken.
         </p>
         <blockquote>
           If we want users to like our software we should design it to behave like a likeable person: respectful, generous and helpful.
@@ -107,7 +103,7 @@ const AboutPage = () => (
           Delft
         </p>
         <h3>
-          Front-end developer & interaction designer
+          Front-end developer & designer
         </h3>
         <p>
           Pluut Interaction B.V.  <br />
@@ -153,10 +149,7 @@ const AboutPage = () => (
           Overig
         </h2>
         <p>
-        In mijn vrije tijd loop ik graag met mijn parttime hond door de natuur. 
-        </p>
-        <p>
-          Klussen, sportief en competitief bezig zijn vind ik ook leuk. Zo ben ik altijd in voor een ⛷ en 🏎 sessie. Op koude regenachtige dagen slinger ik ook graag een goede game 🎮 aan.
+          In mijn vrije tijd loop ik graag met mijn parttime hond door de natuur. Klussen, sportief en competitief bezig zijn vind ik ook leuk. Zo ben ik altijd in voor een ⛷ en 🏎 sessie. Op koude regenachtige dagen slinger ik ook graag een goede game 🎮 aan.
         </p>
         <h2>
           Meer lezen?

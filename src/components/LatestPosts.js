@@ -52,17 +52,22 @@ class LatestPosts extends React.Component {
 
     return (
       <div className={`section section--padding section--light ${css.section} `}>
-        <div className="container page-spacer align-items-center">
+        <div className={`container page-spacer align-items-center ${css.content}`}>
           <div className="row">
-            <div class="col-12 col-md-6">
+            <div className="col-12 col-md-6">
               {this.props.title &&
                 <h2>
                   {this.props.title}
                 </h2>
               }
+              {this.props.paragraph &&
+                <p>
+                  {this.props.paragraph}
+                </p>
+              }
             </div>
             {this.props.link_to && this.props.link_text && 
-              <div class="col-12 col-md-6">
+              <div className="col-12 col-md-6">
                 <Link to={this.props.link_to} className="button button--primary">
                   {this.props.link_text}
                 </Link>

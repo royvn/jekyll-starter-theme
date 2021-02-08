@@ -8,10 +8,10 @@ import ListSocial from "../components/ListSocial";
 const ContactPage = () => (
   <Layout>
     <SEO title="Contact" description="Wil je iets vragen of met mij in contact komen? Hier lees je hoe." />
-    <section className="section">
-      {/* <div className="container page-spacer"> */}
-        <div className="double-layout">
-          <div className="double-layout__left">
+    <section className="section section--margin">
+      <div className="container page-spacer">
+        <div className="row">
+          <div className="col-12 col-md-10 col-lg-8">
             <header>
               <h1>
                 Stuur een <a href="mailto:roy.van.neden@gmail.com">mail</a>. Of maak een connectie via <a href="https://www.linkedin.com/in/roy-van-neden-10549761/" target="_blank" rel="noopener noreferrer">Linkedin</a>.
@@ -42,7 +42,7 @@ const ContactPage = () => (
 
           </div>
         </div>
-      {/* </div> */}
+      </div>
     </section>
   </Layout>
 );

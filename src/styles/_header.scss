@@ -1,13 +1,13 @@
 .header {
-	position: absolute;
+	position: sticky;
 	top: 0;
 	right: 0;
 	left: 0;
 	z-index: 10;
-	// background-color: $paper;
+	background-color: $black;
 	// color: $black;
 	color: $white;
-	padding: rem(24) 0;
+	padding: rem(16) 0;
 	// margin: rem(48) 0 0 0;
 	// box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 	transition: all .32s cubic-bezier(0.55, 0.085, 0.68, 0.53);
@@ -75,6 +75,12 @@
 	background-color: $black;
 	border-radius: rem(48);
 	overflow: hidden;
+	margin-left: auto;
+	margin-right: auto;
+	@include media-breakpoint-up(md) {
+		margin-left: 0;
+		margin-right: auto;
+	}
 	a {
 		display: block;
 	}

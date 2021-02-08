@@ -54,12 +54,11 @@ class Footer extends React.Component {
 				}
 				`} render={data => (
 					<footer className={css.footer}>
-						{/* <WidgetList title="Recent van blog" list={data.allMarkdownRemark.edges} /> */}
-						
+
 						<Outro 
 							subtitle="Wat ik doe" 
-							title="Ik ontwikkel Shopify themes bij CODE - a Shopify Plus agency" 
-							paragraph="Ben je zoekende naar een Shopify Expert? Neem dan daar een kijkje!" 
+							title="Ik ontwikkel Shopify Themes bij CODE" 
+							paragraph="Ben je zoekende naar een Shopify (Plus) Expert? Neem dan een kijkje bij CODE - a Shopify Plus agency!" 
 							button_href="https://code.nl" 
 							button_text="Meer info"
 							image_1={data.image1.childImageSharp.fluid}

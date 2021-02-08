@@ -38,33 +38,35 @@ export default ({ data }) => {
   return (
     <Layout>
       <SEO title={post.frontmatter.title} description={post.excerpt} />
-      <article className="post container page-spacer">
-        <header className="post-header">
-          <div className="row">
-            <div className="col-12 col-md-10 col-lg-8 offset-lg-2">
-              <Link to="/blog/" className="post-back-to-blog">
-                Terug naar overzicht
-              </Link>
-              {post.frontmatter.title && 
-                <h1 className="post-title">
-                {post.frontmatter.title}
-                </h1>
-              }
-              {post.frontmatter.date && categories &&
-                <p className="post-meta">
-                  Geplaatst op {post.frontmatter.date} in {categories}.
-                </p>
-              }
+      <article className="post section section--margin">
+        <div className="container page-spacer">
+          <header className="post-header">
+            <div className="row">
+              <div className="col-12 col-md-10 col-lg-8 offset-lg-2">
+                <Link to="/blog/" className="post-back-to-blog">
+                  Terug naar overzicht
+                </Link>
+                {post.frontmatter.title && 
+                  <h1 className="post-title">
+                  {post.frontmatter.title}
+                  </h1>
+                }
+                {post.frontmatter.date && categories &&
+                  <p className="post-meta">
+                    Geplaatst op {post.frontmatter.date} in {categories}.
+                  </p>
+                }
+              </div>
             </div>
+          </header>
+          {post.frontmatter.image &&
+            <div className="post-image">
+            <Img fluid={post.frontmatter.image.childImageSharp.fluid} alt={post.frontmatter.title} style={{maxWidth: 1024}} />
+            </div>
+          }
+          <div className="post-content">
+            <div dangerouslySetInnerHTML={{ __html: post.html }} className="markdown" />
           </div>
-        </header>
-        {post.frontmatter.image &&
-          <div className="post-image">
-          <Img fluid={post.frontmatter.image.childImageSharp.fluid} alt={post.frontmatter.title} style={{maxWidth: 1024}} />
-          </div>
-        }
-        <div className="post-content">
-          <div dangerouslySetInnerHTML={{ __html: post.html }} className="markdown" />
         </div>
       </article>
       <Donation title="Vind je dit leuk?" options={donationOptions} button_url="https://www.paypal.me/royvn" />

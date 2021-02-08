@@ -9,13 +9,13 @@
 	z-index: 1;
 	background-color: $black;
 	color: $white;
-	min-height: 80vh;
-	@include media-breakpoint-up(md) {
-		min-height: 72vh;
-	}
+	min-height: 75vh;
 	display: flex;
 	align-items: center;
-	padding: 6rem 0;
+	padding: rem(48) 0;
+	@include media-breakpoint-up(md) {
+		padding: rem(96) 0;
+	}
 	&--dark-mode {
 		&:after {
 			content: '';
@@ -52,16 +52,20 @@
 			text-align: center;
 		}
 	}
-	.subtitle {
-		margin-bottom: 1.5rem;
-	}
-	.title {
-		margin-bottom: rem(16);
-	}
+	// .subtitle {
+	// 	margin-bottom: 1.5rem;
+	// }
+	// .title {
+	// 	margin-bottom: rem(16);
+	// }
 	.paragraph {
 		margin-bottom: 1.5rem;
 		margin-left: auto;
 		margin-right: auto;
+	}
+	.buttons {
+		justify-content: center;
+		margin-top: rem(48);
 	}
 }
 

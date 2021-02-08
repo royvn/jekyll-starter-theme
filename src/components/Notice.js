@@ -15,10 +15,7 @@ class Notice extends React.Component {
 		let currentScrollYPosition = window.scrollY;
 		let pageHeight = document.body.clientHeight;
 		let breakpoint = (pageHeight - window.innerHeight) - (pageHeight / 10);
-		console.log({
-			currentScrollYPosition: currentScrollYPosition,
-			breakpoint: breakpoint
-		})
+
 		if(currentScrollYPosition >= breakpoint) {
 			this.setState({ 
 				hide: true 

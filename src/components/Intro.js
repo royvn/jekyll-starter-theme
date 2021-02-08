@@ -12,7 +12,7 @@ class Intro extends React.Component {
       <div className={`section section--margin ${css.intro}`}>
         <div className="container page-spacer">
           <div className="row align-items-center">
-            <div className="col-12 col-lg-7">
+            <div className="col-12 col-md-6">
               <div className={css.content}>
                 {this.props.label &&
                   <p className="subtitle">
@@ -25,7 +25,7 @@ class Intro extends React.Component {
                   </h1>
                 }
                 {this.props.paragraph &&
-                  <p className={`rte rte--lg`}>
+                  <p className={`rte`}>
                     {this.props.paragraph}
                   </p>
                 }

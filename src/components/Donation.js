@@ -58,7 +58,7 @@ class Donation extends React.Component {
                         <ul className={`${css.donationDropdownList}`}>
                           {this.state.items.map((option, index) => (
                             <li className={`${css.donationDropdownListItem} ${this.state.active === index ? css.donationDropdownListItemActive : ''} `} key={index}>
-                              <button type="button" class={`${css.donationDropdownListButton}`} onClick={this.handleDonationUrl} data-index={index} >
+                              <button type="button" className={`${css.donationDropdownListButton}`} onClick={this.handleDonationUrl} data-index={index} >
                                 {option.title}
                               </button>
                             </li>

@@ -15,6 +15,9 @@
 		&:last-child {
 			margin: 0;
 		}
+		&:before {
+			display: none;
+		}
 	}
 	a {
 		padding: 0 0 0 rem(32);
