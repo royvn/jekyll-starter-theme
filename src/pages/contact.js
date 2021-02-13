@@ -1,47 +1,49 @@
 import React from "react";
 import { graphql, StaticQuery } from "gatsby";
 
-import Layout from "../components/Layout";
 import SEO from "../components/Seo";
-import ToolkitHeadline from "../components/ToolkitHeadline";
-import Banner from "../components/ToolkitBanner";
+import Layout from "../components/Layout";
+import ListSocial from "../components/ListSocial";
 
 const ContactPage = () => (
   <Layout>
-    <SEO title="Contact" description="Laat iets van je horen, gezellig en leuk!" />
-    <div className="page-content markdown">
-      <ToolkitHeadline title="Contact" subtitle="Laat iets van je horen!" />
-      <StaticQuery query={graphql`
-      query {
-        allMarkdownRemark(filter: {}, limit: 5) {
-          edges {
-            node {
-              id
-              fields {
-                slug
-              }
-              frontmatter {
-                title
-              }
-            }
-          }
-        }
-        image1: file(relativePath: {eq: "vissershaven.jpg"}) {
-          id
-          childImageSharp {
-            fluid(maxWidth: 1200, quality: 100) {
-              ...GatsbyImageSharpFluid_withWebp
-            }
-          }
-        }
-      }
-      `} render={data => (
-        <Banner image={data.image1.childImageSharp.fluid}/>
-      )} />
-      <p>
-        Wil je iets vragen of met mij in contact komen? Stuur gerust een berichtje op <a href="https://www.linkedin.com/in/roy-van-neden-10549761/">Linkedin</a>! Direct mailen kan ook naar roy.van.neden@gmail.com.
-      </p>
-    </div>
+    <SEO title="Contact" description="Wil je iets vragen of met mij in contact komen? Hier lees je hoe." />
+    <section className="section section--margin">
+      <div className="container page-spacer">
+        <div className="row">
+          <div className="col-12 col-md-10 col-lg-8">
+            <header>
+              <h1>
+                Stuur een <a href="mailto:roy.van.neden@gmail.com">mail</a>. Of maak een connectie via <a href="https://www.linkedin.com/in/roy-van-neden-10549761/" target="_blank" rel="noopener noreferrer">Linkedin</a>.
+              </h1>
+            </header>
+            <article className="markdown">
+              <h2 className="h5">
+                Locatie
+              </h2>
+              <p>
+                Aarde, Nederland, Zuid Holland, Den Haag.
+              </p>
+              <a href="https://www.google.com/maps/place/Den+Haag/@52.0716335,4.2398286,12z/data=!3m1!4b1!4m5!3m4!1s0x47c5b72f4298bd71:0x400de5a8d1e6c10!8m2!3d52.0704978!4d4.3006999" target="_blank" rel="noopener">
+                Bekijk op kaart
+                {/* <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M21 3L3 10.53v.98l6.84 2.65L12.48 21h.98L21 3z"/></svg> */}
+              </a>
+              <h2 className="h5">
+                Links
+              </h2>
+              <p>
+                Hier en daar op het internet.
+              </p>
+
+              <ListSocial />
+
+            </article>
+
+
+          </div>
+        </div>
+      </div>
+    </section>
   </Layout>
 );
 

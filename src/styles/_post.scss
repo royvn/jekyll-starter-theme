@@ -1,10 +1,5 @@
 .post {		
-	margin: rem(48) auto;
-	@include media-breakpoint-up(lg) {
-		margin: rem(96) auto;
-	}
 	.post-back-to-blog {
-		display: inline-flex;
 		font-size: rem(16);
 		line-height: rem(24);
 		color: inherit;
@@ -24,15 +19,26 @@
 			line-height: rem(64);
 		}
 		margin: 1rem 0;
+		hyphens: auto;
+    word-break: break-word;
+	}
+	.post-header {
+		text-align: center;
 	}
 	.post-header, 
 	.post-image {
 		margin-bottom: rem(48);
 	}
+	.post-image {
+		.gatsby-image-wrapper {
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
 	.post-meta {
 		margin-bottom: rem(24);
-		color: lighten($black, 48%);
 		margin-bottom: 0;
+		font-weight: 600;
 	}
 	.post-author {
 		margin-bottom: rem(24);
@@ -64,6 +70,11 @@
 
 .post-content {
 	width: 100%;
+	@include media-breakpoint-up(md) {
+		width: 80%;
+		max-width: rem(720);
+	}
+	margin: 0 auto;
 }
 
 // .post-navigation {

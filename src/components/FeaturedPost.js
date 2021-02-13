@@ -2,6 +2,8 @@ import React from "react";
 import { Link } from "gatsby";
 import Img from "gatsby-image";
 
+import css from "./featuredPost.module.scss";
+
 function FeaturedPost(props) {
 	return (
 		<article className="featured-post" key={props.node.id}>
@@ -25,11 +27,11 @@ function FeaturedPost(props) {
 							{props.node.excerpt}
 						</p>
 					}
-					<span className="button button--block button--outline-primary">
+					{/* <span className={`button button--block ${css.featuredPostButton}`}>
 						Lees verder
-					</span>
-					</div>
-				</Link>
+					</span> */}
+				</div>
+			</Link>
 		</article>
 	);
 }
