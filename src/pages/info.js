@@ -59,7 +59,7 @@ const AboutPage = () => (
     }
   `} render={data => (
     <Layout>
-      <SEO title="Info" description="Designer &amp; developer in regio Den Haag" />
+      <SEO title="Info" description="Front-end developer &amp; Shopify Expert in regio Den Haag" />
       <Hero image={data.heroImage.childImageSharp.fluid} image_alt="Mijn achtertuin" subtitle="In het kort" title="Hi, ik ben Roy" paragraph="Front-end developer met design roots. Focus ligt nu op Ecommerce &amp; Shopify development." />
       <article className="page-content markdown" id="wat-ik-doe">
         <p>
