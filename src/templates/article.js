@@ -22,12 +22,12 @@ export default ({ data }) => {
   
   let donationOptions = [
     {
-      title: 'pizza pomodori buffalo',
-      price: '5,39'
-    },
-    {
       title: 'pakje rooibos thee',
       price: '1,59'
+    },
+    {
+      title: 'pizza pomodori buffalo',
+      price: '5,39'
     },
     {
       title: 'Magic Trackpad 2',

@@ -28,14 +28,6 @@
 		display: block;
 		text-align: center;
 	}
-	&.button--light {
-		background-color: $white;
-		border-color: $white;
-		color: $primary;
-		&:hover {
-			color: darken($primary, 16%);
-		}
-	}
 	&.button--sm {
 		padding: rem(5) rem(8);
 		font-size: rem(12);
@@ -51,10 +43,18 @@
 		font-size: rem(14);
 		line-height: rem(24);
 	}
+	&.button--light {
+		background-color: $white;
+		border-color: $white;
+		color: $primary;
+		&:hover {
+			color: darken($primary, 16%);
+		}
+	}
 	&.button--primary {
 		background-color: $primary;
 		border-color: $primary;
-		color: $white;
+		color: $black;
 		&:hover {
 			background-color: darken($primary, 16%);
 			border-color: darken($primary, 16%);

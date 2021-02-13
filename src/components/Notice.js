@@ -33,26 +33,22 @@ class Notice extends React.Component {
 	}
 
 	render() {
-		if(!window.location.pathname.includes(this.props.link)) {
-			return (
-				<Link to={this.props.link} className={`${css.notice} ${this.state.hide ? `${css.noticeHide}` : ''}`} activeClassName="notice--active">
-					<div className={` ${css.content} page-spacer`}>
-						{this.props.title &&
-							<span className={css.text}>
-								{this.props.title}
-							</span>
-						}
-						{this.props.button_text && 
-							<span className={`${css.button} button button--light button--sm`}>
-								{this.props.button_text}
-							</span>
-						}
-					</div>
-				</Link>
-			);
-		} else {
-			return null;
-		}
+		return (
+			<Link to={this.props.link} className={`${css.notice} ${this.state.hide ? `${css.noticeHide}` : ''}`} activeClassName="notice--active">
+				<div className={` ${css.content} page-spacer`}>
+					{this.props.title &&
+						<span className={css.text}>
+							{this.props.title}
+						</span>
+					}
+					{this.props.button_text && 
+						<span className={`${css.button} button button--light button--sm`}>
+							{this.props.button_text}
+						</span>
+					}
+				</div>
+			</Link>
+		);
   }
   
 }

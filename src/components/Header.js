@@ -52,7 +52,7 @@ class Header extends React.Component {
 		return (
 			<StaticQuery query={graphql`
 			query {
-				logo: file(relativePath: {eq: "royvn.jpg"}) {
+				logo: file(relativePath: {eq: "royvn-2.jpg"}) {
 					childImageSharp {
 						fluid(maxWidth: 48, quality: 100) {
 							...GatsbyImageSharpFluid_withWebp
