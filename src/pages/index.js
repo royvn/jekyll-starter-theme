@@ -68,7 +68,7 @@ class IndexPage extends React.Component {
       `} render={data => ( 
         <Layout>
           <SEO title="Home" description="Roy van Neden | Front-end Developer &amp; Shopify Expert"/>
-          <Hero  image={data.heroImage.childImageSharp.fluid} title="✌😎🐵 Hi, Ik ben Roy van Neden" />
+          <Hero  image={data.heroImage.childImageSharp.fluid} title="Hi, Ik ben Roy van Neden ✌😎🐵" />
           {/* <Landing /> */}
           {/* <Services/> */}
           <LatestPosts title="Laatst gepubliceerd" paragraph="Hier deel en verzamel ik dingen over front-end development, design, Shopify &amp; Ecommerce." data={data.allMarkdownRemark.edges} />
