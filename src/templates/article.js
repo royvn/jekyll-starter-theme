@@ -42,7 +42,7 @@ export default ({ data }) => {
         <div className="container page-spacer">
           <header className="post-header">
             <div className="row">
-              <div className="col-12 col-md-10 col-lg-8 offset-lg-2">
+              <div className="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2">
                 <Link to="/blog/" className="post-back-to-blog">
                   Terug naar overzicht
                 </Link>
