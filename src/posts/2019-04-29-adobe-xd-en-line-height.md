@@ -6,7 +6,7 @@ description: Als designer werk je met verschillende tools. Hierbij loop je soms 
 image: ../uploads/adobe-xd-en-line-height.jpg
 categories: [Design]
 tags: [Adobe]
-author: royvn
+author: Roy
 ---
 
 Als designer & developer werk je met verschillende tools. Hierbij loop je soms tegen dingen aan die je werkproces verstoren. Zo ook bij [Adobe XD](https://www.adobe.com/nl/products/xd.html). In de eerste instantie lijkt het een werkbare tool. Tijdens het aflezen van design specificaties viel het echter op dat XD apart met de [line-height](https://developer.mozilla.org/en-US/docs/Web/CSS/line-height) en de daarmee verbonden hoogte van een tekst object omgaat.

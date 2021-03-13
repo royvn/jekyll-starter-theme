@@ -6,7 +6,7 @@ description: Een informatieve productbeschrijving is één van de meerdere must 
 image: ../uploads/shopify-collapsible.jpg
 categories: [Development]
 tags: [Shopify, Freebie, tutorial]
-author: royvn
+author: Roy
 ---
 
 Een informatieve productbeschrijving is één van de meerdere [must haves](https://www.nngroup.com/articles/ecommerce-product-pages/) bij een ecommerce productpagina. Het beknopt houden kan nog best een uitdaging zijn als je veel informatie kwijt moet. Mocht je producten hebben waarbij dit het geval is kan het de oplossing zijn om informatie op te splitsen in kleinere in- en uitklapbare blokken. Hoe je dat doet lees je in deze tutorial waarbij we stap voor stap een [Shopify section](https://shopify.dev/tutorials/develop-theme-use-sections) maken die je in je Shopify store kan gebruiken.

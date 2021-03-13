@@ -6,7 +6,7 @@ date: 2018-11-24
 image: ../uploads/het-verschil-tussen-require-en-import.jpg
 categories: [Development]
 tags: [Javascript]
-author: royvn
+author: Roy
 ---
 
 Stukken code zijn beter beheersbaar in kleinere stukken, dit geldt ook voor [javascript](https://nl.wikipedia.org/wiki/JavaScript). Om stukken javascript code te kunnen importeren en exporteren gebruik je `import` en `export`. Desalniettemin zie je ook wel eens `require()` en `module.exports`. Wat is nu het verschil en wanneer gebruik je welke?

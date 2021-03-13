@@ -6,7 +6,7 @@ date: 2018-05-21
 image: ../uploads/sketch-plugin-tips-voor-een-snellere-workflow.jpg
 categories: [Design]
 tags: [Tools, Sketch]
-author: royvn
+author: Roy
 ---
 
 Voor het versnellen van je workflow in [Sketch](https://sketchapp.com/), de digitale ontwerptool voor designers, zijn de volgende plugins interessant.

@@ -6,7 +6,7 @@ date: 2017-05-03
 image: ../uploads/rewrite-slug-verversen-na-registratie-van-een-custom-post-type.jpg
 categories: [Notities]
 tags: [WordPress]
-author: royvn
+author: Roy
 ---
 
 In [WordPress](https://nl.wordpress.com/) werkt een later aangepaste rewrite slug van een custom post type niet automatisch in de front-end.
