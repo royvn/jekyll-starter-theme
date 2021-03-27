@@ -1,0 +1,17 @@
+// Makes browsers render all elements more consistently and in line with modern standards
+@import 'normalize.css/normalize';
+
+// Self made mixins
+@import 'mixins/mixins';
+
+// Self made settings
+@import 'settings';
+@import 'root';
+@import 'html';
+@import 'body';
+@import 'accessibility';
+@import 'headings';
+@import 'rte';
+@import 'link';
+@import 'aspect-ratio';
+@import 'page-spacer';

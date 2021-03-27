@@ -1,0 +1,33 @@
+$white: #FDFDFD;
+$green: #53D67C;
+$dark-green: #2B9720;
+$orange: #F55D3E;
+
+$paper: #FAFAFA;
+$grey: #7C7287;
+$frozen: #E5EAFA;
+$black: #07090F;
+$yellow: #F7CB15;
+
+$primary: $green;
+$secondary: $yellow;
+
+$default-font-family: Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+$default-font-size: 1rem;
+
+$monospace-font-family: 'Roboto Mono', monospace;
+
+$headings-font-family: $default-font-family;
+$headings-line-height: 1.25;
+$headings-font-weight: 700;
+
+$body-background: $black;
+$body-color: $paper;
+
+$grid-spacer: rem(64);
+
+$breakpoint-xs: 0;
+$breakpoint-sm: rem(576);
+$breakpoint-md: rem(768);
+$breakpoint-lg: rem(992);
+$breakpoint-xl: rem(1200);

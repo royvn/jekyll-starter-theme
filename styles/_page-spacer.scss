@@ -1,0 +1,8 @@
+.page-spacer {
+	padding-left: rem(24);
+	padding-right: rem(24);
+	@include media-breakpoint-up($breakpoint-md) {
+		padding-left: rem(64);
+		padding-right: rem(64);
+	}
+}
