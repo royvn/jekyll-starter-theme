@@ -1,65 +1,73 @@
-import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import Head from 'next/head';
+import Image from 'next/image';
+import Link from 'next/link';
+import Layout from '../components/Layout';
+import Hero from '../components/Hero';
+import { getAllPosts } from '../lib/api';
 
-export default function Home() {
+
+export default function Home({allPosts}) {
   return (
-    <div className={styles.container}>
+    <Layout>
       <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
+        <title>Roy van Neden</title>
       </Head>
+      <Hero image="/hero.jpg" title="Design &amp; front-end development" />
+      <h1>Index</h1>
+      <h2>Posts</h2>
+      <ul>
+        {allPosts.map((post) => (
+          <li key={post.slug}>
+            <Link href={`/blog/${post.slug}`}>
+              <a>
+                <h3>
+                  {post.title}
+                </h3>
+                {post.date &&
+                  <p>
+                    {post.date} - {post.author}
+                  </p>
+                }
+                {post.tags && 
+                  <p>
+                    {post.tags.map((tag) => (
+                      <span key={tag}>
+                        #{tag}
+                      </span>
+                    ))}
+                  </p>
+                }
+                {post.description &&
+                  <p>
+                    {post.description}
+                  </p>
+                }
+                <span>
+                  Lees verder
+                </span>
+              </a>
+            </Link>
+          </li>
+        ))}
+      </ul>
+      <h2>Work</h2>
 
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
+    </Layout>
+  );
+}
 
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
 
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
-      </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
-      </footer>
-    </div>
-  )
+export async function getStaticProps() {
+  const allPosts = getAllPosts([
+    'slug',
+    'title',
+    'description',
+    'image',
+    'date',
+    'tags',
+    'author',
+  ]);
+  return {
+    props: { allPosts },
+  }
 }

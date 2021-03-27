@@ -1,0 +1,119 @@
+// Self made mixins
+@import '../styles/mixins/mixins';
+
+// Self made settings
+@import '../styles/settings.scss';
+
+// Component
+
+.content {
+	display: block;
+	hyphens: auto;
+	word-wrap: break-word;
+	font-size: rem(16);
+	line-height: rem(24);
+	> p:first-child {
+		font-size: rem(18);
+		line-height: rem(26);
+	}	
+	> *:last-child {
+		margin-bottom: 0;
+	}
+	h2, 
+	h3, 
+	h4, 
+	h5,
+	h6 {
+		color: inherit;
+		margin-top: 2rem;
+	}
+	ul {
+		padding-left: 2.75rem;
+	}
+	p, 
+	ul, 
+	.embed-responsive, 
+	video, 
+	.widget,
+	.aspect-ratio {
+		margin-bottom: 1rem;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	img, 
+	video {
+		max-width: 100%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+	}
+	iframe {
+		border: none;
+	}
+	blockquote {
+		font-family: $headings-font-family;
+		font-style: italic;
+		font-size: 1.5rem;
+		line-height: 2rem;
+		margin: 1rem 0;
+		p:last-child {
+			margin: 0;
+		}
+	}
+	pre {
+		display: block;
+		width: 100%;
+		font-family: $monospace-font-family;
+		background-color: lighten($black, 8%);
+		color: $paper;
+		font-size: rem(14);
+		line-height: rem(24);
+		overflow: auto;
+		max-height: rem(480);
+		position: relative;
+		border-radius: 8px;
+		&:before, 
+		&:after {
+			content: '';
+			display: block;
+			position: sticky;
+			left: 0;
+			right: 0;
+			height: rem(24);
+		}
+		&:before {
+			top: 0;
+			background: linear-gradient(to bottom,  rgba(38,36,46,1) 0%,rgba(38,36,46,0) 100%);
+		}
+		&:after {
+			bottom: 0;
+			background: linear-gradient(to bottom,  rgba(38,36,46,0) 0%,rgba(38,36,46,1) 100%);
+		}
+		code {
+			display: block;
+			padding: 0 rem(24);
+		}
+	}
+	ul {
+		list-style: none;
+		padding-left: 0;
+		li {
+			position: relative;
+			padding-left: rem(16);
+			&:before {
+				content: '';
+				display: block;
+				width: rem(4);
+				height: rem(4);
+				background-color: $white;
+				position: absolute;
+				left: 0;
+				top: rem(10);
+			}
+		}
+	}
+	hr {
+		border: 1px solid rgba($black, 0.08);
+		margin: rem(32) 0;
+	}
+}

@@ -1,0 +1,103 @@
+@import "../styles/mixins/mixins";
+@import "../styles/settings";
+
+.wrapper {
+	position: relative;
+	background-color: $black;
+	color: $white;
+	font-size: rem(16);
+	line-height: rem(24);
+}
+
+.content {
+	padding: rem(48) 0;
+}
+
+.row {
+	align-items: center;
+}
+
+.paragraph {
+	color: $frozen;
+	max-width: 80%;
+}
+
+.bitcoin {
+	position: relative;
+	cursor: pointer;
+	&:hover, 
+	&:focus, 
+	&:active {
+		input {
+			border: 2px dashed rgba(255, 255, 255, 1);		
+		}
+	}
+	input {
+		display: block;
+		width: 100%;
+		padding: rem(6) rem(56) rem(6) rem(16);
+		line-height: rem(24);
+		font-size: rem(12);
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		border: 2px dashed rgba(255, 255, 255, 0.48);
+		background-color: transparent;
+		border-radius: 2px;
+		color: $paper;
+		&:hover, 
+		&:focus, 
+		&:active {
+			background-color: transparent;
+			outline: none;
+		}
+	}
+	button {
+		display: block;
+		appearance: none;
+		background-color: transparent;
+		border: 0;
+		cursor: pointer;
+		position: absolute;
+		right: 0;
+		top: 50%;
+		transform: translateY(-50%);
+		padding: rem(11);
+		&:hover, 
+		&:focus, 
+		&:active {
+			outline: none;
+			background-color: transparent;
+		}
+		svg {
+			display: block;
+			fill: $paper;
+			width: rem(18);
+			height: rem(18);
+		}
+	}
+}
+
+.buttons {
+	margin-top: rem(24);
+}
+
+.info {
+	font-size: rem(14);
+	line-height: rem(24);
+	padding-top: rem(48);
+	color: $frozen;
+	p:last-child {
+		margin: 0;
+	}
+}
+
+.panel {
+	padding-bottom: rem(24);
+	@include media-breakpoint-up($breakpoint-md) {
+		padding-bottom: rem(48);
+	}
+	&:last-child {
+		padding-bottom: rem(48);
+	}
+}

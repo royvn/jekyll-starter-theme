@@ -1,0 +1,31 @@
+@import "../styles/mixins/mixins";
+@import "../styles/settings";
+
+.list-social {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	.list-social-item {
+		position: relative;
+		padding: 0;
+		margin: 0 0 rem(8) 0;
+		&:last-child {
+			margin: 0;
+		}
+		&:before {
+			display: none;
+		}
+	}
+	a {
+		padding: 0 0 0 rem(32);
+	}
+	svg {
+		fill: currentColor;
+		position: absolute;
+		left: 0;
+		top: 50%;
+		transform: translateY(-50%);
+		width: rem(16);
+		height: rem(16);
+	}
+}

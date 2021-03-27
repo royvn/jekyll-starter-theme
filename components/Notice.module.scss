@@ -1,0 +1,51 @@
+@import "../styles/mixins/mixins";
+@import "../styles/settings";
+
+.wrapper {
+  display: block;
+  // display: none;
+  // @include media-breakpoint-up($breakpoint-md) {
+  // }
+  position: relative;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 9;
+  padding: rem(12) rem(0);
+  background-color: $primary;
+  color: $black;
+  text-decoration: none;
+  font-size: rem(14);
+  line-height: rem(24);
+  font-weight: 500;
+  transition: all .32s cubic-bezier(0.55, 0.085, 0.68, 0.53);
+  transform: translateY(0%);
+  &:hover,
+  &:focus, 
+  &:active {
+    text-decoration: none;
+    background-color: $black;
+    color: $primary;
+  }
+  &.link-hide {
+    transform: translateY(100%);
+  }
+}
+
+.content {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.text {
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.button {
+  flex: 0 0 auto;
+}
