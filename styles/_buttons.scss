@@ -72,18 +72,18 @@
 		}
 	}
 	// &.button--effect {
-		&:hover {
-			&:before {
-				transform: translateX(0%);
-			}
-		}
+		// &:hover {
+		// 	&:before {
+		// 		transform: translateX(0%);
+		// 	}
+		// }
 	// }
 	&.button--outline-primary {
-		border-color: $blue;
-		color: $blue;
+		border-color: $primary;
+		color: $primary;
 		&:hover, 
 		&:focus {
-			background-color: $blue;
+			background-color: $primary;
 			color: $white;
 		}
 	}

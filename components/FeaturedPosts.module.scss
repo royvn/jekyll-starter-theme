@@ -1,0 +1,19 @@
+@import "../styles/mixins/mixins";
+@import "../styles/settings";
+
+.test {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: var(--gap);
+  align-items: flex-end;
+  margin-bottom: rem(32);
+}
+
+.grid {
+  display: grid;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: var(--gap);
+}

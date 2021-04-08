@@ -2,14 +2,11 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
-import styles from './hero.module.scss';
+import styles from './Hero.module.scss';
 
 export default function Hero (props) {
   return (
     <div className={`${styles.wrapper} ${styles.wrapperDarkMode}`}>
-      <span>
-        {props.image}
-      </span> 
       {props.image &&
         <Image 
           src={props.image}

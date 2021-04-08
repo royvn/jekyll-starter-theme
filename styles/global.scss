@@ -5,6 +5,11 @@
 @import 'mixins/mixins';
 
 // Self made settings
+
+:root {
+  --gap: 3rem;
+}
+
 @import 'settings';
 @import 'root';
 @import 'html';
@@ -15,3 +20,4 @@
 @import 'link';
 @import 'aspect-ratio';
 @import 'page-spacer';
+@import 'buttons';

@@ -22,8 +22,8 @@ h1,
   font-size: rem(40);
   line-height: rem(48);
   @include media-breakpoint-up($breakpoint-md) {
-    font-size: rem(56);
-    line-height: rem(64);
+    font-size: rem(64);
+    line-height: rem(72);
   }
 }
 
