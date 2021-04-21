@@ -1,16 +1,16 @@
-@import "../styles/mixins/mixins";
-@import "../styles/settings";
+@use "../styles/mixins";
+@use "../styles/settings";
 
 .wrapper {
 	position: relative;
-	background-color: $black;
-	color: $white;
-	font-size: rem(16);
-	line-height: rem(24);
+	background-color: settings.$black;
+	color: settings.$white;
+	font-size: mixins.rem(16);
+	line-height: mixins.rem(24);
 }
 
 .content {
-	padding: rem(48) 0;
+	padding: mixins.rem(48) 0;
 }
 
 .row {
@@ -18,7 +18,7 @@
 }
 
 .paragraph {
-	color: $frozen;
+	color: settings.$frozen;
 	max-width: 80%;
 }
 
@@ -35,16 +35,16 @@
 	input {
 		display: block;
 		width: 100%;
-		padding: rem(6) rem(56) rem(6) rem(16);
-		line-height: rem(24);
-		font-size: rem(12);
+		padding: mixins.rem(6) mixins.rem(56) mixins.rem(6) mixins.rem(16);
+		line-height: mixins.rem(24);
+		font-size: mixins.rem(12);
 		white-space: nowrap;
 		overflow: hidden;
 		text-overflow: ellipsis;
 		border: 2px dashed rgba(255, 255, 255, 0.48);
 		background-color: transparent;
 		border-radius: 2px;
-		color: $paper;
+		color: settings.$paper;
 		&:hover, 
 		&:focus, 
 		&:active {
@@ -62,7 +62,7 @@
 		right: 0;
 		top: 50%;
 		transform: translateY(-50%);
-		padding: rem(11);
+		padding: mixins.rem(11);
 		&:hover, 
 		&:focus, 
 		&:active {
@@ -71,33 +71,33 @@
 		}
 		svg {
 			display: block;
-			fill: $paper;
-			width: rem(18);
-			height: rem(18);
+			fill: settings.$paper;
+			width: mixins.rem(18);
+			height: mixins.rem(18);
 		}
 	}
 }
 
 .buttons {
-	margin-top: rem(24);
+	margin-top: mixins.rem(24);
 }
 
 .info {
-	font-size: rem(14);
-	line-height: rem(24);
-	padding-top: rem(48);
-	color: $frozen;
+	font-size: mixins.rem(14);
+	line-height: mixins.rem(24);
+	padding-top: mixins.rem(48);
+	color: settings.$frozen;
 	p:last-child {
 		margin: 0;
 	}
 }
 
 .panel {
-	padding-bottom: rem(24);
-	@include media-breakpoint-up($breakpoint-md) {
-		padding-bottom: rem(48);
+	padding-bottom: mixins.rem(24);
+	@include mixins.media-breakpoint-up(settings.$breakpoint-md) {
+		padding-bottom: mixins.rem(48);
 	}
 	&:last-child {
-		padding-bottom: rem(48);
+		padding-bottom: mixins.rem(48);
 	}
 }

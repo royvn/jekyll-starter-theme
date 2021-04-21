@@ -1,15 +1,12 @@
-// Self made mixins
-@import 'mixins/mixins';
-
-// Self made settings
-@import 'settings';
+@use 'mixins';
+@use 'settings';
 
 //
 body {
-	margin: 0;
-	font-family: $default-font-family;
-	font-size: $default-font-size;
+	font-family: settings.$default-font-family;
+	font-size: settings.$default-font-size;
 	line-height: 1.5;
-  background-color: lighten($body-background, 4%);
-  color: $body-color;
+  background-color: lighten(settings.$body-background, 4%);
+  color: settings.$body-color;
+	margin: 0;
 }

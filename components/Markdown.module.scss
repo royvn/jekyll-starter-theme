@@ -1,8 +1,8 @@
 // Self made mixins
-@import '../styles/mixins/mixins';
+@use '../styles/mixins';
 
 // Self made settings
-@import '../styles/settings.scss';
+@use '../styles/settings';
 
 // Component
 
@@ -52,7 +52,7 @@
 		border: none;
 	}
 	blockquote {
-		font-family: $headings-font-family;
+		font-family: settings.$headings-font-family;
 		font-style: italic;
 		font-size: 1.5rem;
 		line-height: 2rem;
@@ -64,9 +64,9 @@
 	pre {
 		display: block;
 		width: 100%;
-		font-family: $monospace-font-family;
-		background-color: lighten($black, 8%);
-		color: $paper;
+		font-family: settings.$monospace-font-family;
+		background-color: lighten(settings.$black, 8%);
+		color: settings.$paper;
 		font-size: rem(14);
 		line-height: rem(24);
 		overflow: auto;
@@ -106,7 +106,7 @@
 				display: block;
 				width: rem(4);
 				height: rem(4);
-				background-color: $white;
+				background-color: settings.$white;
 				position: absolute;
 				left: 0;
 				top: rem(10);
@@ -114,7 +114,7 @@
 		}
 	}
 	hr {
-		border: 1px solid rgba($black, 0.08);
+		border: 1px solid rgba(settings.$black, 0.08);
 		margin: rem(32) 0;
 	}
 }

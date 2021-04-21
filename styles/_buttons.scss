@@ -1,3 +1,6 @@
+@use 'mixins';
+@use 'settings';
+
 .button {
 	position: relative;
 	background-color: transparent;
@@ -6,13 +9,13 @@
 	display: inline-block;
 	vertical-align: middle;
 	text-align: center;
-	font-family: $headings-font-family;
-	font-size: rem(14);
-	line-height: rem(24);
+	font-family: settings.$headings-font-family;
+	font-size: mixins.rem(14);
+	line-height: mixins.rem(24);
 	font-weight: 600;
-	padding: rem(7) rem(16);
+	padding: mixins.rem(7) mixins.rem(16);
 	margin: 0;
-	border-radius: rem(4);
+	border-radius: mixins.rem(4);
 	transition: all .32s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 	overflow: hidden;
 	&:hover, 
@@ -22,53 +25,53 @@
 	}
 	&:hover, 
 	&:focus {
-		color: $black;
+		color: settings.$black;
 	}
 	&.button--block {
 		display: block;
 		text-align: center;
 	}
 	&.button--sm {
-		padding: rem(5) rem(8);
-		font-size: rem(12);
-		line-height: rem(20);
+		padding: mixins.rem(5) mixins.rem(8);
+		font-size: mixins.rem(12);
+		line-height: mixins.rem(20);
 	}
 	&.button--md {
-		font-size: rem(14);
-		line-height: rem(24);
-		padding: rem(7) rem(16);
+		font-size: mixins.rem(14);
+		line-height: mixins.rem(24);
+		padding: mixins.rem(7) mixins.rem(16);
 	}
 	&.button--lg {
-		padding: rem(11) rem(24);
-		font-size: rem(14);
-		line-height: rem(24);
+		padding: mixins.rem(11) mixins.rem(24);
+		font-size: mixins.rem(14);
+		line-height: mixins.rem(24);
 	}
 	&.button--light {
-		background-color: $white;
-		border-color: $white;
-		color: $primary;
+		background-color: settings.$white;
+		border-color: settings.$white;
+		color: settings.$primary;
 		&:hover {
-			color: darken($primary, 16%);
+			color: darken(settings.$primary, 16%);
 		}
 	}
 	&.button--primary {
-		background-color: $primary;
-		border-color: $primary;
-		color: $black;
+		background-color: settings.$primary;
+		border-color: settings.$primary;
+		color: settings.$black;
 		&:hover {
-			background-color: darken($primary, 16%);
-			border-color: darken($primary, 16%);
-			color: $black;
+			background-color: darken(settings.$primary, 16%);
+			border-color: darken(settings.$primary, 16%);
+			color: settings.$black;
 		}
 	}
 	&.button--secondary {
-		background-color: $secondary;
-		border-color: $secondary;
-		color: $white;
+		background-color: settings.$secondary;
+		border-color: settings.$secondary;
+		color: settings.$white;
 		&:hover {
-			background-color: darken($secondary, 16%);
-			border-color: darken($secondary, 16%);
-			color: $white;
+			background-color: darken(settings.$secondary, 16%);
+			border-color: darken(settings.$secondary, 16%);
+			color: settings.$white;
 		}
 	}
 	// &.button--effect {
@@ -79,12 +82,12 @@
 		// }
 	// }
 	&.button--outline-primary {
-		border-color: $primary;
-		color: $primary;
+		border-color: settings.$primary;
+		color: settings.$primary;
 		&:hover, 
 		&:focus {
-			background-color: $primary;
-			color: $white;
+			background-color: settings.$primary;
+			color: settings.$white;
 		}
 	}
 	&.button--disabled {
@@ -96,9 +99,9 @@
 .buttons {
   display: flex;
   flex-wrap: wrap;
-  margin-bottom: -(rem(16));
+  margin-bottom: -(mixins.rem(16));
   .button {
-    margin-right: rem(16);
-    margin-bottom: rem(16);
+    margin-right: mixins.rem(16);
+    margin-bottom: mixins.rem(16);
   }
 }

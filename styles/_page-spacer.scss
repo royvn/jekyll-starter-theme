@@ -1,8 +1,11 @@
+@use 'mixins';
+@use 'settings';
+
 .page-spacer {
-	padding-left: rem(24);
-	padding-right: rem(24);
-	@include media-breakpoint-up($breakpoint-md) {
-		padding-left: rem(48);
-		padding-right: rem(48);
+	padding-left: mixins.rem(24);
+	padding-right: mixins.rem(24);
+	@include mixins.media-breakpoint-up(settings.$breakpoint-md) {
+		padding-left: mixins.rem(48);
+		padding-right: mixins.rem(48);
 	}
 }
