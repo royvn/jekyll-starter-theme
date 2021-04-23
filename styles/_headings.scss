@@ -1,5 +1,5 @@
-@import 'mixins/mixins';
-@import 'settings';
+@use 'mixins';
+@use 'settings';
 
 h1, .h1, 
 h2, .h2,
@@ -7,9 +7,9 @@ h3, .h3,
 h4, .h4,
 h5, .h5,
 h6, .h6 {
-  font-family: $headings-font-family;
-  line-height: $headings-line-height;
-  font-weight: $headings-font-weight;
+  font-family: settings.$headings-font-family;
+  line-height: settings.$headings-line-height;
+  font-weight: settings.$headings-font-weight;
   margin-top: 0;
   margin-bottom: rem(16);
   &:last-child {
@@ -21,7 +21,7 @@ h1,
 .h1 {
   font-size: rem(40);
   line-height: rem(48);
-  @include media-breakpoint-up($breakpoint-md) {
+  @include mixins.media-breakpoint-up(settings.$breakpoint-md) {
     font-size: rem(64);
     line-height: rem(72);
   }
@@ -31,7 +31,7 @@ h2,
 .h2 {
   font-size: rem(32);
   line-height: rem(40);
-  @include media-breakpoint-up($breakpoint-md) {
+  @include mixins.media-breakpoint-up(settings.$breakpoint-md) {
     font-size: rem(40);
     line-height: rem(48);
   }
@@ -41,7 +41,7 @@ h3,
 .h3 {
   font-size: rem(28);
   line-height: rem(36);
-  @include media-breakpoint-up($breakpoint-md) {
+  @include mixins.media-breakpoint-up(settings.$breakpoint-md) {
     font-size: rem(40);
     line-height: rem(48);
   }
@@ -51,7 +51,7 @@ h4,
 .h4 {
   font-size: rem(18);
   line-height: rem(26);
-  @include media-breakpoint-up($breakpoint-md) {
+  @include mixins.media-breakpoint-up(settings.$breakpoint-md) {
     font-size: rem(20);
     line-height: rem(28);
   }
@@ -61,7 +61,7 @@ h5,
 .h5 {
   font-size: rem(14);
   line-height: rem(22);
-  @include media-breakpoint-up($breakpoint-md) {
+  @include mixins.media-breakpoint-up(settings.$breakpoint-md) {
     font-size: rem(16);
     line-height: rem(24);
   }
@@ -71,7 +71,7 @@ h6,
 .h6 {
   font-size: rem(12);
   line-height: rem(20);
-  @include media-breakpoint-up($breakpoint-md) {
+  @include mixins.media-breakpoint-up(settings.$breakpoint-md) {
     font-size: rem(14);
     line-height: rem(22);
   }
@@ -85,6 +85,6 @@ h6,
   font-weight: 500;
   margin-bottom: rem(8);
   &--primary {
-    color: $primary;
+    color: settings.$primary;
   }
 }

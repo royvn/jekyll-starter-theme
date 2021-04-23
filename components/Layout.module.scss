@@ -1,5 +1,5 @@
-@import "../styles/mixins/mixins";
-@import "../styles/settings";
+@use "../styles/mixins";
+@use "../styles/settings";
 
 .wrapper {
   position: relative;

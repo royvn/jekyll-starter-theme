@@ -1,16 +1,13 @@
-// Self made mixins
-@import 'mixins/mixins';
-
-// Self made settings
-@import 'settings';
+@use 'mixins';
+@use 'settings';
 
 // 
 a {
-	color: $primary;
+	color: settings.$primary;
 	text-decoration: none;
 	&:hover, 
 	&:focus,
 	&:active {
-		color: darken($primary, 8%);
+		color: darken(settings.$primary, 8%);
 	}
 }

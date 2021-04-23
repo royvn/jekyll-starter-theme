@@ -1,16 +1,16 @@
-@import "../styles/mixins/mixins";
-@import "../styles/settings";
+@use "../styles/mixins";
+@use "../styles/settings";
 
 .wrapper {
 	position: relative;
 	z-index: 1;
-	background-color: $black;
-	color: $white;
+	background-color: settings.$black;
+	color: settings.$white;
 	min-height: 100vh;
 	display: flex;
 	align-items: center;
 	padding: rem(48) 0;
-	@include media-breakpoint-up($breakpoint-md) {
+	@include mixins.media-breakpoint-up(settings.$breakpoint-md) {
 		padding: rem(96) 0;
 		background-color: red;
 	}
@@ -24,7 +24,7 @@
 			right: 0;
 			left: 0;
 			bottom: 0;
-			background-color: $black;
+			background-color: settings.$black;
 			opacity: 0.32;
 			z-index: 2;
 		}
@@ -46,7 +46,7 @@
 	}
 	.content {
 		margin: 0 auto;
-		@include media-breakpoint-up($breakpoint-lg) {
+		@include mixins.media-breakpoint-up(settings.$breakpoint-lg) {
 			text-align: center;
 		}
 	}
@@ -78,7 +78,7 @@
 	color: inherit;
 	text-transform: uppercase;
 	font-weight: 700;
-	font-family: $headings-font-family;
+	font-family: settings.$headings-font-family;
 	font-size: .5rem;
 	line-height: 1rem;
 	border: none;
@@ -102,7 +102,7 @@
 	&:before {
 		top: 0;
 		margin-left: -0.75rem;
-		border: 2px solid $white;
+		border: 2px solid settings.$white;
 		width: 1.5rem;
 		height: 2.5rem;
 		border-radius: 2rem;
@@ -110,7 +110,7 @@
 	&:after {
 		width: 0.25rem;
 		height: 0.5rem;
-		background-color: $white;
+		background-color: settings.$white;
 		top: 0.5rem;
 		border-radius: 0.25rem;
 		margin-left: -2px;

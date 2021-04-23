@@ -1,21 +1,21 @@
-@import 'mixins/mixins';
-@import 'settings';
+@use 'mixins';
+@use 'settings';
 
 .rte {
   &--sm {
-    font-size: rem(12);
-    line-height: rem(18);
+    font-size: mixins.rem(12);
+    line-height: mixins.rem(18);
   }
   &--md {
-    font-size: rem(14);
-    line-height: rem(20);
+    font-size: mixins.rem(14);
+    line-height: mixins.rem(20);
   }
   &--lg {
-    font-size: rem(24);
-    line-height: rem(32);
-    @include media-breakpoint-up($breakpoint-md) {
-      font-size: rem(32);
-      line-height: rem(40);
+    font-size: mixins.rem(24);
+    line-height: mixins.rem(32);
+    @include mixins.media-breakpoint-up(settings.$breakpoint-md) {
+      font-size: mixins.rem(32);
+      line-height: mixins.rem(40);
     }
   }
   *:last-child {
