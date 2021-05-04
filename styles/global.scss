@@ -1,13 +1,29 @@
 // Makes browsers render all elements more consistently and in line with modern standards
-@use 'normalize.css/normalize';
-@use 'settings';
-@use 'root';
-@use 'html';
-@use 'body';
-@use 'accessibility';
-@use 'headings';
-@use 'rte';
-@use 'link';
-@use 'aspect-ratio';
-@use 'page-spacer';
-@use 'buttons';
+// @use 'normalize.css/normalize';
+// @use 'settings';
+// @use 'root';
+// @use 'html';
+// @use 'body';
+// @use 'accessibility';
+// @use 'headings';
+// @use 'page-spacer';
+// // @use 'container';
+// // @use 'row';
+// // @use 'col';
+// @use 'rte';
+// @use 'link';
+// @use 'aspect-ratio';
+// @use 'buttons';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  h1 {
+    @apply text-2xl;
+  }
+  h2 {
+    @apply text-xl;
+  }
+}

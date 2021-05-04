@@ -30,11 +30,11 @@ export default class Footer extends React.Component {
 							image_2="/boat.png"
               />
 							 
-						<div className={`${styles.info} container page-spacer`}>
-							<div className="row">
+						<div className={`container mx-auto px-8 lg:px-16 pt-12 pb-12`}>
+							<div className="grid grid-cols-12 gap-6">
 								
-								<div className={`col-12 col-md-6 col-lg-3 ${styles.panel}`}>
-									<p className="h6">
+								<div className={`col-span-12 md:col-span-3 mb-4 mb:mb-0`}>
+									<p className="font-bold mb-3">
 										roy.vanneden.nl
 									</p>		
 									<p>
@@ -42,23 +42,23 @@ export default class Footer extends React.Component {
 									</p>
 								</div>
 
-								<div className={`col-12 col-md-6 col-lg-3 ${styles.panel}`}>
-									<p className="h6">
+								<div className={`col-span-12 md:col-span-3 mb-4 mb:mb-0`}>
+									<p className="font-bold mb-3">
 										Doneer Bitcoin
 									</p>
 									<div className={styles.bitcoin} onClick={this.handleCopy}>
-										<input type="text" value="1CEZkvXA6dtfknK2YjTZpqtdQDYsBh5Ymi" className={`${styles.bitcoin}`} id="bitcoinAdress" readOnly/>
+										<input type="text" value="bc1qzj30q2ahy54k3qxczc6rldd2h3dlmrsdg9fk7f" className={`${styles.bitcoin}`} id="bitcoinAdress" readOnly/>
 										<button type="button">
 											<svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/></svg>
-											<span className="visually-hidden">
+											<span className="sr-only">
 												Copy Bitcoin address
 											</span>
 										</button>
 									</div>
 								</div>
 
-								<div className={`col-12 col-md-6 col-lg-3 ${styles.panel}`}>
-									<p className="h6">
+								<div className={`col-span-12 md:col-span-3 mb-4 mb:mb-0`}>
+									<p className="font-bold mb-3">
 										Mijn links
 									</p>
 									<p>
@@ -80,8 +80,8 @@ export default class Footer extends React.Component {
 									</p>
 								</div>
 
-								<div className={`col-12 col-md-6 col-lg-3 ${styles.panel}`}>
-									<p className="h6">
+								<div className={`col-span-12 md:col-span-3 mb-4 md:mb-0`}>
+									<p className="font-bold mb-3">
 										© 1992 - {new Date().getFullYear()}
 									</p>
 									<p>

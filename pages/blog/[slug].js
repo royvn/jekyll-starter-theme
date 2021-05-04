@@ -44,6 +44,15 @@ export default function Post ({post}) {
                       Geplaatst op {post.date} door {post.author}.
                     </p>
                   }
+                  {post.tags && 
+                    <p className="flex flex-wrap space-x-3 mt-4">
+                      {post.tags.map((tag) => (
+                        <span className="block text-xs px-3 py-2 font-semibold rounded bg-gray-300" key={tag}>
+                          #{tag}
+                        </span>
+                      ))}
+                    </p>
+                  }
                 </div>
               </div>
             </header>

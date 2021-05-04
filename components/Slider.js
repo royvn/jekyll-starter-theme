@@ -11,7 +11,7 @@ export default function Slider(props) {
           {props.slides.map((slide)=> (
             <div className={styles.slide}>
               {slide.image && 
-                <div className="slide-image">
+                <div className="">
                   <Image 
                     src={slide.image} 
                     alt={slide.title} 

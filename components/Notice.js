@@ -1,8 +1,5 @@
 import React from 'react';
 import Link from 'next/link';
-import styles from './Notice.module.scss';
-
-
 export default class Notice extends React.Component {
 
 	constructor (props) {
@@ -14,11 +11,16 @@ export default class Notice extends React.Component {
 	}
 
 	handleNoticeAnimation() {
+		console.log('checkpoint handleNoticeAnimation');
 		let currentScrollYPosition = window.scrollY;
-		let pageHeight = document.body.clientHeight;
-		let breakpoint = (pageHeight - window.innerHeight) - (pageHeight / 10);
-
-		if(currentScrollYPosition >= breakpoint) {
+		let windowHeight = window.innerHeight;
+		console.log(
+			{
+				currentScrollYPosition,
+				windowHeight
+			}
+		);
+		if(currentScrollYPosition >= windowHeight) {
 			this.setState({ 
 				hide: true 
 			});
@@ -36,17 +38,12 @@ export default class Notice extends React.Component {
 
 	render() {
 		return(
-			<Link href={this.props.link}>
-				<a className={`${styles.wrapper} ${this.state.hide ? `${styles.LinkHide}` : ''}`}>
-					<div className={`${styles.content} page-spacer`}>
-						{this.props.title &&
-							<span className={styles.text}>
-								{this.props.title}
-							</span>
-						}
-						{this.props.button_text && 
-							<span className={`${styles.button} button button--light button--sm`}>
-								{this.props.button_text}
+			<Link href={this.props.link_to}>
+				<a className={`block bg-green-400 py-3 transition-all hover:bg-black hover:text-white ${this.state.hide ? `transform translate-y-full` : ''}`}>
+					<div className="container mx-auto px-8 lg:px-16 text-center">
+						{this.props.link_text &&
+							<span className="text-sm">
+								{this.props.link_text}
 							</span>
 						}
 					</div>
