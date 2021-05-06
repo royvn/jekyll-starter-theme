@@ -18,7 +18,7 @@ export default class Footer extends React.Component {
 		const { data } = this.props;
 		return (
 			
-					<footer className={styles.wrapper}>
+					<footer className={`bg-black text-white`}>
 
 						<Outro 
 							subtitle="Wat ik doe" 
@@ -33,7 +33,7 @@ export default class Footer extends React.Component {
 						<div className={`container mx-auto px-8 lg:px-16 pt-12 pb-12`}>
 							<div className="grid grid-cols-12 gap-6">
 								
-								<div className={`col-span-12 md:col-span-3 mb-4 mb:mb-0`}>
+								<div className={`col-span-12 md:col-span-3`}>
 									<p className="font-bold mb-3">
 										roy.vanneden.nl
 									</p>		
@@ -42,7 +42,7 @@ export default class Footer extends React.Component {
 									</p>
 								</div>
 
-								<div className={`col-span-12 md:col-span-3 mb-4 mb:mb-0`}>
+								<div className={`col-span-12 md:col-span-3`}>
 									<p className="font-bold mb-3">
 										Doneer Bitcoin
 									</p>
@@ -57,7 +57,7 @@ export default class Footer extends React.Component {
 									</div>
 								</div>
 
-								<div className={`col-span-12 md:col-span-3 mb-4 mb:mb-0`}>
+								<div className={`col-span-12 md:col-span-3`}>
 									<p className="font-bold mb-3">
 										Mijn links
 									</p>
@@ -80,7 +80,7 @@ export default class Footer extends React.Component {
 									</p>
 								</div>
 
-								<div className={`col-span-12 md:col-span-3 mb-4 md:mb-0`}>
+								<div className={`col-span-12 md:col-span-3`}>
 									<p className="font-bold mb-3">
 										© 1992 - {new Date().getFullYear()}
 									</p>

@@ -4,7 +4,7 @@ export default function Header () {
   return(
     <header className={`relative bg-white`}>
       <div className={`container mx-auto px-8 lg:px-16`}>
-        <ul className={`flex flex-wrap items-center border-b-2 border-gray-100 py-4 md:space-x-6`}>
+        <ul className={`flex flex-wrap items-center border-b-2 border-gray-100 py-4 space-x-6 justify-center text-sm md:text-base`}>
           <li className={``}>
             <Link href="/">
               <a className={`font-bold`}>

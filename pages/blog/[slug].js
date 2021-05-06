@@ -20,60 +20,70 @@ export default function Post ({post}) {
         <div>Loading..</div>
       ) : (
 
-        <article className="post section section--margin">
+        <div>
           <Head>
             <title>{post.title}</title>
           </Head>
-          <div className="container page-spacer">
+          <div className="container mx-auto my-12 md:my-24 px-8 lg:px-16">
+            <div className={`grid grid-cols-12 gap-6`}>
+              <div className={`col-span-12 lg:col-span-9`}>
+            
+                <article>
+                  <header className="post-header">
+                    <div className="">
+                      <div className="">
+                        <Link href="/blog/" className="post-back-to-blog">
+                          <a>
+                            Terug naar overzicht
+                          </a>
+                        </Link>
+                        {post.title && 
+                          <h1 className="block text-3xl md:text-5xl font-bold transition-all">
+                            {post.title}
+                          </h1>
+                        }
+                        {post.date && post.author &&
+                          <p className="post-meta">
+                            Geplaatst op {post.date} door {post.author}.
+                          </p>
+                        }
+                        {post.tags && 
+                          <p className="flex flex-wrap space-x-3 mt-4">
+                            {post.tags.map((tag) => (
+                              <span className="block text-xs px-3 py-2 font-semibold rounded bg-gray-300" key={tag}>
+                                #{tag}
+                              </span>
+                            ))}
+                          </p>
+                        }
+                      </div>
+                    </div>
+                  </header>
 
-            <header className="post-header">
-              <div className="row">
-                <div className="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2">
-                  <Link href="/blog/" className="post-back-to-blog">
-                    <a>
-                      Terug naar overzicht
-                    </a>
-                  </Link>
-                  {post.title && 
-                    <h1 className="post-title">
-                      {post.title}
-                    </h1>
+                  {post.image && 
+                    <div className="post-image">
+                      <Image 
+                        src={post.image} 
+                        alt={post.title} 
+                        width={1200}
+                        height={600} />
+                    </div>
                   }
-                  {post.date && post.author &&
-                    <p className="post-meta">
-                      Geplaatst op {post.date} door {post.author}.
-                    </p>
-                  }
-                  {post.tags && 
-                    <p className="flex flex-wrap space-x-3 mt-4">
-                      {post.tags.map((tag) => (
-                        <span className="block text-xs px-3 py-2 font-semibold rounded bg-gray-300" key={tag}>
-                          #{tag}
-                        </span>
-                      ))}
-                    </p>
-                  }
-                </div>
+
+                  <div className="post-content">
+                    <Markdown content={post.content} />
+                  </div>
+                </article>
+
               </div>
-            </header>
-
-            {post.image && 
-              <div className="post-image">
-                <Image 
-                  src={post.image} 
-                  alt={post.title} 
-                  width={1200}
-                  height={600} />
-              </div>
-            }
-
-            <div className="post-content">
-              <Markdown content={post.content} />
             </div>
-
           </div>
 
-        </article>
+        </div>
+
+
+
+
 
       )}
     </Layout>

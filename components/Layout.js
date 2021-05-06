@@ -4,7 +4,7 @@ import Footer from './Footer';
 
 export default function Layout ({children}) {
   return (
-    <div className="relative">
+    <div className="relative flex flex-col min-h-screen">
       <a href="#content" className="sr-only">
         Skip naar content
       </a>
@@ -13,7 +13,7 @@ export default function Layout ({children}) {
         link_text="Nieuw op blog: Verbeter de weergave van je productinformatie in Shopify" 
         />
       <Header />
-      <main className="main" id="content">
+      <main className="flex-grow" id="content">
         {children}
       </main>
       <Footer />

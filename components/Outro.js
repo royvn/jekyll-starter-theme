@@ -1,5 +1,4 @@
 import Image from 'next/image';
-// import styles from './Footer.module.scss';
 
 function Outro(props) {
   return (
@@ -30,7 +29,7 @@ function Outro(props) {
               <div className={``}>
 
                 {props.link_to && props.link_text &&
-                  <Link href={props.link_to} className="inline-block text-center px-6 py-3 md:py-4 text-sm leading-6 font-semibold transition-all rounded-full bg-white text-black hover:bg-black hover:text-white">
+                  <Link href={props.link_to} className="inline-block text-center px-6 py-3 text-sm leading-6 font-semibold transition-all rounded-full bg-white text-black hover:bg-black hover:text-white">
                     <a>
                       {props.link_text}
                     </a>
@@ -38,7 +37,7 @@ function Outro(props) {
                 }
   
                 {props.button_href && props.button_text &&
-                  <a href={props.button_href} rel="noopener noreferrer" className="inline-block text-center px-6 py-3 md:py-4 text-sm leading-6 font-semibold transition-all rounded-full bg-white text-black hover:bg-black hover:text-white">
+                  <a href={props.button_href} rel="noopener noreferrer" className="inline-block text-center px-6 py-3 text-sm leading-6 font-semibold transition-all rounded-full bg-white text-black hover:bg-black hover:text-white">
                     {props.button_text}
                   </a>
                 }

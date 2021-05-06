@@ -42,17 +42,19 @@ export default function Home({allPosts}) {
         secondary_link_text="Meer informatie"
         secondary_link_variant="button--link"
         />
-      <Text>
+      {/* <Text>
         <h2>
           Roy van Neden
         </h2>
-        <p>Front-end developer, Shopify theme developer &amp; digital designer</p>
+        <p>
+          Front-end developer, Shopify theme developer &amp; digital designer.
+        </p>
       </Text>
-      <Slider slides={slides}/>
-      <div className="container mx-auto my-24 px-8 lg:px-16">
-        <div className={`grid grid-cols-12 gap-6 mb-12`}>
-          <div className={`col-span-12 md:col-span-6 items-center`}>
-            <h2 className="text-4xl font-bold text-center md:text-left">
+      <Slider slides={slides}/> */}
+      <div className="container mx-auto my-12 md:my-24 px-8 lg:px-16">
+        <div className={`grid grid-cols-12 gap-6 mb-12 items-center`}>
+          <div className={`col-span-12 md:col-span-6`}>
+            <h2 className="text-3xl font-bold text-center md:text-left">
               Laatst gepubliceerd
             </h2>
           </div>
@@ -61,7 +63,7 @@ export default function Home({allPosts}) {
               Op mijn blog schrijf ik over design &amp; development gerelateerde zaken. Van een tutorial tot een korte notitie of een oplossing voor een probleem, je leest het hier 🙃.
             </p> */}
             <Link href={`/blog`}>
-              <a className="inline-block text-center px-6 py-3 md:py-4 text-sm leading-6 font-semibold transition-all rounded-full bg-black text-white hover:bg-white hover:text-black">
+              <a className="inline-block text-center px-6 py-3 text-sm leading-6 font-semibold transition-all rounded-full bg-black text-white hover:bg-white hover:text-black">
                 Naar blog
               </a>
             </Link>
@@ -71,7 +73,7 @@ export default function Home({allPosts}) {
       </div>
 
 
-      <CallToAction image="/hero.jpg" title="Ik ontwikkel Shopify Themes bij CODE" paragraph="Ben je zoekende naar een Shopify (Plus) Expert? Neem dan een kijkje bij CODE - a Shopify Plus agency!" />
+      {/* <CallToAction image="/hero.jpg" title="Ik ontwikkel Shopify Themes bij CODE" paragraph="Ben je zoekende naar een Shopify (Plus) Expert? Neem dan een kijkje bij CODE - a Shopify Plus agency!" /> */}
 
     </Layout>
   );
