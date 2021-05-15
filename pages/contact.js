@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import Layout from '../components/Layout';
 import ListSocial from '../components/ListSocial';
+import Intro from '../components/Intro';
 
 export default function Contact () {
   return (
@@ -8,6 +9,7 @@ export default function Contact () {
       <Head>
         <title>Contact</title>
       </Head>
+      <Intro title="Contact"/>
       <section className="section section--margin">
         <div className="container page-spacer">
           <div className="row">

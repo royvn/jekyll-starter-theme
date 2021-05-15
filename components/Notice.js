@@ -39,7 +39,8 @@ export default class Notice extends React.Component {
 	render() {
 		return(
 			<Link href={this.props.link_to}>
-				<a className={`block bg-green-400 py-3 transition-all hover:bg-black hover:text-white ${this.state.hide ? `transform translate-y-full` : ''}`}>
+				{/* transform translate-y-full */}
+				<a className={`block bg-green-400 py-3 transition-all hover:bg-black hover:text-white ${this.state.hide ? `` : ''}`}>
 					<div className="container mx-auto px-8 lg:px-16 text-center">
 						{this.props.link_text &&
 							<span className="text-sm">

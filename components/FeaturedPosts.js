@@ -7,7 +7,7 @@ export default function FeaturedPosts ({allPosts}) {
         {allPosts.map((post) => (
           <li className="col-span-12 md:col-span-4" key={post.slug}>
             <Link href={`/blog/${post.slug}`}>
-              <a className="block border rounded-lg overflow-hidden">
+              <a className="group block border rounded-lg overflow-hidden text-gray-700 hover:text-black hover:bg-gray-50">
                 {post.image && 
                   <div className="block">
                     <Image 
@@ -17,8 +17,8 @@ export default function FeaturedPosts ({allPosts}) {
                       height={300} />
                   </div>
                 }
-                <div className="p-4">
-                  <h3 className="text-lg font-bold mb-1">
+                <div className="p-6">
+                  <h3 className="text-lg font-bold mb-1 text-black">
                     {post.title}
                   </h3>
                   {post.date &&

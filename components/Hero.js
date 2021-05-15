@@ -1,6 +1,6 @@
 import React from 'react';
-import Image from 'next/image';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Hero (props) {
   return (
@@ -15,11 +15,11 @@ export default function Hero (props) {
           className="relative z-10"/>
       }
       <div className="absolute z-20 inset-y-0 inset-x-0 bg-gradient-to-b from-black opacity-40"></div>
-      <div className="relative z-30 container mx-auto px-8 lg:px-16">
-        <div className={`grid grid-cols-12 md:gap-6 relative z-10 min-h-screen-2/4 md:min-h-screen-3/4 items-end md:items-center text-center`}>
+      <div className="relative z-30 container mx-auto px-6 lg:px-16">
+        <div className={`grid grid-cols-12 md:gap-6 relative z-10 min-h-screen-3/4 md:min-h-screen items-end md:items-center text-center`}>
           <div className={`col-span-12 md:col-span-8 lg:col-span-6 md:col-start-3 lg:col-start-4 py-12`}>
             {props.title &&
-              <h1 className={`block text-5xl md:text-7xl font-bold mb-6 md:mb-12 transition-all`}>
+              <h1 className={`block text-6xl md:text-8xl font-bold mb-6 md:mb-12 transition-all`}>
                 {
                   props.title.split(' ').map((word) => (
                     <span className="block">

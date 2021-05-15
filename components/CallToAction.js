@@ -1,12 +1,11 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-// import './CallToAction.module.scss';
 
 
 export default function CallToAction (props) {
   return (
-    <div className={`section section--margin container page-spacer`}>
+    <div className={`relative section section--margin container page-spacer`}>
       <div className={``}>
         <div className={``}>
           {props.image &&

@@ -1,3 +1,5 @@
+@use 'mixins';
+
 $white: #FDFDFD;
 $green: #53D67C;
 $dark-green: #2B9720;
@@ -24,10 +26,20 @@ $headings-font-weight: 700;
 $body-background: $black;
 $body-color: $paper;
 
-$grid-spacer: rem(64);
+$grid-columns: 12;
+$grid-gutter: 3rem;
 
-$breakpoint-xs: 0;
-$breakpoint-sm: rem(576);
-$breakpoint-md: rem(768);
-$breakpoint-lg: rem(992);
-$breakpoint-xl: rem(1200);
+$breakpoint-xs: mixins.rem(0);
+$breakpoint-sm: mixins.rem(480);
+$breakpoint-md: mixins.rem(768);
+$breakpoint-lg: mixins.rem(992);
+$breakpoint-xl: mixins.rem(1200);
+$breakpoint-xxl: mixins.rem(1440);
+
+$grid-breakpoints: (
+  xs: $breakpoint-xs,
+  sm: $breakpoint-sm,
+  md: $breakpoint-md,
+  lg: $breakpoint-lg,
+  xl: $breakpoint-xxl
+);

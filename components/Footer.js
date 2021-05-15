@@ -1,6 +1,5 @@
 import React from 'react';
 import Outro from './Outro';
-import styles from './Footer.module.scss';
 
 export default class Footer extends React.Component {
 
@@ -21,7 +20,7 @@ export default class Footer extends React.Component {
 					<footer className={`bg-black text-white`}>
 
 						<Outro 
-							subtitle="Wat ik doe" 
+							subtitle="Shopify hulp nodig?" 
 							title="Ik ontwikkel Shopify Themes bij CODE" 
 							paragraph="Ben je zoekende naar een Shopify (Plus) Expert? Neem dan een kijkje bij CODE - a Shopify Plus agency!" 
 							button_href="https://code.nl" 
@@ -30,7 +29,7 @@ export default class Footer extends React.Component {
 							image_2="/boat.png"
               />
 							 
-						<div className={`container mx-auto px-8 lg:px-16 pt-12 pb-12`}>
+						{/* <div className={`container mx-auto px-8 lg:px-16 pt-12 pb-12`}>
 							<div className="grid grid-cols-12 gap-6">
 								
 								<div className={`col-span-12 md:col-span-3`}>
@@ -103,7 +102,7 @@ export default class Footer extends React.Component {
 								</div>
 
 							</div>
-						</div>
+						</div> */}
 					</footer>
 
 			);

@@ -1,25 +1,24 @@
-// Makes browsers render all elements more consistently and in line with modern standards
-// @use 'normalize.css/normalize';
-// @use 'settings';
-// @use 'root';
-// @use 'html';
-// @use 'body';
-// @use 'accessibility';
-// @use 'headings';
-// @use 'page-spacer';
-// // @use 'container';
-// // @use 'row';
-// // @use 'col';
-// @use 'rte';
-// @use 'link';
-// @use 'aspect-ratio';
-// @use 'buttons';
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
+
+  body {
+    @apply text-gray-800;
+  }
+
+  a {
+    @apply text-green-500 hover:text-green-800;
+  }
+
+  p {
+    @apply mb-4;
+    &:last-child {
+      @apply mb-0;
+    }
+  }
+  
   h1, .h1, 
   h2, .h2, 
   h3, .h3, 
@@ -31,28 +30,36 @@
       @apply mb-0;
     }
   }
+
+
   h1,
   .h1 {
-    @apply text-3xl md:text-5xl;
+    @apply text-6xl;
   }
+
   h2,
   .h2 {
-    @apply block text-3xl;
+    @apply text-4xl;
   }
+
   h3,
   .h3 {
-    @apply block text-xl;
+    @apply text-3xl;
   }
+
   h4,
   .h4 {
-    @apply block text-xl;
+    @apply text-2xl;
   }
+
   h5,
   .h5 {
-    @apply block text-xl;
+    @apply text-xl;
   }
+
   h6,
   .h6 {
-    @apply block text-xl;
+    @apply text-lg;
   }
+
 }

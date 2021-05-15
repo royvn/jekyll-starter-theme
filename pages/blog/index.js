@@ -2,6 +2,7 @@ import Head from 'next/head';
 import { getAllPosts } from '../../lib/api';
 import Layout from '../../components/Layout';
 import FeaturedPosts from '../../components/FeaturedPosts';
+import Intro from '../../components/Intro';
 
 export default function Blog ({allPosts}) {
   return (
@@ -9,7 +10,7 @@ export default function Blog ({allPosts}) {
       <Head>
         <title>Blog</title>
       </Head>
-      <h1>Blog</h1>
+      <Intro title="Blog"/>
       <div className="container mx-auto my-24 px-8 lg:px-16">
         <FeaturedPosts allPosts={allPosts}/>
       </div>
