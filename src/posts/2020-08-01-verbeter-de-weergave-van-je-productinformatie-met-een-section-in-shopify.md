@@ -539,7 +539,7 @@ Vervolgens voegen we nog [scss](https://sass-lang.com/) styling toe.
 5. Voeg het volgende stukje code in `product.liquid` toe op de plaats waar je de blokken wilt hebben.
 
 ```html
-{%- section 'product-collapsible' -%}
+{%- section 'product-collapsibles' -%}
 ```
 
 6. Vul de productbeschrijving, metafields en section blokken toe.
