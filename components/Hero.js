@@ -22,7 +22,7 @@ export default function Hero (props) {
               <h1 className={`block text-6xl md:text-8xl font-bold mb-6 md:mb-12 transition-all`}>
                 {
                   props.title.split(' ').map((word) => (
-                    <span className="block">
+                    <span className="block" key={word}>
                       {word}
                     </span>
                   ))

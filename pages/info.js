@@ -1,5 +1,6 @@
 import Head from 'next/head';
-import Link from 'next/Link';
+import Link from 'next/link';
+import Image from 'next/image';
 import Layout from '../components/Layout';
 import Intro from '../components/Intro';
 import { getAllPosts } from '../lib/api';
@@ -47,7 +48,14 @@ export default function Info ({allPosts}) {
             <p>
               UX, UI, Sketch, HTML, SCSS, Javascript, Git, NPM, Yarn, Grunt, Gulp, Webpack, Twig, Liquid, Shopify, OctoberCMS, WordPress, Statamic, Jekyll.
             </p>
-            {/* <Img fluid={data.image3.childImageSharp.fluid} alt="Vaardigheden" style={{maxWidth: 320}} /> */}
+            <Image 
+              src="/tab-3.png"
+              alt={``}
+              layout="intrinsic"
+              width={320}
+              height={320}
+              quality={100} 
+              className=""/>
             <h2>
               Workflow
             </h2>
@@ -66,7 +74,7 @@ export default function Info ({allPosts}) {
               Delft
             </p>
             <h3>
-              Front-end developer & designer
+              Front-end developer &amp; designer
             </h3>
             <p>
               Pluut Interaction B.V.  <br />
